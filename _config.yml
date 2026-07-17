@@ -1,12 +1,28 @@
+title: IBM Db2 Developer Extension
+# email: your-email@example.com
+description: >- # this means to ignore newlines until "baseurl:"
+  Tutorials and how-to information for using IBM Db2 Developer Extension.
+# baseurl: "" # the subpath of your site, e.g. /blog
+# url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
-title: YOUR TITLE
-description: YOUR DESCRIPTION
-theme: just-the-docs
-
-url: https://Aparna-T-Ashokan.github.io/Db2-developer-extension-staging2
-
-aux_links: # remove if you don't want this link to appear on your pages
-  Template Repository: https://github.com/Aparna-T-Ashokan/Db2-developer-extension-staging2
+# Build settings
+remote_theme: vsoch/docsy-jekyll
+#remote_theme: just-the-docs
+#remote_theme: mmistakes/minimal-mistakes
 
 
+# Collections
+collections:
+  blogs:
+    output: false
 
+# Theme settings (Docsy Jekyll)
+repo: "https://github.com/IBM/db2developerextension-about"
+github_user: "IBM"
+github_repo: "db2developerextension-about"
+github_branch: "main"
+color: "#000" # primary color for header and buttons
+fixedNav: true
+
+sass:
+  sass_dir: assets/css
