@@ -21,7 +21,7 @@ Designed for developers, this extension delivers a unified, intuitive environmen
 - Create, edit, and delete secure connection profiles.
 - Maintain multiple active database connections simultaneously.
 - Store credentials securely using VS Code's SecretStorage API.
-- Paste a JDBC URL to automatically populate connection fields.
+- JDBC URL parsing support for database connections.
 - Add custom JDBC connection properties to fine-tune your connections.
 
 ### Powerful unified SQL editor
