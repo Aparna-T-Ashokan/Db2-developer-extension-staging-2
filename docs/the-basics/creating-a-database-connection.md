@@ -69,21 +69,22 @@ To work with IBM Db2 databases, you need to create a database connection to conn
 ![Adding a database connection]({{site.baseurl}}/assets/images/add-db2-connection.png)
 
 2. Enter the following details:
-      - Host: IP address or hostname of the Db2 server you want to connect to.
-      - Port: Port number used by the Db2 server for the database connection.
-      - Database: Name of the Db2 database you want to connect to.
-      - Connection name: Name of the database connection.
-      - Connection URL: Auto-generated JDBC (Java Database Connectivity) URL for the database connection.
-      - Username: Username to access the Db2 instance.
-      - Password: Password to access the Db2 instance.
-3. Under the **Security** section, the checkbox **Use SSL** is selected by default. This option is used to enable SSL encryption for the database connection.
-      - **Certificate**: Select the appropriate SSL certificate from the list, or select **None** if SSL is not required.
-      - **Truststore path**: Provide the path to your truststore file.
-      - **Truststore password**: Enter the truststore password.
-4. (Optional) Select the **Save credentials** checkbox to save your credentials.  
-5. Click **Test connection** to verify the credentials are correct.  
+      - **Host**: IP address or hostname of the Db2 server you want to connect to.
+      - **Port**: Port number used by the Db2 server for the database connection.
+      - **Database**: Name of the Db2 database you want to connect to.
+      - **Connection name** (optional): A unique name to identify this connection.
+      - **Connection URL**: Auto-generated JDBC (Java Database Connectivity) URL for the database connection.
+      - **Username**: Username to access the Db2 instance.
+      - **Password**: Password to access the Db2 instance.
+3. Under the **Security** section, the **Use SSL** checkbox is selected by default. This option is used to enable SSL encryption for the database connection.
+      - **Certificate**: Select the SSL certificate type from the list. The default value is **Public CA**. Other options are **JKS** and **PKCS12**.
+      - **Truststore Password**: Enter the password for your truststore file.
+      - **Truststore Path**: Provide the file system path to your truststore file.
+4. (Optional) Select the **Save credentials** checkbox to save your credentials.
+5. (Optional) In the **Optional JDBC Properties** section, click **+ Add Property** to add custom JDBC connection properties. Each property requires a **Name** and a **Value**. Click **Remove** to delete a property.
+6. Click **Test connection** to verify the credentials are correct.
    You receive a **Test connection successful** notification if the credentials are correct.
-6. Click **Create connection**.  
+7. Click **Create connection**.
    If your connection was created successfully, you can see it on the **DB2 CONNECTIONS** pane.
 
 

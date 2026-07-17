@@ -21,21 +21,30 @@ Designed for developers, this extension delivers a unified, intuitive environmen
 - Create, edit, and delete secure connection profiles.
 - Maintain multiple active database connections simultaneously.
 - Store credentials securely using VS Code's SecretStorage API.
+- Paste a JDBC URL to automatically populate connection fields.
+- Add custom JDBC connection properties to fine-tune your connections.
 
 ### Powerful unified SQL editor
-- Write and run multiple queries simultaneously.
+- Write and run multiple queries simultaneously, each with a dedicated transactional session.
 - Keyword and template suggestions for faster query authoring.
 - Real-time syntax checking and highlighting.
 - Signature help for correct parameter usage.
+- Cancel long-running queries without closing the connection.
 
 ### Query running and visualization
 - Run queries directly within VS Code.
-- View results instantly in tabular format.
+- View results instantly in tabular format with streaming support for large result sets.
 - Export results to CSV and JSON with one click.
-- Query history with timestamps.
+- Export table and schema data directly from the extension.
+- Replicate data between schemas without leaving VS Code.
+- Query history with timestamps, preserved across VS Code sessions.
 
 ### Database explorer with tree view
 - Browse schemas, tables, views, procedures, and other objects in a clean tree structure.
+- View check constraints on table objects.
+- Support for table and object names that contain special characters.
+- View advanced data types including CLOB, BLOB, Binary, Vector, XML, and Spatial.
+- Generate ER diagrams from your database schemas.
 - Right-click objects for instant access to common operations.
 
 <!--
