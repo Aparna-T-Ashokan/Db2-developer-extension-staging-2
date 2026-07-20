@@ -21,11 +21,13 @@
       url: "docs/working-with-Db2-objects"
       children:
         - title: "Exploring tables"
-          url: "docs/working-with-Db2-objects/Db2-objects"    
+          url: "docs/working-with-Db2-objects/Db2-objects"
         - title: "Exploring procedures"
-          url: "docs/working-with-Db2-objects/Procedure-objects"   
+          url: "docs/working-with-Db2-objects/Procedure-objects"
         - title: "Exploring views"
-          url: "docs/working-with-Db2-objects/Db2-objects-view"   
+          url: "docs/working-with-Db2-objects/Db2-objects-view"
+        - title: "Generating ER diagrams"
+          url: "docs/working-with-Db2-objects/er-diagram"
     - title: Working with SQL
       url: "docs/working-with-sql"
       children:

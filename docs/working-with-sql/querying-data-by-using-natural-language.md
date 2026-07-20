@@ -24,7 +24,7 @@ To use natural language queries, ensure that:
 ## Connecting to Genius Hub
 
 1. Open Db2 Developer Extension.
-2. Open the **Db2 AI Assistant** view.
+2. Click the **Toggle Db2 AI Assistant**. **Db2 AI Assistant** view opens.
 3. Click **Login to Genius Hub**.
 4. Enter the following information:
    - **Genius Hub URL**
@@ -46,15 +46,10 @@ After the connection is established, you can begin using natural language querie
 
 4. Press **Enter**.
 
-The extension:
+   The extension:
 
-- Sends the request to Genius Hub.
-- Converts the natural language request into SQL.
-- Runs the generated SQL against the selected database.
-- Displays the results in the **Results** tab.
+   - Sends the request to Genius Hub.
+   - Converts the natural language request into SQL.
+   - Runs the generated SQL against the selected database.
+   - Displays the results in the **Results** tab along with the SQL query.
 
-## Viewing the generated SQL
-
-The extension can display the SQL generated from your natural language request in the chat window.
-
-Review the generated SQL before using the results in production environments.

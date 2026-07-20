@@ -56,7 +56,9 @@ The **QUERY HISTORY** view lists previously run SQL statements. Run at least one
         - Rows: Total number of rows returned by the query.
         - Execution Time (ms): Time taken to run the query in milliseconds.
 
-You can search within the displayed results using the Search box. Click **Export** to export the query results to CSV or JSON. 
+You can search within the displayed results using the Search box. Click **Export** to export the query results to CSV or JSON.
+
+When a result cell contains a complex or large-object data type, a **View** button appears in the cell. Click **View** to open the data viewer. See [Viewing complex data types](../working-with-sql/running-multiple-sql-statements#viewing-complex-data-types) for details on how each type is displayed.
 
 
 

@@ -25,6 +25,24 @@ If you encounter issues during the Db2 instance creation (for example, errors th
 
 
 
+## Resolving Java version detection issues
+
+**Problem**: The extension fails to start or behaves unexpectedly because it detected the wrong Java version. This can happen when multiple JDKs are installed and the system PATH or `JAVA_HOME` environment variable points to an unsupported version (Java 17 or later is required).
+
+**Solution**:
+
+Manually set the Java installation path in the extension settings:
+
+1. Open Visual Studio Code and click the gear icon and then **Settings**.
+2. Go to **Extensions** in the left sidebar and select **IBM Db2 Developer Extension Settings**.
+3. In the **Db2 › Java: Home** field, enter the full path to your Java 17 (or later) installation directory (for example, `/Library/Java/JavaVirtualMachines/jdk-17.jdk/Contents/Home` on macOS or `C:\Program Files\Java\jdk-17` on Windows).
+4. Click **Backup and Sync Settings** and reload VS Code.
+
+The extension will now use the specified Java installation instead of the auto-detected version.
+
+> **Note**: The **Db2 › Java: Home** setting takes priority over the `JAVA_HOME` environment variable and the system PATH.
+{: .note-right}
+
 ## Resolving common instance creation issues
 
 ### Homebrew installation errors on macOS
