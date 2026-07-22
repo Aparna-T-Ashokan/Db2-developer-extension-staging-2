@@ -36,7 +36,7 @@ Manually set the Java installation path in the extension settings:
 1. Open Visual Studio Code and click the gear icon and then **Settings**.
 2. Go to **Extensions** in the left sidebar and select **IBM Db2 Developer Extension Settings**.
 3. In the **Db2 › Java: Home** field, enter the full path to your Java 17 (or later) installation directory (for example, `/Library/Java/JavaVirtualMachines/jdk-17.jdk/Contents/Home` on macOS or `C:\Program Files\Java\jdk-17` on Windows).
-4. Click **Backup and Sync Settings** and reload VS Code.
+4. Reload VS Code.
 
 The extension will now use the specified Java installation instead of the auto-detected version.
 
