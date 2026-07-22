@@ -52,21 +52,25 @@ You can open multiple columns in the viewer simultaneously — each opens in its
 
 ## Running transactions
 
-Each SQL editor tab maintains a dedicated database connection. Because the same connection is used for all query executions within a tab, you can reliably run multi-statement transactions.
+Each SQL editor tab maintains a dedicated database connection. Because the same connection is used for all query executions within a tab, transaction state and session state are preserved across multiple query executions.
 
-Statements such as `BEGIN`, `COMMIT`, and `ROLLBACK` execute on the same database connection, which preserves transaction state across multiple query executions.
+You can execute transaction statements such as `BEGIN`, `COMMIT`, and `ROLLBACK` from a SQL editor. These statements run on the same database connection, allowing Db2 to maintain the transaction context until the transaction is committed or rolled back.
 
 **Example:**
+
 ```sql
 BEGIN;
-INSERT INTO orders VALUES (101, 'item-A');
-UPDATE inventory SET qty = qty - 1 WHERE item = 'item-A';
+UPDATE DB2INST1.EMPLOYEE_SALARY
+SET SALARY = SALARY + 5000
+WHERE EMP_ID = 1001;
 COMMIT;
-```
 
+```
 When you run these statements from the same SQL editor tab, Db2 processes them as a single transaction.
 
-> **Note**: Each SQL editor tab maintains its own independent connection and transaction state. Transactions started in one tab do not affect other open SQL editor tabs.
+Because the connection remains associated with the SQL editor tab, session-specific objects and settings, such as temporary tables and session variables, remain available across query executions while the dedicated connection is active.
+
+> **Note:** Each SQL editor tab maintains its own dedicated connection and transaction state. Transactions, temporary tables, session variables, and other session-specific settings created in one SQL editor tab are isolated from other open SQL editor tabs.
 {: .note-right}
 
 ## Running Selected SQL statements in SQL Editor
