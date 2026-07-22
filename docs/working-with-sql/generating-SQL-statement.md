@@ -30,11 +30,7 @@ You can generate SQL statements by multiple methods:
 ---
 
 1. Click **Create new SQL file** (![Creating new SQL file]({{site.baseurl}}/assets/images/create-new-sql-file.png){:width="25" :height="25"}) in the DB2 CONNECTIONS pane.
-2. A new editor tab opens with the name Untitled. Save the file with a .sql extension.
-
-    > **Note**:
-    You can also create a new SQL file by clicking File > New File and then save it as anyname.sql to enable SQL editing features.
-    {: .note-right}
+2. A new editor tab opens with the name Untitled. The extension prompts you to select the database connection to run your query. Select the required connection. 
 
 3. In the editor, type your SQL statement. For example, type the first letters of SELECT. The SELECT statement appears in the list of available SQL elements. Click SELECT statement to insert a code snippet with the basic structure.
     ![Creating new SQL file]({{site.baseurl}}/assets/images/file-new-sql-ceate.png)
@@ -52,12 +48,14 @@ You can generate SQL statements by multiple methods:
 
     When you select a snippet, the editor inserts the corresponding SQL template into your current SQL editor.
 
-7. Click Run SQL and the system prompts you to select the database connection to run your query. Select the required connection and click **Enter** to run the queries. 
-    ![Creating new SQL file]({{site.baseurl}}/assets/images/select-connection-prompt.png)
-    The Query Status tab opens, showing execution details such as timestamp, SQL statement, return code, and elapsed time.
-        ![Creating new SQL file]({{site.baseurl}}/assets/images/new-file-sql-status.png)
+7. Click Run SQL to run the queries. 
+    The Query **Result** tab opens to view the query output in a table format.
+    Switch to the **Status** tab to view the execution details such as timestamp, SQL statement, return code, and elapsed time.
+8. Save the file with a .sql extension.
 
-    Switch to the **Result** tab to view the query output in a table format.
+    > **Note**:
+    You can also create a new SQL file by clicking File > New File and then save it as anyname.sql to enable SQL editing features.
+    {: .note-right}
 
 
 ## Generating and running SQL statements for a table 
