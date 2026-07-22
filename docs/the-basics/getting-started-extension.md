@@ -31,7 +31,7 @@ The IBM Db2 Developer Extension icon (![Db2 developer icon]({{site.baseurl}}/ass
 
 
    - **Db2 › Java: Home**
-     Path to the Java installation for the Db2 extension (optional). If not set, the extension uses the `JAVA_HOME` environment variable or the system PATH to locate Java. Set this if you have multiple JDKs installed and the extension is picking up the wrong version.
+     Path to the Java installation for the Db2 extension. If not set, the extension uses the `JAVA_HOME` environment variable or the system PATH to locate Java. Set this if you have multiple JDKs installed and the extension is picking up the wrong version.
    - **Db2service: Max Rows**
      Set the maximum number of rows to fetch in query results (default is 1000).
    - **Db2service: Service Port**
