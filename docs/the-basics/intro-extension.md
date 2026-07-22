@@ -25,9 +25,10 @@ Designed for developers, this extension delivers a unified, intuitive environmen
 - Add custom JDBC connection properties to fine-tune your connections.
 
 ### Powerful unified SQL editor
-- Write and run multiple queries simultaneously, each with a dedicated transactional session.
+- Run queries in dedicated transactional sessions, ensuring isolation between SQL editor tabs and connections.
+- Write and run multiple queries simultaneously.
 - Keyword and template suggestions for faster query authoring.
-- Real-time syntax checking and highlighting.
+- TextMate-based SQL syntax highlighting and real-time syntax validation.
 - Signature help for correct parameter usage.
 - Cancel long-running queries without closing the connection.
 
@@ -44,7 +45,7 @@ Designed for developers, this extension delivers a unified, intuitive environmen
 - View check constraints on table objects.
 - Support for table and object names that contain special characters.
 - View advanced data types including CLOB, BLOB, Binary, Vector, XML, and Spatial.
-- Generate ER diagrams from your database schemas.
+- Generate ER diagrams for tables and schemas.
 - Right-click objects for instant access to common operations.
 
 <!--

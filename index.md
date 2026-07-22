@@ -1,6 +1,5 @@
 
 # Introduction
----
 
 <!--Bringing database development into the modern era
 ---The **Db2 Developer Extension** is a comprehensive, feature-rich development tool designed to enable seamless interaction with IBM Db2 databases running on Linux, Unix, and Windows systems. Built for developers and database administrators, this extension integrates the power of Db2 directly into the Visual Studio Code environment, streamlining database operations, improving query development efficiency, and enhancing overall productivity.
@@ -17,27 +16,36 @@ Designed for developers, this extension delivers a unified, intuitive environmen
 
 
 ## Key features
----
 
-Database connection management
+### Database connection management
 - Create, edit, and delete secure connection profiles.
 - Maintain multiple active database connections simultaneously.
-- Store your credentials safely by using VS Code’s SecretStorage API.
+- Store credentials securely using VS Code's SecretStorage API.
+- Bidirectional JDBC URL parsing: auto-generates the connection URL from individual fields and populates fields from a pasted JDBC URL.
+- Add custom JDBC connection properties to fine-tune your connections.
 
-Powerful unified SQL editor
+### Powerful unified SQL editor
+- Run queries in dedicated transactional sessions, ensuring isolation between SQL editor tabs and connections.
 - Write and run multiple queries simultaneously.
 - Keyword and template suggestions for faster query authoring.
-- Real-time syntax checking and highlighting.
+- TextMate-based SQL syntax highlighting and real-time syntax validation.
 - Signature help for correct parameter usage.
+- Cancel long-running queries without closing the connection.
 
-Query running and visualization
+### Query running and visualization
 - Run queries directly within VS Code.
-- View results instantly in tabular format.
+- View results instantly in tabular format with streaming support for large result sets.
 - Export results to CSV and JSON with one click.
-- Query history with timestamps.
+- Export table and schema data directly from the extension.
+- Replicate data between schemas without leaving VS Code.
+- Query history with timestamps, preserved across VS Code sessions.
 
-Database explorer with tree view
+### Database explorer with tree view
 - Browse schemas, tables, views, procedures, and other objects in a clean tree structure.
+- View check constraints on table objects.
+- Support for table and object names that contain special characters.
+- View advanced data types including CLOB, BLOB, Binary, Vector, XML, and Spatial.
+- Generate ER diagrams for tables and schemas.
 - Right-click objects for instant access to common operations.
 
 <!--
