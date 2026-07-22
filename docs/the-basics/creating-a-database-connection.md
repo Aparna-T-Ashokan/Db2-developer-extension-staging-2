@@ -73,7 +73,7 @@ To work with IBM Db2 databases, you need to create a database connection to conn
       - **Port**: Port number used by the Db2 server for the database connection.
       - **Database**: Name of the Db2 database you want to connect to.
       - **Connection name** (optional): A unique name to identify this connection.
-      - **Connection URL**: A bidirectional JDBC (Java Database Connectivity) URL field. It auto-generates the URL as you fill in the **Host**, **Port**, and **Database** fields. You can also paste a complete JDBC URL directly into this field to automatically populate the **Host**, **Port**, **Database**, and SSL parameters.
+      - **Connection URL**: A bidirectional JDBC (Java Database Connectivity) URL field. It auto-generates the URL as you fill in the **Host**, **Port**, and **Database** fields. You can also paste a complete JDBC URL directly into this field to automatically populate the **Host**, **Port**, **Database**, and custom JDBC properties.
       - **Username**: Username to access the Db2 instance.
       - **Password**: Password to access the Db2 instance.
 3. Under the **Security** section, the **Use SSL** checkbox is selected by default. This option is used to enable SSL encryption for the database connection.
