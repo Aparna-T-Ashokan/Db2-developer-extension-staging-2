@@ -20,6 +20,10 @@ You can generate ER diagrams at two levels:
 
 The ER diagram opens in a new editor tab, showing the selected table and its relationships to other tables.
 
+![ER diagram]({{site.baseurl}}/assets/images/ER-diagram.png)
+
+Each table in the diagram displays the column names and their data types. Click **Show all columns** to expand a table and view all of its columns. You can also drag tables to rearrange them in the diagram canvas.
+
 ## Generating an ER diagram for a schema
 
 
