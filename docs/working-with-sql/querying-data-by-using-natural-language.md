@@ -48,4 +48,5 @@ To use natural language queries, ensure that:
    - Converts the natural language request into SQL.
    - Runs the generated SQL against the selected database.
    - Displays the results in the **Results** tab along with the SQL query.
+   - Saves the generated SQL query to **QUERY HISTORY**, where it persists across VS Code sessions even after you close and reopen the window.
 

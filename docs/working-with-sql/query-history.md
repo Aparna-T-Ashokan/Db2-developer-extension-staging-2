@@ -7,6 +7,8 @@ title: "Query History"
 
 The **QUERY HISTORY** view lists previously run SQL statements. Run at least one SQL statement from the Db2 SQL Editor for history entries to appear. You can open a history entry to view status details and results.
 
+Query history is persistent — your previously run queries are retained even after you close and reopen VS Code, so you can always refer back to earlier work.
+
 ## Viewing queries in Query History
 ---
 
