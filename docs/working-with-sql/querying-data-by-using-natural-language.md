@@ -35,7 +35,7 @@ To use natural language queries, ensure that:
 
 ## Querying data
 
-1. In the **Db2 AI Assistant** panel, click the **Choose Database** dropdown at the bottom and select the database you want to query.
+1. In the **Db2 AI Assistant** chat interface, click the **Choose Database** dropdown at the bottom and select the database.
 2. Enter your question in natural language in the chat input. For example:
 
    ```
@@ -51,16 +51,17 @@ To use natural language queries, ensure that:
    - Displays the **Generated SQL Query** in the **Db2 AI Assistant** panel.
    - Automatically populates the generated SQL into the **Db2 SQL Editor** and runs it.
    - Displays the results in the **Results** pane below the editor.
-   - Saves the generated SQL query to **QUERY HISTORY**, where it persists across VS Code sessions even after you close and reopen the window.
+   - Saves the generated SQL query to **QUERY HISTORY**.
 
-   A status message **"SQL query populated and executed in SQL Editor"** is shown at the bottom of the **Db2 AI Assistant** panel to confirm that the query was sent to the editor and run.
 
-The **Conversation History** panel in the **Db2 AI Assistant** lists your previously asked questions. The following actions are available for managing your conversations:
+Click **Conversation History** icon to see the **Conversation History** panel. It lists your previously asked questions. 
+
+The following actions are available for managing your conversations:
 
 - **Search**: Use the search bar at the top of the **Conversation History** panel to find a specific conversation by keyword.
-- **Rename**: Click the rename icon next to a conversation entry to give it a custom name. In the **Rename Conversation** dialog, enter the new name and click **Rename**.
-- **Bookmark**: Click the bookmark icon next to a conversation to mark it for quick access later.
-- **Filter**: Use the filter option to narrow down the conversation list by database. Select a database from the **Database** dropdown to show only conversations that were run against that database.
+- **Rename**: Click the **rename** icon next to a conversation entry to give it a custom name. In the **Rename Conversation** dialog, enter the new name and click **Rename**.
+- **Bookmark**: Click the **bookmark** icon next to a conversation to mark it for quick access later.
+- **Filter**: Use the **filter** option to narrow down the conversation list by database. Select a database from the **Database** dropdown to show only conversations that were run against that database.
 
 Click any conversation entry to reload it.
 
