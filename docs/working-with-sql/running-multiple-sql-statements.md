@@ -54,19 +54,32 @@ You can open multiple columns in the viewer simultaneously — each opens in its
 
 Each SQL editor tab maintains a dedicated database connection. Because the same connection is used for all query executions within a tab, transaction state and session state are preserved across multiple query executions.
 
-You can execute transaction statements such as `BEGIN`, `COMMIT`, and `ROLLBACK` from a SQL editor. These statements run on the same database connection, allowing Db2 to maintain the transaction context until the transaction is committed or rolled back.
+You can execute transaction statements such as `Begin Transaction`, `ROLLBACK`, `COMMIT`, and `End Transaction` from a SQL editor. These statements run on the same database connection, allowing Db2 to maintain the transaction context until the transaction is committed or rolled back.
 
 **Example:**
 
 ```sql
-BEGIN;
-UPDATE DB2INST1.EMPLOYEE_SALARY
-SET SALARY = SALARY + 5000
-WHERE EMP_ID = 1001;
-COMMIT;
+Begin Transaction;
 
+INSERT INTO ADNAAN.ACT (ACTNO, ACTKWD, ACTDESC)
+VALUES (5463, 'lkol', 'ibml');
+
+select * from ADNAAN.ACT ;
+
+rollback;
+
+commit;
+End Transaction
 ```
-When you run these statements from the same SQL editor tab, Db2 processes them as a single transaction.
+
+This example demonstrates the following workflow:
+
+1. `Begin Transaction` starts the transaction and establishes the transaction boundary.
+2. The `INSERT` statement adds a new row to the `ADNAAN.ACT` table.
+3. The `SELECT` statement queries the table so you can verify the inserted row within the current transaction context. The new row is visible at this point because the transaction has not yet been committed or rolled back.
+4. `rollback` undoes the `INSERT`, reverting the table to its state before the transaction began. If you were to run another `SELECT` here, the inserted row would no longer appear.
+5. `commit` finalizes any remaining changes and makes them permanent in the database.
+6. `End Transaction` closes the transaction boundary.
 
 Because the connection remains associated with the SQL editor tab, session-specific objects and settings, such as temporary tables and session variables, remain available across query executions while the dedicated connection is active.
 
