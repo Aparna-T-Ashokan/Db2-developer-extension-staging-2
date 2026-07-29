@@ -36,16 +36,11 @@ When you run multiple SQL statements, the extension runs them sequentially and p
 
 You can search in the result set. Click **Export** to download your query results in CSV or JSON.
 
-## Viewing complex data types
+## Viewing LOB data
 
-When a result cell contains a complex or large-object data type, a **View** button appears in the cell. Click **View** to open the data viewer, which displays the content formatted by type:
+When a result cell contains a large-object (LOB) data type such as CLOB, BLOB, DBCLOB, XML, or BINARY, click the cell to open the **LOB Viewer**. The LOB Viewer displays the column name, data type, character count, format, and the full captured content. Click **Copy** to copy the content to the clipboard.
 
-- **JSON and XML**: Displayed with readable formatting.
-- **BLOB and Binary**: Displayed in hexadecimal notation.
-- **Spatial**: Displayed using `x'...'` hex notation.
-- **CLOB, VECTOR, and EMBEDDING**: Displayed as text content.
-
-You can open multiple columns in the viewer simultaneously — each opens in its own tab. Clicking **View** on the same cell a second time focuses the existing tab rather than opening a duplicate. Click **Copy** in the viewer to copy the displayed content to the clipboard.
+You can open multiple columns in the LOB Viewer simultaneously — each opens in its own tab. Clicking the same cell a second time focuses the existing tab rather than opening a duplicate.
 
 > **Note**: A zero-byte BLOB value is rendered as `NULL` in the viewer.
 {: .note-right}

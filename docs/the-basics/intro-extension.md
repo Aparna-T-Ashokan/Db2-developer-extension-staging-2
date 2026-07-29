@@ -17,6 +17,10 @@ Designed for developers, this extension delivers a unified, intuitive environmen
 
 ## Key features
 
+### Db2 Community Edition
+
+- Supports multiple container runtimes: **Docker**, **Podman**, and **Colima**, giving you flexibility to use whichever runtime is available on your system.
+
 ### Database connection management
 - Create, edit, and delete secure connection profiles.
 - Maintain multiple active database connections simultaneously.
@@ -26,9 +30,10 @@ Designed for developers, this extension delivers a unified, intuitive environmen
 
 ### Powerful unified SQL editor
 - Run queries in dedicated transactional sessions, ensuring isolation between SQL editor tabs and connections.
+- Transactional query support: execute `BEGIN TRANSACTION`, `ROLLBACK`, `COMMIT`, and `END TRANSACTION` statements within a single editor session.
 - Write and run multiple queries simultaneously.
 - Keyword and template suggestions for faster query authoring.
-- TextMate-based SQL syntax highlighting and real-time syntax validation.
+- Consistent SQL syntax highlighting: keywords, data types, strings, and comments are rendered in the same colors across all SQL file types.
 - Signature help for correct parameter usage.
 - Cancel long-running queries without closing the connection.
 
@@ -38,14 +43,14 @@ Designed for developers, this extension delivers a unified, intuitive environmen
 - Export results to CSV and JSON with one click.
 - Export table and schema data directly from the extension.
 - Replicate data between schemas without leaving VS Code.
-- Query history with timestamps, preserved across VS Code sessions.
+- Query history with timestamps, preserved across VS Code sessions even after you close and reopen VS Code.
 
 ### Database explorer with tree view
 - Browse schemas, tables, views, procedures, and other objects in a clean tree structure.
 - View check constraints on table objects.
 - Support for table and object names that contain special characters.
-- View advanced data types including CLOB, BLOB, Binary, Vector, XML, and Spatial.
-- Generate ER diagrams for tables and schemas.
+- View LOB data (CLOB, BLOB, DBCLOB, XML, Binary, and more) directly in the **LOB Viewer**.
+- Generate ER diagrams for individual tables and entire schemas.
 - Right-click objects for instant access to common operations.
 
 <!--
