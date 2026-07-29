@@ -17,6 +17,9 @@ Before you create a Db2 instance, ensure that your system meets the following re
 
 - **System resources**: Ensure that your system has a minimum of 4 GB of available RAM and sufficient disk space for the Db2 container. 
 
+
+The Db2 Developer Extension automatically detects supported runtimes during instance creation.
+
 #### Windows Subsystem for Linux (WSL)
 
 If you use the extension within WSL on Windows, ensure that the following prerequisites are met:
@@ -145,7 +148,28 @@ To create a Db2 instance by using IBM Db2 Community Edition, complete the follow
 1. In the **DB2 CONNECTIONS** pane, click the **Create Db2 instance** button or the **Create Db2 Instance** icon ![Creating new Db2 instance]({{site.baseurl}}/assets/images/create-db2-instance.png){:width="25" :height="25"}.
    
    The extension checks for an existing Db2 instance on your system. If an instance exists, the **Db2 Instance Already Exists** workflow opens in a new editor tab. For more information, see [Managing an existing Db2 instance]({{site.baseurl}}/docs/the-basics/creating-a-database-connection#managing-db2-instance).
+   
+   The extension automatically detects available runtimes before instance creation begins. During runtime validation, the extension:
+   - Detects the operating system.
+   - Searches for supported runtimes.
+   - Validates runtime availability.
+   - Starts the runtime if required.    
 
+    **Supported runtimes**: Db2 Community Edition supports the following container runtimes:         
+
+    | Platform | Runtime |
+    |----------|----------|
+    | macOS | Podman |
+    | macOS | Docker |
+    | macOS | Colima |
+    | Linux (LUW) | Podman |
+    | Linux (LUW) | Docker |
+
+    If a supported runtime is already installed and available, the extension automatically detects and uses it.
+   
+   If no supported runtime is detected, the extension installs and configures the required runtime before continuing with Db2 Community Edition instance creation.
+
+              
 2. When no Db2 instance exists, the **Add Db2 instance** workflow opens in a new editor tab. Enter the following details:
 
    ![Creating Db2 instance]({{site.baseurl}}/assets/images/create-db2-instance-window.png)
@@ -157,7 +181,7 @@ To create a Db2 instance by using IBM Db2 Community Edition, complete the follow
    - **Database Name**: Name of the database that you want to create. By default, the database name is set to `testdb`.
    
    When you create a Db2 instance, Db2 Developer Extension automatically creates two databases:
-   - **testdb**: Default database that you specify during instance setup.
+   - **Testdb**: Default database that you specify during instance setup.
    - **SAMPLE**: Sample database for testing and learning purposes.
 
 3. Click **Create Db2 instance**.
@@ -168,9 +192,9 @@ To create a Db2 instance by using IBM Db2 Community Edition, complete the follow
    The checklist runs automatically. When all checks are complete, the Db2 instance is created successfully.
 
    During the Db2 instance creation process, the extension:
-   - Creates the `testdb` (or your chosen name) and `SAMPLE` databases.
+   - Creates the `Testdb` (or your chosen name) and `SAMPLE` databases.
    - Creates corresponding database connections for both databases.
-   - Automatically connects to the `testdb` (or your chosen name) and `SAMPLE` databases.
+   - Automatically connects to the `Testdb` (or your chosen name) and `SAMPLE` databases.
 
    The database connections are listed in the **DB2 CONNECTIONS** pane.
 
