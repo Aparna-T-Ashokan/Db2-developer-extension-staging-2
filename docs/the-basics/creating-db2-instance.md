@@ -13,10 +13,8 @@ Before you create a Db2 instance, ensure that your system meets the following re
 #### MacOS
 
 - **Homebrew**: Homebrew is required for installing dependencies such as Colima and Docker CLI. If Homebrew is not installed on your system, the extension shows a prompt to install it during the Db2 instance setup. The prompt opens a terminal window where you can enter your system password and interact as needed. The installation script runs automatically. Monitor the terminal for any errors. After Homebrew is installed, the Db2 instance creation resumes automatically.
-  
 
-- **System resources**: Ensure that your system has a minimum of 4 GB of available RAM and sufficient disk space for the Db2 container. 
-
+- **System resources**: Ensure that your system has a minimum of 4 GB of available RAM and sufficient disk space for the Db2 container.
 
 The Db2 Developer Extension automatically detects supported runtimes during instance creation.
 
@@ -49,26 +47,34 @@ Ensure that your system meets the following requirements:
 
    b. (Optional) Download and install WSL2 kernel update only if WSL is not installed:
 
-          curl.exe -L -o wsl_update_x64.msi https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi
-          msiexec /i wsl_update_x64.msi /quiet /norestart
+      ```
+      curl.exe -L -o wsl_update_x64.msi https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi
+      msiexec /i wsl_update_x64.msi /quiet /norestart
+      ```
 
    c. Set WSL2 as the default version:
 
-          wsl --set-default-version 2
+      ```
+      wsl --set-default-version 2
+      ```
 
    d. Update WSL:
    {: #step-1d}
 
-          wsl --update
+      ```
+      wsl --update
+      ```
 
 **2. Install Ubuntu 22.04 on WSL**
 
-   > **Note**: The `wsl --install -d Ubuntu-22.04` command fails if WSL is not updated. Complete [Step 1d](#step-1d)  before proceeding.
+   > **Note**: The `wsl --install -d Ubuntu-22.04` command fails if WSL is not updated. Complete [Step 1d](#step-1d) before proceeding.
    {: .note-right}
 
    a. Install Ubuntu 22.04:
 
-          wsl --install -d Ubuntu-22.04
+      ```
+      wsl --install -d Ubuntu-22.04
+      ```
 
    b. When Ubuntu starts for the first time, enter a Linux username and set a password.
 
@@ -76,25 +82,29 @@ Ensure that your system meets the following requirements:
 
    a. Set Ubuntu as the default distribution:
 
-          wsl --set-default Ubuntu-22.04
-      
+      ```
+      wsl --set-default Ubuntu-22.04
+      ```
 
-   After completing the previous step, restart your system. 
-
+   After completing the previous step, restart your system.
 
    b. Launch WSL:
 
-          wsl
+      ```
+      wsl
+      ```
 
    c. Verify that you are in the correct Ubuntu home directory by running the following command:
 
-          pwd
+      ```
+      pwd
+      ```
 
-      
-      
    Expected output:
 
+      ```
       /home/<username>
+      ```
 
 After completing these steps, the Db2 Developer Extension automatically handles the following actions:
 
@@ -112,9 +122,9 @@ After completing these steps, the Db2 Developer Extension automatically handles 
 
    a. Run the following command to verify that the Db2 container is running. The `sudo` prefix is required for Docker commands until you log out and log back in to apply Docker group permissions:
 
-          sudo docker ps
-
-
+      ```
+      sudo docker ps
+      ```
 
    Expected output:
 
@@ -128,15 +138,12 @@ During the Db2 instance creation, the extension automatically installs the neces
 
 #### MacOS
 
-
 - **Colima**: A lightweight Docker‑compatible runtime used to run the Db2 Community Edition container without Docker Desktop.
 - **Docker CLI**: The Docker command‑line interface, installed using Homebrew alongside Colima. Docker CLI is used to manage the container operations.
 
 #### Linux
 
-
 - **Docker Engine or Docker CLI**: Installed using the system package manager (for example, apt-get) if they are not already available.
-
 
 These dependencies are installed on your system to support the Db2 Community Edition container.
 
@@ -144,32 +151,30 @@ These dependencies are installed on your system to support the Db2 Community Edi
 
 To create a Db2 instance by using IBM Db2 Community Edition, complete the following steps:
 
-
 1. In the **DB2 CONNECTIONS** pane, click the **Create Db2 instance** button or the **Create Db2 Instance** icon ![Creating new Db2 instance]({{site.baseurl}}/assets/images/create-db2-instance.png){:width="25" :height="25"}.
-   
+
    The extension checks for an existing Db2 instance on your system. If an instance exists, the **Db2 Instance Already Exists** workflow opens in a new editor tab. For more information, see [Managing an existing Db2 instance]({{site.baseurl}}/docs/the-basics/creating-a-database-connection#managing-db2-instance).
-   
+
    The extension automatically detects available runtimes before instance creation begins. During runtime validation, the extension:
    - Detects the operating system.
    - Searches for supported runtimes.
    - Validates runtime availability.
-   - Starts the runtime if required.    
+   - Starts the runtime if required.
 
-    **Supported runtimes**: Db2 Community Edition supports the following container runtimes:         
+   **Multiple runtime support**: Db2 Community Edition supports the following container runtimes:
 
-    | Platform | Runtime |
-    |----------|----------|
-    | macOS | Podman |
-    | macOS | Docker |
-    | macOS | Colima |
-    | Linux (LUW) | Podman |
-    | Linux (LUW) | Docker |
+   | Platform | Runtime |
+   |----------|---------|
+   | macOS | Podman |
+   | macOS | Docker |
+   | macOS | Colima |
+   | Linux (LUW) | Podman |
+   | Linux (LUW) | Docker |
 
-    If a supported runtime is already installed and available, the extension automatically detects and uses it.
-   
+   If a supported runtime is already installed and available, the extension automatically detects and uses it.
+
    If no supported runtime is detected, the extension installs and configures the required runtime before continuing with Db2 Community Edition instance creation.
 
-              
 2. When no Db2 instance exists, the **Add Db2 instance** workflow opens in a new editor tab. Enter the following details:
 
    ![Creating Db2 instance]({{site.baseurl}}/assets/images/create-db2-instance-window.png)
@@ -179,7 +184,7 @@ To create a Db2 instance by using IBM Db2 Community Edition, complete the follow
    - **Username**: Username for accessing the instance. The username is automatically converted to lowercase.
    - **Password**: Password for accessing the instance.
    - **Database Name**: Name of the database that you want to create. By default, the database name is set to `testdb`.
-   
+
    When you create a Db2 instance, Db2 Developer Extension automatically creates two databases:
    - **Testdb**: Default database that you specify during instance setup.
    - **SAMPLE**: Sample database for testing and learning purposes.
@@ -187,7 +192,6 @@ To create a Db2 instance by using IBM Db2 Community Edition, complete the follow
 3. Click **Create Db2 instance**.
 
 4. Review the Db2 instance creation checklist. The checklist verifies that your environment meets the prerequisites.
-
 
    The checklist runs automatically. When all checks are complete, the Db2 instance is created successfully.
 
@@ -198,16 +202,8 @@ To create a Db2 instance by using IBM Db2 Community Edition, complete the follow
 
    The database connections are listed in the **DB2 CONNECTIONS** pane.
 
-
    > **Note**: If you prefer to install Db2 Community Edition manually, see [Installing Db2 Community Edition manually]({{site.baseurl}}/docs/tips-and-tricks/manual-db2-installation).
    {: .note-right}
-
-
-
-
-
-
-
 
 
 ## What's next
