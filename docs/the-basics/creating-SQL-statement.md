@@ -23,7 +23,7 @@
 
 6. Review the inserted code:
 
-   - **Syntax highlighting** applies different colors to keywords, variables, and object names to improve readability.
+   - **Syntax highlighting** applies different colors to keywords, variables, and object names to improve readability. Color coding is applied consistently across all SQL file types, so keywords, data types, strings, comments, and other SQL elements are always rendered in the same colors.
    - **Syntax checking or validation** underlines errors with squiggly lines. Hover over an underlined element to view the error and possible fixes.
    - To view all issues, click **View problems** in the pop‑up or open **View** > **Problems**.
 
