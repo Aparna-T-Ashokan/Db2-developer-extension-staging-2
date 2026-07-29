@@ -160,19 +160,19 @@ To create a Db2 instance by using IBM Db2 Community Edition, complete the follow
    - Validates runtime availability.
    - Starts the runtime if required.
 
-**Multiple runtime support**: Db2 Community Edition supports the following container runtimes:
+   **Multiple runtime support**: Db2 Community Edition supports the following container runtimes:
 
-| Platform | Runtime |
-|----------|---------|
-| macOS | Podman |
-| macOS | Docker |
-| macOS | Colima |
-| Linux (LUW) | Podman |
-| Linux (LUW) | Docker |
+   | Platform | Runtime |
+   |----------|---------|
+   | macOS | Podman |
+   | macOS | Docker |
+   | macOS | Colima |
+   | Linux (LUW) | Podman |
+   | Linux (LUW) | Docker |
 
-If a supported runtime is already installed and available, the extension automatically detects and uses it.
+   If a supported runtime is already installed and available, the extension automatically detects and uses it.
 
-If no supported runtime is detected, the extension installs and configures the required runtime before continuing with Db2 Community Edition instance creation.
+   If no supported runtime is detected, the extension installs and configures the required runtime before continuing with Db2 Community Edition instance creation.
 
 2. When no Db2 instance exists, the **Add Db2 instance** workflow opens in a new editor tab. Enter the following details:
 
