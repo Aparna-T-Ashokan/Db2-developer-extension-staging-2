@@ -1,5 +1,8 @@
+---
+title: "Creating a Db2 instance by using Community Edition"
+---
 
-# Creating a Db2 instance by using Community Edition {#create-db2-instance-id}
+# {{ page.title }} {#create-db2-instance-id}
 ---
 
 > **Note**:
@@ -43,68 +46,64 @@ Ensure that your system meets the following requirements:
 
 **1. Enable and update WSL2**
 
-   a. Open Windows PowerShell as administrator.
+a. Open Windows PowerShell as administrator.
 
-   b. (Optional) Download and install WSL2 kernel update only if WSL is not installed:
+b. (Optional) Download and install WSL2 kernel update only if WSL is not installed:
 
-      ```
-      curl.exe -L -o wsl_update_x64.msi https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi
-      msiexec /i wsl_update_x64.msi /quiet /norestart
-      ```
+```
+curl.exe -L -o wsl_update_x64.msi https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi
+msiexec /i wsl_update_x64.msi /quiet /norestart
+```
 
-   c. Set WSL2 as the default version:
+c. Set WSL2 as the default version:
 
-      ```
-      wsl --set-default-version 2
-      ```
+```
+wsl --set-default-version 2
+```
 
-   d. Update WSL:
-   {: #step-1d}
+d. Update WSL:
+{: #step-1d}
 
-      ```
-      wsl --update
-      ```
+```
+wsl --update
+```
 
 **2. Install Ubuntu 22.04 on WSL**
 
-   > **Note**: The `wsl --install -d Ubuntu-22.04` command fails if WSL is not updated. Complete [Step 1d](#step-1d) before proceeding.
-   {: .note-right}
+> **Note**: The `wsl --install -d Ubuntu-22.04` command fails if WSL is not updated. Complete [Step 1d](#step-1d) before proceeding.
+{: .note-right}
 
-   a. Install Ubuntu 22.04:
+a. Install Ubuntu 22.04:
 
-      ```
-      wsl --install -d Ubuntu-22.04
-      ```
+```
+wsl --install -d Ubuntu-22.04
+```
 
-   b. When Ubuntu starts for the first time, enter a Linux username and set a password.
+b. When Ubuntu starts for the first time, enter a Linux username and set a password.
 
 **3. Set Ubuntu as the default WSL distribution**
 
-   a. Set Ubuntu as the default distribution:
+a. Set Ubuntu as the default distribution:
 
-      ```
-      wsl --set-default Ubuntu-22.04
-      ```
+```
+wsl --set-default Ubuntu-22.04
+```
 
-   After completing the previous step, restart your system.
+After completing the previous step, restart your system.
 
-   b. Launch WSL:
+b. Launch WSL:
 
-      ```
-      wsl
-      ```
+```
+wsl
+```
 
-   c. Verify that you are in the correct Ubuntu home directory by running the following command:
+c. Verify that you are in the correct Ubuntu home directory by running the following command:
 
-      ```
-      pwd
-      ```
+```
+pwd
+```
 
-   Expected output:
-
-      ```
-      /home/<username>
-      ```
+Expected output: `/home/<username>`
 
 After completing these steps, the Db2 Developer Extension automatically handles the following actions:
 
@@ -120,16 +119,16 @@ After completing these steps, the Db2 Developer Extension automatically handles 
 
 **4. Verify Db2 container status**
 
-   a. Run the following command to verify that the Db2 container is running. The `sudo` prefix is required for Docker commands until you log out and log back in to apply Docker group permissions:
+a. Run the following command to verify that the Db2 container is running. The `sudo` prefix is required for Docker commands until you log out and log back in to apply Docker group permissions:
 
-      ```
-      sudo docker ps
-      ```
+```
+sudo docker ps
+```
 
-   Expected output:
+Expected output:
 
-   - Db2 container status is running.
-   - Port `50001` is exposed and accessible from your Windows system.
+- Db2 container status is running.
+- Port `50001` is exposed and accessible from your Windows system.
 
 
 ## Installed dependencies
@@ -163,13 +162,13 @@ To create a Db2 instance by using IBM Db2 Community Edition, complete the follow
 
    **Multiple runtime support**: Db2 Community Edition supports the following container runtimes:
 
-   | Platform | Runtime |
-   |----------|---------|
-   | macOS | Podman |
-   | macOS | Docker |
-   | macOS | Colima |
-   | Linux (LUW) | Podman |
-   | Linux (LUW) | Docker |
+| Platform | Runtime |
+|----------|---------|
+| macOS | Podman |
+| macOS | Docker |
+| macOS | Colima |
+| Linux (LUW) | Podman |
+| Linux (LUW) | Docker |
 
    If a supported runtime is already installed and available, the extension automatically detects and uses it.
 
