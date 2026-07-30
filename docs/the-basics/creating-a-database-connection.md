@@ -76,7 +76,7 @@ To work with IBM Db2 databases, you need to create a database connection to conn
       - **Connection URL**: A bidirectional JDBC (Java Database Connectivity) URL field. It auto-generates the URL as you fill in the **Host**, **Port**, and **Database** fields. You can also paste a complete JDBC URL directly into this field to automatically populate the **Host**, **Port**, **Database**, and custom JDBC properties.
       - **Username**: Username to access the Db2 instance.
       - **Password**: Password to access the Db2 instance.
-3. Under the **Security** section, the **Use SSL** checkbox is selected by default. This option is used to enable SSL encryption for the database connection.
+3. Under the **Security** section, the **Use SSL** checkbox is selected by default. This option enables SSL encryption for the database connection. When selected, `sslConnection=true` and `sslCertificateType` are automatically added to the connection properties.
       - **Certificate**: Select the SSL certificate type from the list. The default value is **Public CA**. Other options are **JKS** and **PKCS12**.
       - **Truststore Password**: Enter the password for your truststore file.
       - **Truststore Path**: Provide the file system path to your truststore file.
