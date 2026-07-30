@@ -55,10 +55,11 @@ To use natural language queries, ensure that:
    - Displays the results in the **Results** pane below the editor.
    - Saves the generated SQL query to **QUERY HISTORY**.
 
+## Managing conversations
 
-   Click Conversation History icon (![Open SQL Editor]({{site.baseurl}}/assets/images/conversation-history.png){:width="25" :height="25"}) to see the **Conversation History** panel. It lists your previously asked questions.
+Click Conversation History icon (![Open SQL Editor]({{site.baseurl}}/assets/images/conversation-history.png){:width="25" :height="25"}) to see the **Conversation History** panel. It lists your previously asked questions.
 
-   The following actions are available for managing your conversations:
+The following actions are available for managing your conversations:
 
    - **Search**: Use the search bar at the top of the **Conversation History** panel to find a specific conversation by keyword.
    - **Rename**: Click rename (![Rename]({{site.baseurl}}/assets/images/rename.png){:width="25" :height="25"}) next to a conversation entry to give it a custom name. In the **Rename Conversation** dialog, enter the new name and click **Rename**.
