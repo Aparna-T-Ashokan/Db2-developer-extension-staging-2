@@ -5,3 +5,29 @@ a[href*="marketplace.visualstudio.com/items?itemName"] {
 a:contains("Rate this extension") {
   display: none !important;
 }
+
+/* Apply table styles to tables nested inside list items (e.g. ol/ul > li > table) */
+.td-content li table {
+    width: 100%;
+    margin-bottom: 1rem;
+    background-color: transparent;
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.td-content li table th,
+.td-content li table td {
+    padding: .75rem;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+}
+
+.td-content li table thead th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #dee2e6;
+}
+
+.td-content li table tbody tr:nth-of-type(odd) {
+    background-color: rgba(0, 0, 0, .05);
+}
