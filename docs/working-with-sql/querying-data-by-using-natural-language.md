@@ -24,7 +24,7 @@ To use natural language queries, ensure that:
 ## Connecting to Genius Hub
 
 1. Open Db2 Developer Extension.
-2. Click **Toggle Db2 AI Assistant** icon ![Toggle Db2 AI Assistant]({{site.baseurl}}/assets/images/Toggle-db2-ai-assistant.png){:width="25" :height="25"} to open the **Db2 AI Assistant** view.
+2. Click **Toggle Db2 AI Assistant** (![Toggle Db2 AI Assistant]({{site.baseurl}}/assets/images/Toggle-db2-ai-assistant.png){:width="25" :height="25"}) to open the **Db2 AI Assistant** view.
 3. Enter the following information:
    - **Genius Hub URL**
    - **User ID**
@@ -33,18 +33,18 @@ To use natural language queries, ensure that:
 
    After the connection is established, the **Db2 AI Assistant** chat interface is displayed.
 
-   ![Db2 AI Assistant chat interface]({{site.baseurl}}/assets/images/chat-window.png)
+   ![Db2 AI Assistant chat interface]({{site.baseurl}}/assets/images/chat-window.png){:width="600" :height="1200"}
 
 ## Querying data
 
 1. In the **Db2 AI Assistant** chat interface, click the **Choose Database** dropdown at the bottom and select the database.
-2. Enter your question in natural language in the chat input. For example:
+2. Enter your question in natural language. For example:
 
    ```
    List the top 10 customers by total sales in 2025
    ```
 
-3. Press **Enter**.
+3. Press **Send**.
 
    The extension:
 
@@ -56,14 +56,14 @@ To use natural language queries, ensure that:
    - Saves the generated SQL query to **QUERY HISTORY**.
 
 
-Click the **Conversation History** icon ![Open SQL Editor]({{site.baseurl}}/assets/images/conversation-history.png){:width="25" :height="25"} to see the **Conversation History** panel. It lists your previously asked questions.
+Click Conversation History icon (![Open SQL Editor]({{site.baseurl}}/assets/images/conversation-history.png){:width="25" :height="25"}) to see the **Conversation History** panel. It lists your previously asked questions.
 
 The following actions are available for managing your conversations:
 
 - **Search**: Use the search bar at the top of the **Conversation History** panel to find a specific conversation by keyword.
-- **Rename**: Click rename ![Rename]({{site.baseurl}}/assets/images/rename.png){:width="25" :height="25"} next to a conversation entry to give it a custom name. In the **Rename Conversation** dialog, enter the new name and click **Rename**.
-- **Bookmark**: Click bookmark ![Bookmark]({{site.baseurl}}/assets/images/bookmark.png){:width="25" :height="25"} next to a conversation to mark it for quick access later.
-- **Filter**: Click filter ![Filter]({{site.baseurl}}/assets/images/filter.png){:width="25" :height="25"} to narrow down the conversation list by database. Select a database from the **Database** dropdown to show only conversations that were run against that database.
+- **Rename**: Click rename (![Rename]({{site.baseurl}}/assets/images/rename.png){:width="25" :height="25"}) next to a conversation entry to give it a custom name. In the **Rename Conversation** dialog, enter the new name and click **Rename**.
+- **Bookmark**: Click bookmark (![Bookmark]({{site.baseurl}}/assets/images/bookmark.png){:width="25" :height="25"}) next to a conversation to mark it for quick access later.
+- **Filter**: Click filter (![Filter]({{site.baseurl}}/assets/images/filter.png){:width="25" :height="25"}) to narrow down the conversation list by database. Select a database from the **Database** dropdown to show only conversations that were run against that database.
 
 Click any conversation entry to reload it.
 
