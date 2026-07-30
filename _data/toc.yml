@@ -26,8 +26,8 @@
           url: "docs/working-with-Db2-objects/Procedure-objects"
         - title: "Exploring views"
           url: "docs/working-with-Db2-objects/Db2-objects-view"
-        - title: "Generating ER diagrams"
-          url: "docs/working-with-Db2-objects/er-diagram"
+ #       - title: "Generating ER diagrams"
+ #         url: "docs/working-with-Db2-objects/er-diagram"
     - title: Working with SQL
       url: "docs/working-with-sql"
       children:
@@ -41,8 +41,8 @@
  #         url: "docs/working-with-sql/running-sql-from-history"
         - title: "Managing queries in Query History"
           url: "docs/working-with-sql/query-history"
-        - title: "Querying data by using natural language"
-          url: "docs/working-with-sql/querying-data-by-using-natural-language"
+ #       - title: "Querying data by using natural language"
+ #         url: "docs/working-with-sql/querying-data-by-using-natural-language"
         - title: "Limiting the number of rows returned"
           url: "docs/working-with-sql/limiting-the-number-of-rows-returned"
 #        - title: "Running SQL statements from any file"

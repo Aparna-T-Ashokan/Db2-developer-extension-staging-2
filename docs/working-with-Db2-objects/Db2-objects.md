@@ -93,7 +93,7 @@ In Db2, every table is associated with a set of metadata and structural componen
    - Cardinality: Number of distinct values in the indexed columns.
    
    
-   **Data**: Shows the actual rows that are stored in the table, including columns with large-object (LOB) data types such as CLOB, BLOB, DBCLOB, XML, and BINARY. Click a LOB cell to open the **LOB Viewer**, which displays the column name, data type, character count, format, and the full captured content. Click **Copy** in the LOB Viewer to copy the content to the clipboard.
+   **Data**: Shows the actual rows that are stored in the table, including columns with large-object (LOB) data types such as CLOB, BLOB, DBCLOB, XML, BINARY, Spatial, Vector Embeddings, and Metadata. Click a LOB cell to open the **LOB Viewer**, which displays the column name, data type, character count, format, and the full captured content. Click **Copy** in the LOB Viewer to copy the content to the clipboard. If a LOB cell contains a null value, the LOB Viewer displays it as null regardless of the LOB data type.
 
 
       ![Adding a database connection]({{site.baseurl}}/assets/images/table-data.png)

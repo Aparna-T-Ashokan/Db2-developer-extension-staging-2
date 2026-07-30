@@ -49,8 +49,7 @@ Designed for developers, this extension delivers a unified, intuitive environmen
 - Browse schemas, tables, views, procedures, and other objects in a clean tree structure.
 - View check constraints on table objects.
 - Support for table and object names that contain special characters.
-- View LOB data (CLOB, BLOB, DBCLOB, XML, Binary, and more) directly in the LOB Viewer.
-- Generate ER diagrams for individual tables and entire schemas.
+- View LOB data (CLOB, BLOB, DBCLOB, XML, Binary, Spatial, Vector Embeddings, Metadata, and more) directly in the LOB Viewer.
 - Right-click objects for instant access to common operations.
 
 <!--

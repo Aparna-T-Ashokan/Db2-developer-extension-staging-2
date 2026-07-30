@@ -6,49 +6,60 @@ title: "Creating a Db2 instance by using Community Edition"
 ---
 
 > **Note**:
-> Skip this step if you already have a Db2 instance.
+> Skip this procedure if you already have a Db2 Community Edition instance.
 {: .note-right}
+
+## Overview
+
+The IBM Db2 Developer Extension can automatically provision a fully functional Db2 Community Edition instance on your local machine. The extension installs any required container runtime (if needed), deploys Db2 inside a container, creates the requested databases, and automatically registers database connections in the extension.
+
+No manual container commands or environment configuration are required.
 
 ## Prerequisites
 
-Before you create a Db2 instance, ensure that your system meets the following requirements:
+Before creating a Db2 instance, ensure the following requirements are met.
 
-#### MacOS
+#### All platforms
 
-- **Homebrew**: Homebrew is required for installing dependencies such as Colima and Docker CLI. If Homebrew is not installed on your system, the extension shows a prompt to install it during the Db2 instance setup. The prompt opens a terminal window where you can enter your system password and interact as needed. The installation script runs automatically. Monitor the terminal for any errors. After Homebrew is installed, the Db2 instance creation resumes automatically.
+- Visual Studio Code is installed.
+- An active internet connection is available to download the Db2 Community Edition container image.
+- At least 4 GB of available RAM.
+- Sufficient free disk space for the Db2 container image and databases.
 
-- **System resources**: Ensure that your system has a minimum of 4 GB of available RAM and sufficient disk space for the Db2 container.
+#### Windows
 
-The Db2 Developer Extension automatically detects supported runtimes during instance creation.
+- Windows Subsystem for Linux (WSL2) is installed.
+- A supported Linux distribution (such as Ubuntu) is configured.
+- WSL2 is set as the default version.
 
-#### Windows Subsystem for Linux (WSL)
+> **Note**: The Db2 Developer Extension supports Db2 Community Edition installation only inside WSL2.
+>
+> If WSL2 or a Linux distribution is not detected, the extension displays a warning with a **View Installation Guide** button that opens the Microsoft WSL2 documentation. The extension does not install WSL2 itself — WSL2 must be set up manually before using the **Create Db2 Instance** feature.
+{: .note-right}
 
-If you use the extension within WSL on Windows, ensure that the following prerequisites are met:
+If WSL2 is not already configured, see [Setting up WSL2 (Windows only)](#setting-up-wsl2-windows-only) below.
 
-- [WSL 2 is installed](#setting-up-wsl2-and-docker-for-db2-community-edition) and set as the default version.
-- Docker Desktop for Windows is installed with WSL integration enabled. In Docker Settings, go to **Resources** > **WSL Integration** and enable it.
-- Ubuntu or another supported Linux distribution is configured as your WSL environment.
-- A minimum of 4 GB of RAM is allocated to WSL.
+#### macOS
 
-Without these prerequisites, the Db2 container setup might fail. For more information about WSL setup, see the [Microsoft WSL documentation](https://docs.microsoft.com/en-us/windows/wsl/).
+No additional software is required before starting. If Homebrew is not installed, the extension installs it automatically after requesting your permission.
 
-#### Setting up WSL2 and Docker for Db2 Community Edition
+#### Setting up WSL2 (Windows only)
 
-This procedure describes how to prepare a Windows 10 or Windows 11 system to run IBM Db2 Community Edition by using WSL2 (Ubuntu 22.04) and Docker Engine.
+If WSL2 is not already configured on your system, complete the following steps before creating a Db2 Community Edition instance.
 
 **System requirements**
 
-Ensure that your system meets the following requirements:
+Ensure that your Windows system meets the following requirements:
 
-- Windows 10 or Windows 11 with administrator privileges
-- Virtualization enabled in BIOS
-- Latest version of Visual Studio Code
+- Windows 10 or Windows 11 with administrator privileges.
+- Virtualization enabled in the BIOS.
+- Visual Studio Code installed.
 
 **1. Enable and update WSL2**
 
-a. Open Windows PowerShell as administrator.
+a. Open Windows PowerShell as an administrator.
 
-b. (Optional) Download and install WSL2 kernel update only if WSL is not installed:
+b. (Optional) If WSL is not already installed, install the WSL2 kernel update:
 
 ```
 curl.exe -L -o wsl_update_x64.msi https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi
@@ -68,36 +79,36 @@ d. Update WSL:
 wsl --update
 ```
 
-**2. Install Ubuntu 22.04 on WSL**
+**2. Install Ubuntu**
 
-> **Note**: The `wsl --install -d Ubuntu-22.04` command fails if WSL is not updated. Complete [Step 1d](#step-1d) before proceeding.
+> **Note**: The `wsl --install Ubuntu` command might fail if WSL has not been updated. Complete [Step 1d](#step-1d) before continuing.
 {: .note-right}
 
-a. Install Ubuntu 22.04:
+a. Install Ubuntu:
 
 ```
-wsl --install -d Ubuntu-22.04
+wsl --install Ubuntu
 ```
 
-b. When Ubuntu starts for the first time, enter a Linux username and set a password.
+b. When Ubuntu starts for the first time, create your Linux user account and password.
 
-**3. Set Ubuntu as the default WSL distribution**
+**3. Configure Ubuntu as the default distribution**
 
-a. Set Ubuntu as the default distribution:
+a. Set Ubuntu as the default WSL distribution (replace `Ubuntu` with your installed distribution name if different):
 
 ```
-wsl --set-default Ubuntu-22.04
+wsl --set-default Ubuntu
 ```
 
-After completing the previous step, restart your system.
+b. Restart your system.
 
-b. Launch WSL:
+c. Launch WSL:
 
 ```
 wsl
 ```
 
-c. Verify that you are in the correct Ubuntu home directory by running the following command:
+d. Verify that you are in your Ubuntu home directory:
 
 ```
 pwd
@@ -105,64 +116,39 @@ pwd
 
 Expected output: `/home/<username>`
 
-After completing these steps, the Db2 Developer Extension automatically handles the following actions:
+After WSL2 is configured, return to Visual Studio Code and use the **Create Db2 Instance** option in the **DB2 CONNECTIONS** view. The Db2 Developer Extension automatically detects the WSL2 environment and performs the remaining installation and configuration steps, including installing the container runtime (Podman or Docker) inside WSL2.
 
-- Detects the WSL environment.
-- Installs Docker Engine inside WSL.
-- Configures Docker permissions.
-- Downloads the Db2 Community Edition image.
-- Creates and starts the Db2 container.
-- Initializes the Db2 instance.
-- Creates the database.
-- Loads sample data.
-- Verifies connectivity.
+## Required permissions
 
-**4. Verify Db2 container status**
+Some installation steps may require administrator (`sudo`) privileges depending on your operating system and environment.
 
-a. Run the following command to verify that the Db2 container is running. The `sudo` prefix is required for Docker commands until you log out and log back in to apply Docker group permissions:
+Whenever elevated permissions are required, the extension uses one of two mechanisms:
 
-```
-sudo docker ps
-```
+- **VS Code modal dialog**: Shown for decisions such as approving corrupted-runtime cleanup or selecting an alternative port. You confirm or cancel directly inside VS Code before the operation proceeds.
+- **Terminal (sudo) prompt**: Shown inside the Db2 Community terminal panel when a shell script requires elevated privileges (for example, during container runtime installation on Linux/WSL2). You enter your system password in the terminal when prompted.
 
-Expected output:
+No privileged operations are performed without user consent.
 
-- Db2 container status is running.
-- Port `50001` is exposed and accessible from your Windows system.
+## Supported container runtimes
 
+The extension automatically detects and selects the most suitable container runtime in the following order:
 
-## Installed dependencies
+1. Podman (preferred)
+2. Docker
+3. Colima (macOS only)
 
-During the Db2 instance creation, the extension automatically installs the necessary libraries and tools.
-
-#### MacOS
-
-- **Colima**: A lightweight Docker‑compatible runtime used to run the Db2 Community Edition container without Docker Desktop.
-- **Docker CLI**: The Docker command‑line interface, installed using Homebrew alongside Colima. Docker CLI is used to manage the container operations.
-
-#### Linux
-
-- **Docker Engine or Docker CLI**: Installed using the system package manager (for example, apt-get) if they are not already available.
-
-These dependencies are installed on your system to support the Db2 Community Edition container.
+If none of the supported runtimes are available, the extension automatically installs one.
 
 ## Procedure
 
 To create a Db2 instance by using IBM Db2 Community Edition, complete the following steps:
 
-1. In the **DB2 CONNECTIONS** pane, click the **Create Db2 instance** button or the **Create Db2 Instance** icon ![Creating new Db2 instance]({{site.baseurl}}/assets/images/create-db2-instance.png){:width="25" :height="25"}.
+1. In the **DB2 CONNECTIONS** view, click the **Create Db2 instance** button or the **Create Db2 Instance** icon ![Creating new Db2 instance]({{site.baseurl}}/assets/images/create-db2-instance.png){:width="25" :height="25"}.
 
-   The extension checks for an existing Db2 instance on your system. If an instance exists, the **Db2 Instance Already Exists** workflow opens in a new editor tab. For more information, see [Managing an existing Db2 instance]({{site.baseurl}}/docs/the-basics/creating-a-database-connection#managing-db2-instance).
+   - If an existing Db2 Community Edition instance is detected, the **Update Db2 Instance** page opens.
+   - Otherwise, the **Create Db2 Instance** page opens.
 
-   The extension automatically detects available runtimes before instance creation begins. During runtime validation, the extension:
-   - Detects the operating system.
-   - Searches for supported runtimes.
-   - Validates runtime availability.
-   - Starts the runtime if required.
-
-   **Multiple runtime support**: On macOS, Db2 Community Edition supports Podman, Docker, and Colima. On Linux (LUW), it supports Podman and Docker. If a supported runtime is already installed and available, the extension automatically detects and uses it. If no supported runtime is detected, the extension installs and configures the required runtime before continuing with Db2 Community Edition instance creation.
-
-2. When no Db2 instance exists, the **Add Db2 instance** workflow opens in a new editor tab. Enter the following details:
+2. Enter the required information:
 
    ![Creating Db2 instance]({{site.baseurl}}/assets/images/create-db2-instance-window.png)
 
@@ -170,27 +156,80 @@ To create a Db2 instance by using IBM Db2 Community Edition, complete the follow
    - **Port**: Internal Docker port number (between 1 and 65535) for the instance.
    - **Username**: Username for accessing the instance. The username is automatically converted to lowercase.
    - **Password**: Password for accessing the instance.
-   - **Database Name**: Name of the database that you want to create. By default, the database name is set to `testdb`.
-
-   When you create a Db2 instance, Db2 Developer Extension automatically creates two databases:
-   - **Testdb**: Default database that you specify during instance setup.
-   - **SAMPLE**: Sample database for testing and learning purposes.
+   - **Database Name**: Name of the database that you want to create. By default, the database name is set to `TESTDB`.
 
 3. Click **Create Db2 instance**.
 
-4. Review the Db2 instance creation checklist. The checklist verifies that your environment meets the prerequisites.
+   If the port you specified is already in use on your machine, a dialog appears offering an alternative available port. You can accept the suggested port or cancel to enter a different one manually.
 
-   The checklist runs automatically. When all checks are complete, the Db2 instance is created successfully.
+4. The extension automatically performs the following setup process. Progress is displayed in real time through the setup progress panel.
 
-   During the Db2 instance creation process, the extension:
-   - Creates the `Testdb` (or your chosen name) and `SAMPLE` databases.
-   - Creates corresponding database connections for both databases.
-   - Automatically connects to the `Testdb` (or your chosen name) and `SAMPLE` databases.
+   a. Detects the operating system and architecture.
 
-   The database connections are listed in the **DB2 CONNECTIONS** pane.
+   b. Detects available container runtimes.
+
+   c. Starts and validates the selected runtime. (Skipped if no runtime is found — see step e.)
+
+   d. Checks for an existing Db2 Community Edition instance. (Only runs if a healthy runtime exists.)
+
+   e. Installs a supported container runtime if one is not available. (Skipped if a healthy runtime was already found in step b.)
+
+   f. Downloads and installs Db2 Community Edition.
+
+   g. Creates the requested database.
+
+   h. Creates the `SAMPLE` database.
+
+   i. Verifies database connectivity.
+
+   j. Registers database connection profiles in the extension.
+
+5. When setup completes successfully:
+
+   - The requested database and `SAMPLE` database are available.
+   - Connection profiles are created automatically and displayed in the **DB2 CONNECTIONS** view.
+   - The **Update Db2 Instance** page opens.
 
    > **Note**: If you prefer to install Db2 Community Edition manually, see [Installing Db2 Community Edition manually]({{site.baseurl}}/docs/tips-and-tricks/manual-db2-installation).
    {: .note-right}
+
+## Automatic runtime installation
+
+If no supported container runtime is detected, the extension installs one automatically. Depending on the operating system, the extension may install:
+
+| Platform | Automatically installed |
+|----------|------------------------|
+| macOS | Homebrew (if required), then Podman, Docker, or Colima |
+| Linux | Podman or Docker |
+| WSL2 | Podman or Docker inside WSL2 |
+
+Administrator privileges may be required during installation.
+
+## Databases created
+
+During setup, the extension creates:
+
+- Your specified database (default: `TESTDB`)
+- `SAMPLE` database
+
+Connection profiles for both databases are automatically created and displayed in the **DB2 CONNECTIONS** view.
+
+## Installation time
+
+Installation time depends on your internet connection and system performance. Typical installation times are:
+
+| Platform | Estimated time |
+|----------|---------------|
+| macOS | 15–20 minutes |
+| Linux / WSL2 | 10–15 minutes |
+
+## Notes
+
+- Installation requires an internet connection to download the Db2 Community Edition container image.
+- The extension displays installation progress throughout the setup process.
+- You may be prompted for administrator (`sudo`) privileges when required — either via a VS Code dialog or directly in the terminal.
+- Existing Db2 Community Edition instances are detected automatically and reused whenever possible.
+- **Windows only**: WSL2 must be installed and configured before using this feature. The extension detects missing WSL2 and provides a link to the Microsoft installation guide, but does not install WSL2 itself.
 
 
 ## What's next
