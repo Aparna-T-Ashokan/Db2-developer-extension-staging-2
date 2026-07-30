@@ -63,5 +63,5 @@ The following actions are available for managing your conversations:
 - **Bookmark**: Click the **bookmark** icon next to a conversation to mark it for quick access later.
 - **Filter**: Use the **filter** option to narrow down the conversation list by database. Select a database from the **Database** dropdown to show only conversations that were run against that database.
 
-Click any conversation entry to reload it.
+Click any conversation entry to reload it. 
 
