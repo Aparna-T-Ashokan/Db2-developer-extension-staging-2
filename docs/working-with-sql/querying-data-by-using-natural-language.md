@@ -33,7 +33,7 @@ To use natural language queries, ensure that:
 
    After the connection is established, the **Db2 AI Assistant** chat interface is displayed.
 
-   ![Db2 AI Assistant chat interface]({{site.baseurl}}/assets/images/chat-window.png){:width="600" :height="1200"}
+   ![Db2 AI Assistant chat interface]({{site.baseurl}}/assets/images/chat-window.png){:width="400" :height="800"}
 
 ## Querying data
 
@@ -56,14 +56,14 @@ To use natural language queries, ensure that:
    - Saves the generated SQL query to **QUERY HISTORY**.
 
 
-Click Conversation History icon (![Open SQL Editor]({{site.baseurl}}/assets/images/conversation-history.png){:width="25" :height="25"}) to see the **Conversation History** panel. It lists your previously asked questions.
+   Click Conversation History icon (![Open SQL Editor]({{site.baseurl}}/assets/images/conversation-history.png){:width="25" :height="25"}) to see the **Conversation History** panel. It lists your previously asked questions.
 
-The following actions are available for managing your conversations:
+   The following actions are available for managing your conversations:
 
-- **Search**: Use the search bar at the top of the **Conversation History** panel to find a specific conversation by keyword.
-- **Rename**: Click rename (![Rename]({{site.baseurl}}/assets/images/rename.png){:width="25" :height="25"}) next to a conversation entry to give it a custom name. In the **Rename Conversation** dialog, enter the new name and click **Rename**.
-- **Bookmark**: Click bookmark (![Bookmark]({{site.baseurl}}/assets/images/bookmark.png){:width="25" :height="25"}) next to a conversation to mark it for quick access later.
-- **Filter**: Click filter (![Filter]({{site.baseurl}}/assets/images/filter.png){:width="25" :height="25"}) to narrow down the conversation list by database. Select a database from the **Database** dropdown to show only conversations that were run against that database.
+   - **Search**: Use the search bar at the top of the **Conversation History** panel to find a specific conversation by keyword.
+   - **Rename**: Click rename (![Rename]({{site.baseurl}}/assets/images/rename.png){:width="25" :height="25"}) next to a conversation entry to give it a custom name. In the **Rename Conversation** dialog, enter the new name and click **Rename**.
+   - **Bookmark**: Click bookmark (![Bookmark]({{site.baseurl}}/assets/images/bookmark.png){:width="25" :height="25"}) next to a conversation to mark it for quick access later.
+   - **Filter**: Click filter (![Filter]({{site.baseurl}}/assets/images/filter.png){:width="25" :height="25"}) to narrow down the conversation list by database. Select a database from the **Choose Database** dropdown to show only conversations that were run against that database.
 
-Click any conversation entry to reload it.
+   Click any conversation entry to reload it.
 
