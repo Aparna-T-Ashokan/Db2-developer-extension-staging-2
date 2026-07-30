@@ -38,11 +38,11 @@ You can search in the result set. Click **Export** to download your query result
 
 ## Viewing LOB data
 
-When a result cell contains a large-object (LOB) data type such as CLOB, BLOB, DBCLOB, XML, or BINARY, click the cell to open the **LOB Viewer**. The LOB Viewer displays the column name, data type, character count, and the full captured content. Click **Copy** to copy the content to the clipboard.
+When a result cell contains a large-object (LOB) data type such as CLOB, BLOB, DBCLOB, XML, BINARY, Spatial, Vector Embeddings, or Metadata, click the cell to open the **LOB Viewer**. The LOB Viewer displays the column name, data type, character count, and the full captured content. Click **Copy** to copy the content to the clipboard.
 
 You can open multiple columns in the LOB Viewer simultaneously — each opens in its own tab. Clicking the same cell a second time focuses the existing tab rather than opening a duplicate.
 
-> **Note**: A zero-byte BLOB value is rendered as `NULL` in the viewer.
+> **Note**: A zero-byte or null LOB value is rendered as `NULL` in the viewer, regardless of the LOB data type.
 {: .note-right}
 
 ## Running transactions
