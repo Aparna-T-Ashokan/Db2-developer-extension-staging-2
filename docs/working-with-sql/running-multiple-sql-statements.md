@@ -78,6 +78,8 @@ This example demonstrates the following workflow:
 
 Because the connection remains associated with the SQL editor tab, session-specific objects and settings, such as temporary tables and session variables, remain available across query executions while the dedicated connection is active.
 
+Transactional query support is available in the SQL file Editor. The result set is limited to 100 rows. To retrieve the complete result set, run the query directly in the SQL file Editor.
+
 > **Note:** Each SQL editor tab maintains its own dedicated connection and transaction state. Transactions, temporary tables, session variables, and other session-specific settings created in one SQL editor tab are isolated from other open SQL editor tabs.
 {: .note-right}
 
