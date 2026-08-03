@@ -40,7 +40,7 @@ The IBM Db2 Developer Extension icon (![Db2 developer icon]({{site.baseurl}}/ass
   <!--
    - **Genius Hub: Allow Self Signed Certificate**
      Allow self-signed TLS certificates when connecting to IBM Db2 Genius Hub. Enable this only if your Genius Hub server is using a self-signed certificate.
--->
+  -->
 
 ## Using the IBM Db2 Developer Extension
 ---
