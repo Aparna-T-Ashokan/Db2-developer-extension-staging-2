@@ -68,24 +68,19 @@ To work with IBM Db2 databases, you need to create a database connection to conn
 1. In the **DB2 CONNECTIONS** pane, click **Add connection** button or **Add connection** ![Adding a database connection]({{site.baseurl}}/assets/images/add-database-connection.png){:width="25" :height="25"} to open the **Db2 Connection** workflow in a new editor tab.
 ![Adding a database connection]({{site.baseurl}}/assets/images/add-db2-connection.png)
 
-2. Enter the following details:
-      - **Host**: IP address or hostname of the Db2 server you want to connect to.
-      - **Port**: Port number used by the Db2 server for the database connection.
-      - **Database**: Name of the Db2 database you want to connect to.
-      - **Connection name** (optional): A unique name to identify this connection.
-      - **Connection URL**: A bidirectional JDBC (Java Database Connectivity) URL field. It auto-generates the URL as you fill in the **Host**, **Port**, and **Database** fields. You can also paste a complete JDBC URL directly into this field to automatically populate the **Host**, **Port**, **Database**, and custom JDBC properties.
-      - **Username**: Username to access the Db2 instance.
-      - **Password**: Password to access the Db2 instance.
-3. Under the **Security** section, the **Use SSL** checkbox is selected by default. This option enables SSL encryption for the database connection. When selected, `sslConnection=true` and `sslCertificateType` are automatically added to the connection properties.
-      - **Certificate**: Select the SSL certificate type from the list. The default value is **Public CA**. Other options are **JKS** and **PKCS12**.
-      - **Truststore Password**: Enter the password for your truststore file.
-      - **Truststore Path**: Provide the file system path to your truststore file.
-4. (Optional) Select the **Save credentials** checkbox to save your credentials.
-5. (Optional) In the **Optional JDBC Properties** section, click **+ Add Property** to add custom JDBC connection properties. Each property requires a **Name** and a **Value**. Click **Remove** to delete a property.
-6. Click **Test connection** to verify the credentials are correct.
-   You receive a **Test connection successful** notification if the credentials are correct.
+2. Enter the **Connection URL**:
+      - Provide the JDBC connection URL for your Db2 database (for example, `jdbc:db2://<host>:<port>/<database>`).
+3. (Optional) Under the **Security** section, select **Use SSL** to enable SSL encryption for the database connection. When enabled, SSL properties (such as `sslConnection=true` and `sslCertificateType=StandardCA`) are automatically added to **Optional JDBC Properties**, and you can configure:
+      - **Certificate**: Select the SSL certificate type (**Public CA** is selected by default; other options include **JKS** and **PKCS12**).
+      - **Truststore Password**: Enter the password for your truststore file (if applicable).
+      - **Truststore Path**: Provide the file system path to your truststore file (if applicable).
+4. Enter your connection credentials:
+      - **Username \***: Enter the username to access the Db2 database. (Required field).
+      - **Password**: Enter the password to access the Db2 database. You can click the eye icon to toggle password visibility.
+5. (Optional) Select the **Save credentials** checkbox to save your credentials securely in Visual Studio Code.
+6. (Optional) In the **Optional JDBC Properties** section, review automatically populated properties or click **+ Add Property** to add custom JDBC connection properties as key-value pairs. Click **Remove** to delete a property.
 7. Click **Create connection**.
-   If your connection was created successfully, you can see it on the **DB2 CONNECTIONS** pane.
+   If your connection was created successfully, you can see it on the **DB2 CONNECTIONS** pane. Click **Cancel** to close the tab without saving.
 
 
 > **Note**: If your database connection gets disconnected, click the **Connect** icon (![Connecting to database]({{site.baseurl}}/assets/images/connect-database.png){:width="25" :height="25"}) on the specific database connection. When prompted, enter the password in the input field of the extension and press **Enter** to connect to the database again.
