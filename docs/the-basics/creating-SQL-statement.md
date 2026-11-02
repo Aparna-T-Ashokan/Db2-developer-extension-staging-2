@@ -2,7 +2,7 @@
 # Creating a simple SQL statement
 ---
 
-1. Ensure that you are connected to a Db2 database in the IBM Db2 Developer Extension.
+1. Ensure that you are connected to a Db2 database in the IBM Db2 Genius Code.
 
 2. Create a new file by clicking **File > New File**. 
 

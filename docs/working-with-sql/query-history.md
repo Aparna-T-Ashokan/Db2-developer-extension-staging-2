@@ -12,7 +12,7 @@ Query history is persistent — your previously run queries are retained even af
 ## Viewing queries in Query History
 ---
 
-1. On the **DB2 CONNECTIONS** pane, locate **QUERY HISTORY** and expand it.
+1. On the **Db2 Connections** pane, locate **QUERY HISTORY** and expand it.
 
 
    This section lists all previously run queries, which are grouped by timestamp and sorted in reverse chronological order, by default.

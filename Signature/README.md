@@ -1,6 +1,6 @@
-# IBM Db2 Developer Extension - Signature Verification Guide
+# IBM Db2 Genius Code - Signature Verification Guide
 
-Verify the authenticity and integrity of the IBM Db2 Developer Extension before installation.
+Verify the authenticity and integrity of the IBM Db2 Genius Code before installation.
 
 ## What You'll Need
 
@@ -105,7 +105,7 @@ openssl verify -CAfile PRD0015359key.pem.chain PRD0015359key.pem.cer
 PRD0015359key.pem.cer: OK
 ```
 
-Once installed, you can use OpenSSL to verify the certificate chain for IBM Db2 Developer Extension.
+Once installed, you can use OpenSSL to verify the certificate chain for IBM Db2 Genius Code.
 
 ## Certificate Information
 

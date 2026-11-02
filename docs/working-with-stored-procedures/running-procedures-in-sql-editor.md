@@ -46,7 +46,7 @@ To run a procedure, do the following steps.
 
 ### Step 1: Locate your procedure
 
-Verify that your procedure exists in the database by expanding the schema in the DB2 CONNECTIONS pane:
+Verify that your procedure exists in the database by expanding the schema in the Db2 Connections pane:
 
   1. Go to your database connection (for example, `localhost@SAMPLE`).
   2. Expand the schema (for example, `DB2INST1`).
@@ -57,7 +57,7 @@ If you haven't created the procedure yet, see [Creating native SQL procedures]({
 
 ### Step 2: Open the SQL Editor
 
-Click the **Open SQL Editor** (![Opening a new SQL editor]({{site.baseurl}}/assets/images/open-sql-editor.png){:width="25" :height="25"}) in the DB2 CONNECTIONS pane.
+Click the **Open SQL Editor** (![Opening a new SQL editor]({{site.baseurl}}/assets/images/open-sql-editor.png){:width="25" :height="25"}) in the Db2 Connections pane.
 
 ### Step 3: Select the database connection
 

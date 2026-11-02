@@ -6,7 +6,7 @@ title: "Notices"
 
 NOTICES AND INFORMATION
 
-IBM Db2 Developer Extension 1.1
+IBM Db2 Genius Code 1.1
 
 The IBM license agreement and any applicable information on the web download page for IBM products refers Licensee to this file for details concerning notices applicable to code included in the products listed above ("the Program").
 
@@ -16,7 +16,7 @@ Please note: This Notices file may identify information that is not used by, or 
 
 IMPORTANT: IBM does not represent or warrant that the information in this NOTICES file is accurate. Third party websites are independent of IBM and IBM does not represent or warrant that the information on any third party website referenced in this NOTICES file is accurate. IBM disclaims any and all liability for errors and omissions or for any damages accruing from the use of this NOTICES file or its contents, including without limitation URLs or references to any third party websites.
 
-======  START OF IBM Db2 Developer Extension 1.1 NOTICES AND INFORMATION ======
+======  START OF IBM Db2 Genius Code 1.1 NOTICES AND INFORMATION ======
 ======  Start of 1: Open-Source Packages ======
 
 ============
@@ -136,7 +136,7 @@ Oracle expressly places this Software in the public domain. However, Oracle gran
 
 **END OF NOTICES FOR: IBM Data Server Driver for JDBC and SQLJ**
 --------------------------------------------------------------------------------
-======  END OF IBM Db2 Developer Extension 1.1 NOTICES AND INFORMATION ======
+======  END OF IBM Db2 Genius Code 1.1 NOTICES AND INFORMATION ======
 
 
 L/N: L-KXVJ-GPHVQ7

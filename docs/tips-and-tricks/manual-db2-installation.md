@@ -4,7 +4,7 @@ title: "Installing Db2 Community Edition manually"
 
 # {{ page.title }}
 
-This topic describes how to install Db2 Community Edition manually across Windows, Linux, and macOS systems. You can install Db2 Community Edition automatically by using the IBM Db2 Developer Extension. For more information, see [Creating a Db2 instance by using Community Edition]({{site.baseurl}}/docs/the-basics/creating-db2-instance).
+This topic describes how to install Db2 Community Edition manually across Windows, Linux, and macOS systems. You can install Db2 Community Edition automatically by using the IBM Db2 Genius Code. For more information, see [Creating a Db2 instance by using Community Edition]({{site.baseurl}}/docs/the-basics/creating-db2-instance).
 
 > **Note**: The extension automates the entire installation process, including dependency management, container setup, and database creation. Manual installation is recommended only for users who need custom configurations or prefer to manage their Db2 environment independently.
 {: .note-right}
@@ -425,7 +425,7 @@ docker rm db2server
 
 After successfully installing Db2 Community Edition:
 
--  **Create a database connection** in the IBM Db2 Developer Extension. See [Creating a database connection](creating-a-database-connection.md#create-db-connection).
+-  **Create a database connection** in the IBM Db2 Genius Code. See [Creating a database connection](creating-a-database-connection.md#create-db-connection).
 
 -  **Explore Db2 objects** such as schemas, tables, and procedures. See [Exploring Db2 objects](Exploring-Db2-objects.md).
 

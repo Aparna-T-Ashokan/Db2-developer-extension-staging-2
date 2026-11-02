@@ -3,7 +3,7 @@
 # Creating and managing Db2 instances and database connections
 ---
 
-**IBM Db2 Developer Extension** provides a streamlined way to set up and manage Db2 environments all within your VS Code Editor. Before you can start writing queries or exploring schemas, you need a Db2 instance.
+**IBM Db2 Genius Code** provides a streamlined way to set up and manage Db2 environments all within your VS Code Editor. Before you can start writing queries or exploring schemas, you need a Db2 instance.
 
  If you have a Db2 instance, [create a database connection](#create-db-connection) to work with your databases. For users who do not have a Db2 instance, get started by using [IBM Db2 Community Edition to create the instance](#create-db2-instance-id), which offers a free and fully functional environment for development and testing.
 
@@ -111,7 +111,7 @@ Ensure that your system meets the following requirements:
 
       /home/<username>
 
-After completing these steps, the Db2 Developer Extension automatically handles the following actions:
+After completing these steps, the Db2 Genius Code automatically handles the following actions:
 
 - Detects the WSL environment.
 - Installs Docker Engine inside WSL.
@@ -160,7 +160,7 @@ These dependencies are installed on your system to support the Db2 Community Edi
 To create a Db2 instance by using IBM Db2 Community Edition, complete the following steps:
 
 
-1. In the **DB2 CONNECTIONS** pane, click the **Create Db2 instance** button or the **Create Db2 Instance** icon ![Creating new Db2 instance]({{site.baseurl}}/assets/images/create-db2-instance.png){:width="25" :height="25"}.
+1. In the **Db2 Connections** pane, click the **Create Db2 instance** button or the **Create Db2 Instance** icon ![Creating new Db2 instance]({{site.baseurl}}/assets/images/create-db2-instance.png){:width="25" :height="25"}.
    
    The extension checks for an existing Db2 instance on your system. If an instance exists, the **Db2 Instance Already Exists** workflow opens in a new editor tab. For more information, see [Managing an existing Db2 instance](#managing-db2-instance).
 
@@ -174,7 +174,7 @@ To create a Db2 instance by using IBM Db2 Community Edition, complete the follow
    - **Password**: Password for accessing the instance.
    - **Database Name**: Name of the database that you want to create. By default, the database name is set to `testdb`.
    
-   When you create a Db2 instance, Db2 Developer Extension automatically creates two databases:
+   When you create a Db2 instance, Db2 Genius Code automatically creates two databases:
    - **testdb**: Default database that you specify during instance setup.
    - **SAMPLE**: Sample database for testing and learning purposes.
 
@@ -190,7 +190,7 @@ To create a Db2 instance by using IBM Db2 Community Edition, complete the follow
    - Creates corresponding database connections for both databases.
    - Automatically connects to the `testdb` (or your chosen name) and `SAMPLE` databases.
 
-   The database connections are listed in the **DB2 CONNECTIONS** pane.
+   The database connections are listed in the **Db2 Connections** pane.
 
    ![testdb-sample-connections]({{site.baseurl}}/assets/images/test-sample-connections.png){:width="200" :height="300"}
 
@@ -218,7 +218,7 @@ You can see the following information about the instance:
 - Password: Password for accessing the Db2 instance.
 - Available Databases: Lists the databases within the instance. The **Connect** button is used to establish a connection to the database and the **Drop** button is used to delete the database
  
-   > **Note**: You can also connect to the database by manually [adding the database connection](#create-db-connection) from the DB2 CONNECTIONS pane.
+   > **Note**: You can also connect to the database by manually [adding the database connection](#create-db-connection) from the Db2 Connections pane.
    {: .note-right}
 
 - Action Buttons
@@ -244,7 +244,7 @@ You can see the following information about the instance:
 ---
 To work with IBM Db2 databases, you need to create a database connection to connect to the required database within the Db2 instance.
 
-1. In the **DB2 CONNECTIONS** pane, click **Add Connection** button or **Add Connection** ![Adding a database connection]({{site.baseurl}}/assets/images/add-database-connection.png){:width="25" :height="25"} to open the **Db2 Connection** workflow in a new editor tab.
+1. In the **Db2 Connections** pane, click **Add Connection** button or **Add Connection** ![Adding a database connection]({{site.baseurl}}/assets/images/add-database-connection.png){:width="25" :height="25"} to open the **Db2 Connection** workflow in a new editor tab.
 ![Adding a database connection]({{site.baseurl}}/assets/images/add-db2-connection.png)
 
 2. Enter the following details:
@@ -263,7 +263,7 @@ To work with IBM Db2 databases, you need to create a database connection to conn
 5. Click **Test connection** to verify the credentials are correct.  
    You receive a **Test connection successful** notification if the credentials are correct.
 6. Click **Create connection**.  
-   If your connection was created successfully, you can see it in the **DB2 CONNECTIONS** pane.
+   If your connection was created successfully, you can see it in the **Db2 Connections** pane.
 
 
 > **Note**: If your database connection gets disconnected, click the **Connect** icon (![Connecting to database]({{site.baseurl}}/assets/images/connect-database.png){:width="25" :height="25"}) on the specific database connection. When prompted, enter the password in the input field of the extension and press **Enter** to connect to the database again.

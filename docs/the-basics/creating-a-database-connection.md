@@ -3,7 +3,7 @@
 # Managing Db2 instances and database connections
 ---
 
-**IBM Db2 Developer Extension** provides a streamlined way to set up and manage Db2 environments all within your VS Code Editor. Before you can start writing queries or exploring schemas, you need a Db2 instance.
+**IBM Db2 Genius Code** provides a streamlined way to set up and manage Db2 environments all within your VS Code Editor. Before you can start writing queries or exploring schemas, you need a Db2 instance.
 
  If you have a Db2 instance, [create a database connection](#create-db-connection) to work with your databases. For users who do not have a Db2 instance, get started by using [IBM Db2 Community Edition to create the instance]({{site.baseurl}}/docs/the-basics/creating-db2-instance), which offers a free and fully functional environment for development and testing.
 
@@ -39,7 +39,7 @@ You can see the following information about the instance:
 - Password: Password for accessing the Db2 instance.
 - Available databases: Lists the databases within the instance. The **Connect** button is used to establish a connection to the database and the **Drop** button is used to delete the database
  
-   > **Note**: You can also connect to the database by manually [adding the database connection](#create-db-connection) from the DB2 CONNECTIONS pane.
+   > **Note**: You can also connect to the database by manually [adding the database connection](#create-db-connection) from the Db2 Connections pane.
    {: .note-right}
 
 - Action Buttons
@@ -65,7 +65,7 @@ You can see the following information about the instance:
 ---
 To work with IBM Db2 databases, you need to create a database connection to connect to the required database within the Db2 instance.
 
-1. In the **DB2 CONNECTIONS** pane, click **Add connection** button or **Add connection** ![Adding a database connection]({{site.baseurl}}/assets/images/add-database-connection.png){:width="25" :height="25"} to open the **Db2 Connection** workflow in a new editor tab.
+1. In the **Db2 Connections** pane, click **Add connection** button or **Add connection** ![Adding a database connection]({{site.baseurl}}/assets/images/add-database-connection.png){:width="25" :height="25"} to open the **Db2 Connection** workflow in a new editor tab.
 ![Adding a database connection]({{site.baseurl}}/assets/images/add-db2-connection.png)
 
 2. Enter the **Connection URL**:
@@ -80,7 +80,7 @@ To work with IBM Db2 databases, you need to create a database connection to conn
 5. (Optional) Select the **Save credentials** checkbox to save your credentials securely in Visual Studio Code.
 6. (Optional) In the **Optional JDBC Properties** section, review automatically populated properties or click **+ Add Property** to add custom JDBC connection properties as key-value pairs. Click **Remove** to delete a property.
 7. Click **Create connection**.
-   If your connection was created successfully, you can see it on the **DB2 CONNECTIONS** pane. Click **Cancel** to close the tab without saving.
+   If your connection was created successfully, you can see it on the **Db2 Connections** pane. Click **Cancel** to close the tab without saving.
 
 
 > **Note**: If your database connection gets disconnected, click the **Connect** icon (![Connecting to database]({{site.baseurl}}/assets/images/connect-database.png){:width="25" :height="25"}) on the specific database connection. When prompted, enter the password in the input field of the extension and press **Enter** to connect to the database again.

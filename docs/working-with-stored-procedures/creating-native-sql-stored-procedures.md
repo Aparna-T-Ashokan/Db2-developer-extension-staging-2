@@ -114,7 +114,7 @@ END;
 
 You can create procedures in the SQL Editor:
 
-1. Open the editor by clicking the **Open SQL Editor** (![Opening a new SQL editor]({{site.baseurl}}/assets/images/open-sql-editor.png){:width="25" :height="25"}) in the DB2 CONNECTION pane.
+1. Open the editor by clicking the **Open SQL Editor** (![Opening a new SQL editor]({{site.baseurl}}/assets/images/open-sql-editor.png){:width="25" :height="25"}) in the Db2 Connections pane.
 
 2. Select your database connection from the dropdown menu (for example, `localhost@SAMPLE`).
 

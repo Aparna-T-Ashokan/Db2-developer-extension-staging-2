@@ -4,11 +4,11 @@ title: "Changing the color theme"
 
 # {{ page.title }}
 
-You can switch between using Db2 Developer Extension in dark and light mode by changing the VS Code Color Theme setting:
+You can switch between using Db2 Genius Code in dark and light mode by changing the VS Code Color Theme setting:
 
 To change the color theme:
 
-1. Open Db2 Developer Extension and click the **Settings** icon at the lower left corner of VS Code window:
+1. Open Db2 Genius Code and click the **Settings** icon at the lower left corner of VS Code window:
 
 
 2. Click **Themes > Color Theme**.

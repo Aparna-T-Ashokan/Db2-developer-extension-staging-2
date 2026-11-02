@@ -2,7 +2,7 @@
 
 # Getting started 
 ---
-This topic guides you through the initial setup, configuration, and basic usage of IBM Db2 Developer Extension.
+This topic guides you through the initial setup, configuration, and basic usage of IBM Db2 Genius Code.
 
 ## Prerequisites
 ---
@@ -16,17 +16,17 @@ Before you begin, ensure that the following software is installed:
 ---
 1. Open **Visual Studio Code**.
 2. Click **Extensions**.
-3. Search for **IBM Db2 Developer Extension**.
+3. Search for **IBM Db2 Genius Code**.
 4. Select the extension and click **Install**.
 
 
-The IBM Db2 Developer Extension icon (![Db2 developer icon]({{site.baseurl}}/assets/images/Db2-developer-extension-icon.png){:width="25" :height="25"}) appears in the Activity Bar.
+The IBM Db2 Genius Code icon (![Db2 developer icon]({{site.baseurl}}/assets/images/Db2-developer-extension-icon.png){:width="25" :height="25"}) appears in the Activity Bar.
 
 
-## Configuring IBM Db2 Developer Extension
+## Configuring IBM Db2 Genius Code
 ---
 1. Open Visual Studio Code and click the gear icon (![gear icon]({{site.baseurl}}/assets/images/gear-icon.png){:width="25" :height="25"}) and then **Settings**. 
-2. Go to **Extensions** in the left sidebar and select **IBM Db2 Developer Extension Settings**.
+2. Go to **Extensions** in the left sidebar and select **IBM Db2 Genius Code Settings**.
 3. Configure the following settings as required:
 
 
@@ -39,28 +39,28 @@ The IBM Db2 Developer Extension icon (![Db2 developer icon]({{site.baseurl}}/ass
      
      <!-- - **Genius Hub: Allow Self Signed Certificate** :Allow self-signed TLS certificates when connecting to IBM Db2 Genius Hub. Enable this only if your Genius Hub server is using a self-signed certificate.-->
 
-## Using the IBM Db2 Developer Extension
+## Using the IBM Db2 Genius Code
 ---
-When you open the Db2 Developer Extension, you can see the **DB2 CONNECTIONS** pane. 
+When you open the Db2 Genius Code, you can see the **Db2 Connections** pane. 
 
 
 **If you already have a Db2 instance**: 
 
-Click **Add connection** button or **Add connection** icon (![Adding a database connection]({{site.baseurl}}/assets/images/add-database-connection.png){:width="25" :height="25"}) in the DB2 CONNECTIONS pane and follow the steps [here](creating-a-database-connection.md#create-db-connection) to create a database connection.
+Click **Add connection** button or **Add connection** icon (![Adding a database connection]({{site.baseurl}}/assets/images/add-database-connection.png){:width="25" :height="25"}) in the Db2 Connections pane and follow the steps [here](creating-a-database-connection.md#create-db-connection) to create a database connection.
 
 
 **If you do not have a Db2 instance**: 
 
-Click **Create Db2 instance** button or **Create Db2 instance** icon (![Creating new Db2 instance]({{site.baseurl}}/assets/images/create-db2-instance.png){:width="25" :height="25"}) in the DB2 CONNECTIONS pane and follow the steps [here]({{site.baseurl}}/docs/the-basics/creating-db2-instance) to create one.
+Click **Create Db2 instance** button or **Create Db2 instance** icon (![Creating new Db2 instance]({{site.baseurl}}/assets/images/create-db2-instance.png){:width="25" :height="25"}) in the Db2 Connections pane and follow the steps [here]({{site.baseurl}}/docs/the-basics/creating-db2-instance) to create one.
 
    
    
    ![Creating Db2 instance]({{site.baseurl}}/assets/images/db2-developer-initial-screen.png){:width="300" :height="350"}
 
-## DB2 CONNECTIONS pane  
+## Db2 Connections pane  
 ---
 
-You can see the following icons on the **DB2 CONNECTIONS** pane. 
+You can see the following icons on the **Db2 Connections** pane. 
 
 
 

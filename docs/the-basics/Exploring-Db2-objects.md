@@ -1,7 +1,7 @@
 
 # Db2 objects
 ---
-**IBM Db2 Developer Extension** provides a clean, intuitive tree-based interface for exploring and managing database objects. With this organized view, you can quickly navigate through schemas and access objects such as tables, views, indexes, and stored procedures. 
+**IBM Db2 Genius Code** provides a clean, intuitive tree-based interface for exploring and managing database objects. With this organized view, you can quickly navigate through schemas and access objects such as tables, views, indexes, and stored procedures. 
 
 The extension offers a seamless way to drill down into object details and manage your Db2 environment efficiently.
 
@@ -66,7 +66,7 @@ When you click an object type in a schema, it expands to show all objects of tha
    - Data: Shows the actual rows that are stored in the table.
    
    
-You can also view the details of a particular table by expanding the Tables section under the schema in the DB2 CONNECTIONS pane and clicking the table name. For example, EMPMDC. For more information about the table properties, see [Exploring table object details](../working-with-Db2-objects/Db2-objects.md).
+You can also view the details of a particular table by expanding the Tables section under the schema in the Db2 Connections pane and clicking the table name. For example, EMPMDC. For more information about the table properties, see [Exploring table object details](../working-with-Db2-objects/Db2-objects.md).
 
 
 You can follow the same process to explore other Db2 objects. 

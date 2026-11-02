@@ -1,6 +1,6 @@
 # Querying data by using natural language
 
-You can use natural language queries in Db2 Developer Extension to ask questions about your data in plain English. The extension converts your request to SQL, runs the generated query against the selected database connection, and displays the results.
+You can use natural language queries in Db2 Genius Code to ask questions about your data in plain English. The extension converts your request to SQL, runs the generated query against the selected database connection, and displays the results.
 
 For example, instead of writing a SQL statement, you can enter:
 
@@ -17,13 +17,13 @@ To use natural language queries, ensure that:
 - Genius Hub is installed and configured.
 - At least one connected database is entitled to Genius Hub or Db2 AI Edition.
 - The database that you want to query is registered in Genius Hub.
-- A database connection profile exists in Db2 Developer Extension.
+- A database connection profile exists in Db2 Genius Code.
 
 **Important:** Natural language queries are unavailable if Genius Hub is not installed or no eligible database connection exists.
 
 ## Connecting to Genius Hub
 
-1. Open Db2 Developer Extension.
+1. Open Db2 Genius Code.
 2. Click **Toggle Db2 AI Assistant** (![Toggle Db2 AI Assistant]({{site.baseurl}}/assets/images/Toggle-db2-ai-assistant.png){:width="25" :height="25"}) to open the **Db2 AI Assistant** view.
 3. Enter the following information:
    - **Genius Hub URL**

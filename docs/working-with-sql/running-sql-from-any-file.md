@@ -4,7 +4,7 @@ title: "Running SQL statements from any file"
 
 # {{ page.title }}
 
-IBM Db2 Developer Extension supports running SQL statements from any file in Visual Studio Code. SQL statements can be run from files of any type, not only .sql files, which helps integrate Db2 workflows into code files, notebooks, or documentation.
+IBM Db2 Genius Code supports running SQL statements from any file in Visual Studio Code. SQL statements can be run from files of any type, not only .sql files, which helps integrate Db2 workflows into code files, notebooks, or documentation.
 
 ### Procedure
 

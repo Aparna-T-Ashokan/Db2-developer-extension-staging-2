@@ -4,7 +4,7 @@ title: "Troubleshooting Docker and Colima runtime issues"
 
 # {{ page.title }}
 
-This topic provides guidance for diagnosing and resolving Docker and Colima issues when using the IBM Db2 Developer Extension. The extension uses Colima as the default container runtime on macOS and Docker Engine on Linux and Windows Subsystem for Linux (WSL). The troubleshooting steps help you to ensure that the extension can create, start, and manage Db2 containers reliably across supported environments.
+This topic provides guidance for diagnosing and resolving Docker and Colima issues when using the IBM Db2 Genius Code. The extension uses Colima as the default container runtime on macOS and Docker Engine on Linux and Windows Subsystem for Linux (WSL). The troubleshooting steps help you to ensure that the extension can create, start, and manage Db2 containers reliably across supported environments.
 
 
 ## Switching between Docker Desktop and Colima (macOS)

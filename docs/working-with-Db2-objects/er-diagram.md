@@ -5,7 +5,7 @@ title: "Generating ER diagrams"
 # {{ page.title }}
 
 
-IBM Db2 Developer Extension allows you to generate entity-relationship (ER) diagrams directly from your database schemas or individual tables. ER diagrams provide a visual representation of table relationships and schema structures, making it easier to explore databases, understand dependencies, and document designs.
+IBM Db2 Genius Code allows you to generate entity-relationship (ER) diagrams directly from your database schemas or individual tables. ER diagrams provide a visual representation of table relationships and schema structures, making it easier to explore databases, understand dependencies, and document designs.
 
 You can generate ER diagrams at two levels:
 - **Table level**: Visualize the relationships for a single table.
@@ -14,7 +14,7 @@ You can generate ER diagrams at two levels:
 ## Generating an ER diagram for a table
 
 
-1. In the **DB2 CONNECTIONS** pane, expand the database connection and navigate to the schema that contains the table.
+1. In the **Db2 Connections** pane, expand the database connection and navigate to the schema that contains the table.
 2. Expand the **Tables** section and right-click the table name.
 3. Select **View ER Diagram**.
 
@@ -27,7 +27,7 @@ Each table in the diagram displays the column names and their data types. Click 
 ## Generating an ER diagram for a schema
 
 
-1. In the **DB2 CONNECTIONS** pane, expand the database connection.
+1. In the **Db2 Connections** pane, expand the database connection.
 2. Right-click the schema name.
 3. Select **View Schema ER Diagram**.
 

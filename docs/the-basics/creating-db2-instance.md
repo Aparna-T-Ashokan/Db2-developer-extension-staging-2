@@ -11,7 +11,7 @@ title: "Creating a Db2 instance by using Community Edition"
 
 ## Overview
 
-The IBM Db2 Developer Extension can automatically provision a fully functional Db2 Community Edition instance on your local machine. The extension installs any required container runtime (if needed), deploys Db2 inside a container, creates the requested databases, and automatically registers database connections in the extension.
+The IBM Db2 Genius Code can automatically provision a fully functional Db2 Community Edition instance on your local machine. The extension installs any required container runtime (if needed), deploys Db2 inside a container, creates the requested databases, and automatically registers database connections in the extension.
 
 No manual container commands or environment configuration are required.
 
@@ -32,7 +32,7 @@ Before creating a Db2 instance, ensure the following requirements are met.
 - A supported Linux distribution (such as Ubuntu) is configured.
 - WSL2 is set as the default version.
 
-> **Note**: The Db2 Developer Extension supports Db2 Community Edition installation only inside WSL2.
+> **Note**: The Db2 Genius Code supports Db2 Community Edition installation only inside WSL2.
 >
 > If WSL2 or a Linux distribution is not detected, the extension displays a warning with a **View Installation Guide** button that opens the Microsoft WSL2 documentation. The extension does not install WSL2 itself — WSL2 must be set up manually before using the **Create Db2 Instance** feature.
 {: .note-right}
@@ -116,7 +116,7 @@ pwd
 
 Expected output: `/home/<username>`
 
-After WSL2 is configured, return to Visual Studio Code and use the **Create Db2 Instance** option in the **DB2 CONNECTIONS** view. The Db2 Developer Extension automatically detects the WSL2 environment and performs the remaining installation and configuration steps, including installing the container runtime (Podman or Docker) inside WSL2.
+After WSL2 is configured, return to Visual Studio Code and use the **Create Db2 Instance** option in the **Db2 Connections** view. The Db2 Genius Code automatically detects the WSL2 environment and performs the remaining installation and configuration steps, including installing the container runtime (Podman or Docker) inside WSL2.
 
 ## Required permissions
 
@@ -143,7 +143,7 @@ If none of the supported runtimes are available, the extension automatically ins
 
 To create a Db2 instance by using IBM Db2 Community Edition, complete the following steps:
 
-1. In the **DB2 CONNECTIONS** view, click the **Create Db2 instance** button or the **Create Db2 Instance** icon ![Creating new Db2 instance]({{site.baseurl}}/assets/images/create-db2-instance.png){:width="25" :height="25"}.
+1. In the **Db2 Connections** view, click the **Create Db2 instance** button or the **Create Db2 Instance** icon ![Creating new Db2 instance]({{site.baseurl}}/assets/images/create-db2-instance.png){:width="25" :height="25"}.
 
    - If an existing Db2 Community Edition instance is detected, the **Update Db2 Instance** page opens.
    - Otherwise, the **Create Db2 Instance** page opens.
@@ -187,7 +187,7 @@ To create a Db2 instance by using IBM Db2 Community Edition, complete the follow
 5. When setup completes successfully:
 
    - The requested database and `SAMPLE` database are available.
-   - Connection profiles are created automatically and displayed in the **DB2 CONNECTIONS** view.
+   - Connection profiles are created automatically and displayed in the **Db2 Connections** view.
    - The **Update Db2 Instance** page opens.
 
    > **Note**: If you prefer to install Db2 Community Edition manually, see [Installing Db2 Community Edition manually]({{site.baseurl}}/docs/tips-and-tricks/manual-db2-installation).
@@ -212,7 +212,7 @@ During setup, the extension creates:
 - Your specified database (default: `TESTDB`)
 - `SAMPLE` database
 
-Connection profiles for both databases are automatically created and displayed in the **DB2 CONNECTIONS** view.
+Connection profiles for both databases are automatically created and displayed in the **Db2 Connections** view.
 
 ## Installation time
 
