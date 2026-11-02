@@ -36,31 +36,27 @@ Query history is persistent — your previously run queries are retained even af
       - Warning: Number of statements that completed with warnings.
       - Total elapsed time (ms): The cumulative time taken to run all the statements in the group, in milliseconds.
 
-3. Expand the timestamped query record to show individual statements. Select a statement. The editor shows two tabs:
+3. Expand a timestamped query group to display the individual SQL statements executed during that session. Click a statement to open its **Query Result** view in the editor.
 
+   The **Query Result** view provides the following information and actions:
 
-
-
-   - The **Status** tab shows the following details:
-
-        - File: Indicates the source from which the SQL statement was run.
-        - Executed: Timestamp when the query was run.
-        - Connection: Database connection details used for running the query.
-        - Statement: Shows the actual SQL statement that was run.
-        - Return code: Numeric code indicating the result of the run.
-        - SQL code: Db2‑specific SQLCODE returned after the statement was processed.
-        - SQL state: Alphanumeric code that is used for the SQL standard for error reporting.
-        - Message: Text describing the result of the run.
-        - Elapsed time (ms): Total time taken to run the query in milliseconds.
-    - The **Result** tab shows the output of the SQL statement in a tabular format. It provides information about the rows returned, run time, and options for searching and exporting the results.
-
-
-        - Rows: Total number of rows returned by the query.
-        - Execution Time (ms): Time taken to run the query in milliseconds.
-
-You can search within the displayed results using the Search box. Click **Export** to export the query results to CSV or JSON.
-
-When a result cell contains a complex or large-object data type, a **View** button appears in the cell. Click **View** to open the data viewer. See [Viewing complex data types](../working-with-sql/running-multiple-sql-statements#viewing-complex-data-types) for details on how each type is displayed.
+   - **SQL Statement panel**:
+     - Shows the full SQL query text.
+     - **Copy icon**: Copies the SQL statement to your clipboard.
+     - **Run icon** (▶): Runs the query directly from the Query Result view. The results are displayed in the terminal.
+     - **Open button** (**Open ↗**): Opens the query in the **Db2 SQL Editor**, where you can modify and run the SQL statement.
+   - **Status panel**:
+     - **Message**: Status text describing the execution result (for example, *Query processed successfully*).
+     - **Return code**: Return code indicating the outcome (for example, *0* for success).
+     - **SQL code**: Db2-specific SQLCODE returned after processing the statement.
+     - **SQL state**: Standard SQLSTATE code for error reporting.
+   - **Execution details**:
+     - **File**: Source file or editor from which the query was executed (for example, *Db2 SQL Editor*).
+     - **Executed**: Date and time when the query was run.
+     - **Connection**: Database connection profile used (for example, *TESTDB@localhost*).
+     - **Elapsed time (ms)**: Total execution duration in milliseconds.
+   - **Past results**:
+     - Expand the **Past results** section to view past query results or historical execution records.
 
 
 
