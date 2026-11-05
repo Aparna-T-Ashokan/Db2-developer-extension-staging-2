@@ -23,21 +23,29 @@ To use Genius AI, ensure that:
 
 ## Connecting to Genius Hub
 
+To connect your workspace and enable Genius AI code assistance, log in to Genius Hub:
+
 1. Open Db2 Genius Code.
-2. Click **Toggle Genius AI** (![Toggle Genius AI]({{site.baseurl}}/assets/images/Toggle-db2-ai-assistant.png){:width="25" :height="25"}) to open the **Genius AI** panel.
-3. Enter the following information:
+2. In the **Account** section, enter the following information:
    - **Genius Hub URL**
    - **Username**
    - **Password**
+3. Optional: Keep **Stay logged in** selected if you want to remain logged in.
 4. Click **Log in**.
 
-   After the connection is established, the **Genius AI** chat interface is displayed with an **Open Genius Hub** button and a **Log out** link.
+   After you log in, the **Account** section shows that you are logged in, with an **Open Genius Hub** button and a **Log out** link.
+
+5. In the **Db2 Connections** section, connect to a database.
+
+   When a database is selected, the **Toggle Genius AI** button (![Toggle Genius AI]({{site.baseurl}}/assets/images/Toggle-db2-ai-assistant.png){:width="25" :height="25"}) is displayed.
+
+6. Click **Toggle Genius AI** to open the **Genius AI** chat panel.
 
    ![Genius AI chat interface]({{site.baseurl}}/assets/images/chat-window.png){:width="400" :height="800"}
 
 ## Querying data
 
-1. In the **Genius AI** chat interface, click the **Choose Database** dropdown at the bottom and select the database.
+1. In the **Genius AI** chat panel, click the **Choose Database** dropdown at the bottom and select the database that you want to query.
 2. Enter your question in natural language. For example:
 
    ```
@@ -55,16 +63,22 @@ To use Genius AI, ensure that:
    - Displays the results in the **Results** pane below the editor.
    - Saves the generated SQL query to **QUERY HISTORY**.
 
+## Starting a new chat
+
+The database that you select with **Choose Database** stays the same for the whole chat. To run queries against a different database, click the **New chat** icon at the top of the **Genius AI** chat panel. Then, in the new chat, select the database that you want to query.
+
 ## Managing conversations
 
-Click Conversation History icon (![Open SQL Editor]({{site.baseurl}}/assets/images/conversation-history.png){:width="25" :height="25"}) to see the **Conversation History** panel. It lists your previously asked questions.
+Click Conversation History icon (![Open SQL Editor]({{site.baseurl}}/assets/images/conversation-history.png){:width="25" :height="25"}) in the **Genius AI** chat panel to see the **Conversation History** panel. It lists your previously asked questions.
 
 The following actions are available for managing your conversations:
 
-   - **Search**: Use the search bar at the top of the **Conversation History** panel to find a specific conversation by keyword.
+   - **Search**: Use the search bar at the top of the **Conversation History** panel to find a specific chat by keyword.
    - **Rename**: Click rename (![Rename]({{site.baseurl}}/assets/images/rename.png){:width="25" :height="25"}) next to a conversation entry to give it a custom name. In the **Rename Conversation** dialog, enter the new name and click **Rename**.
    - **Bookmark**: Click bookmark (![Bookmark]({{site.baseurl}}/assets/images/bookmark.png){:width="25" :height="25"}) next to a conversation to mark it for quick access later.
    - **Filter**: Click filter (![Filter]({{site.baseurl}}/assets/images/filter.png){:width="25" :height="25"}) to narrow down the conversation list by database. Select a database from the **Choose Database** dropdown to show only conversations that were run against that database.
+
+   - **Archive**: Archive a chat to remove it from your active list. Click **Archived chats** to see all archived chats.
 
    Click any conversation entry to reload it.
 
@@ -116,7 +130,7 @@ In both cases, DDL generation continues to work. For more information, see [Gene
 
 ## Working with chat history
 
-The selected database is fixed for each chat, so a conversation stays associated with the same database. To work with a different database, start a new chat and select that database.
+The selected database is fixed for each chat, so a conversation stays associated with the same database. To work with a different database, start a new chat. See [Starting a new chat](#starting-a-new-chat).
 
 To revisit earlier conversations, use the chat history. See [Managing conversations](#managing-conversations).
 
@@ -124,5 +138,10 @@ To revisit earlier conversations, use the chat history. See [Managing conversati
 
 You can archive conversations that you no longer need so that they do not appear in your active chat list.
 
-- To view archived conversations, open the archived chat section.
+- To archive a chat, use the archive option for that chat in the **Conversation History** panel.
+- To view all your archived chats, click **Archived chats**.
 - To continue an archived conversation, or to return it to your active chat list, use the **Unarchive** option.
+
+## Logging out of Genius Hub
+
+To log out of Genius Hub, click the **Log out** icon in the **Genius AI** chat panel, or click **Log out** in the **Account** section.
