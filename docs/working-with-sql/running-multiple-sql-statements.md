@@ -45,11 +45,27 @@ You can open multiple columns in the LOB Viewer simultaneously — each opens in
 > **Note**: A zero-byte or null LOB value is rendered as `NULL` in the viewer, regardless of the LOB data type.
 {: .note-right}
 
+## Running a statement from the SQL editor
+
+You can run SQL statements directly from the SQL editor without interrupting your workflow. Select the appropriate run option to run your statement.
+
+## Setting the statement terminator {#setting-the-sql-statement-terminator}
+
+By default, the extension uses a semicolon (`;`) to separate SQL statements. You can set a different default terminator in the VS Code settings instead of specifying it repeatedly in each SQL file.
+
+1. Open Visual Studio Code and click the gear icon (![Db2 developer settings]({{site.baseurl}}/assets/images/gear-icon.png){:width="25" :height="25"}) and then **Settings**.
+2. Search for `Db2` or go to **Extensions** and select **IBM Db2 Genius Code Settings**.
+3. In the **Db2service: Statement Terminator** field, enter the terminator that you want to use, for example, `@`.
+
+To use a different terminator in a single file, add `--#SET TERMINATOR <char>` to that file. This overrides the **Db2service: Statement Terminator** setting for that file only.
+
+If your SQL file contains statements that end with a different terminator than the one that is configured, only the statements that match the configured terminator run successfully. For example, if the terminator is set to `@` and only the first query in a file ends with `@`, only the first query runs successfully. Change the terminator to match your statements, and then run the queries again to run all of them.
+
 ## Running transactions
 
 Each SQL editor tab maintains a dedicated database connection. Because the same connection is used for all query executions within a tab, transaction state and session state are preserved across multiple query executions.
 
-You can execute transaction statements such as `Begin Transaction`, `ROLLBACK`, `COMMIT`, and `End Transaction` from a SQL editor. These statements run on the same database connection, allowing Db2 to maintain the transaction context until the transaction is committed or rolled back.
+You can start a transaction by using either `Start Transaction` or `Begin Transaction`. Both statements are supported. You can then run `ROLLBACK`, `COMMIT`, and `End Transaction` from a SQL editor. These statements run on the same database connection, allowing Db2 to maintain the transaction context until the transaction is committed or rolled back.
 
 **Example:**
 
@@ -75,6 +91,10 @@ This example demonstrates the following workflow:
 4. `rollback` undoes the `INSERT`, reverting the table to its state before the transaction began. If you were to run another `SELECT` here, the inserted row would no longer appear.
 5. `commit` finalizes any remaining changes and makes them permanent in the database.
 6. `End Transaction` closes the transaction boundary.
+
+After you commit a transaction, you cannot roll it back. If you run `ROLLBACK` after `COMMIT`, the statement fails because the transaction was already committed.
+
+Whenever the extension detects a transaction identifier, it maintains a dedicated connection to the Db2 server.
 
 Because the connection remains associated with the SQL editor tab, session-specific objects and settings, such as temporary tables and session variables, remain available across query executions while the dedicated connection is active.
 

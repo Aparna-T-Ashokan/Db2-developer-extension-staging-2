@@ -37,7 +37,7 @@ You can see the following information about the instance:
 - Port: Port number used for database connection.
 - Username: Username for accessing the Db2 instance.
 - Password: Password for accessing the Db2 instance.
-- Available databases: Lists the databases within the instance. The **Connect** button is used to establish a connection to the database and the **Drop** button is used to delete the database
+- Available databases: Lists the databases within the instance. The **Connect** button is used to establish a connection to the database and the **Drop** button is used to delete the database. The databases that are created with the instance are already connected, so you can run queries on them right away. You can also disconnect from a database, drop it, or connect to it again from here.
  
    > **Note**: You can also connect to the database by manually [adding the database connection](#create-db-connection) from the Db2 Connections pane.
    {: .note-right}
@@ -68,8 +68,11 @@ To work with IBM Db2 databases, you need to create a database connection to conn
 1. In the **Db2 Connections** pane, click **Add connection** button or **Add connection** ![Adding a database connection]({{site.baseurl}}/assets/images/add-database-connection.png){:width="25" :height="25"} to open the **Db2 Connection** workflow in a new editor tab.
 ![Adding a database connection]({{site.baseurl}}/assets/images/add-db2-connection.png)
 
-2. Enter the **Connection URL**:
-      - Provide the JDBC connection URL for your Db2 database (for example, `jdbc:db2://<host>:<port>/<database>`).
+2. Enter the connection details by using one of the following methods:
+      - Enter the **Host**, **Port**, and **Database**. The extension automatically generates the **Connection URL** from these fields.
+      - Paste the JDBC URL for your Db2 database (for example, `jdbc:db2://<host>:<port>/<database>`) in the **Connection URL** field. The extension automatically populates the other fields from the URL.
+
+   Optionally, enter a unique **Connection name** to identify the connection in the **Db2 Connections** pane.
 3. (Optional) Under the **Security** section, select **Use SSL** to enable SSL encryption for the database connection. When enabled, SSL properties (such as `sslConnection=true` and `sslCertificateType=StandardCA`) are automatically added to **Optional JDBC Properties**, and you can configure:
       - **Certificate**: Select the SSL certificate type (**Public CA** is selected by default; other options include **JKS** and **PKCS12**).
       - **Truststore Password**: Enter the password for your truststore file (if applicable).
@@ -77,10 +80,13 @@ To work with IBM Db2 databases, you need to create a database connection to conn
 4. Enter your connection credentials:
       - **Username \***: Enter the username to access the Db2 database. (Required field).
       - **Password**: Enter the password to access the Db2 database. You can click the eye icon to toggle password visibility.
-5. (Optional) Select the **Save credentials** checkbox to save your credentials securely in Visual Studio Code.
+5. (Optional) Select the **Save credentials** checkbox to save your credentials securely in Visual Studio Code. If you do not select this checkbox, the extension prompts you for the password each time that you connect.
 6. (Optional) In the **Optional JDBC Properties** section, review automatically populated properties or click **+ Add Property** to add custom JDBC connection properties as key-value pairs. Click **Remove** to delete a property.
-7. Click **Create connection**.
+7. (Optional) Click **Test connection** to verify the connection details before you create the connection.
+8. Click **Create connection**.
    If your connection was created successfully, you can see it on the **Db2 Connections** pane. Click **Cancel** to close the tab without saving.
+
+After you connect to the database, you can browse its schemas, data types, LOBs, and tables.
 
 
 > **Note**: If your database connection gets disconnected, click the **Connect** icon (![Connecting to database]({{site.baseurl}}/assets/images/connect-database.png){:width="25" :height="25"}) on the specific database connection. When prompted, enter the password in the input field of the extension and press **Enter** to connect to the database again.

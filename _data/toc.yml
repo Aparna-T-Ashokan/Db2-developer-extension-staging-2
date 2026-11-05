@@ -28,6 +28,8 @@
           url: "docs/working-with-Db2-objects/Db2-objects-view"
         - title: "Viewing ER diagrams"
           url: "docs/working-with-Db2-objects/er-diagram"
+        - title: "Viewing historical table data by using Db2 Time Machine"
+          url: "docs/working-with-Db2-objects/db2-time-machine"
     - title: Working with SQL
       url: "docs/working-with-sql"
       children:
@@ -43,6 +45,10 @@
           url: "docs/working-with-sql/query-history"
         - title: "Querying data by using Genius AI"
           url: "docs/working-with-sql/querying-data-by-using-natural-language"
+        - title: "Analyzing query performance"
+          url: "docs/working-with-sql/analyzing-query-performance"
+        - title: "Viewing and visualizing query results"
+          url: "docs/working-with-sql/viewing-and-visualizing-query-results"
         - title: "Limiting the number of rows returned"
           url: "docs/working-with-sql/limiting-the-number-of-rows-returned"
 #        - title: "Running SQL statements from any file"

@@ -1,5 +1,5 @@
 ---
-title: "Generating ER diagrams"
+title: "Viewing ER diagrams"
 ---
 
 # {{ page.title }}
@@ -33,6 +33,37 @@ Each table in the diagram displays the column names and their data types. Click 
 
 The ER diagram opens in a new editor tab, showing all tables in the schema and the relationships between them.
 
+## Viewing relationships
+
+The diagram displays relationships between tables, including weak relationships where applicable. These visual connections help you understand dependencies between tables without having to inspect every relationship manually.
+
+## Changing the diagram layout
+
+Use the layout control to switch between horizontal and vertical arrangements. Choose the layout that best suits your schema and makes the relationships between tables easier to follow.
+
+## Searching for a table in the diagram
+
+When a schema contains many tables, use the search option to find a particular table.
+
+1. Click the search option in the ER diagram view.
+2. Enter the name of the table that you want to find (for example, `Product`).
+
+   The matching table is highlighted in blue in the diagram.
+
+## Modifying a table from the diagram
+
+You can add a column to a table directly from the diagram.
+
+1. In the diagram, use the editing functionality to add a new column to the table.
+
+   The extension generates the SQL statement for the proposed change.
+2. Review the generated SQL.
+3. Select one of the following options:
+   - **Open SQL editor**: Opens the SQL in the SQL editor.
+   - **Copy SQL**: Copies the SQL to the clipboard.
+   - **Cancel**: Closes the dialog without making the change.
+   - **Run** or **Apply**: Runs the SQL to apply the change to the database.
+
 ## Exporting an ER diagram
 
 
@@ -42,3 +73,5 @@ You can export an ER diagram in the following formats:
 - **JSON**: Exports the diagram data as a JSON file, suitable for further processing or reimporting.
 
 To export a diagram, click **Export** in the ER diagram view and select the format you want.
+
+When you export a diagram as a PNG image, a dialog box prompts you for the name of the exported file. Enter the file name and confirm the export.

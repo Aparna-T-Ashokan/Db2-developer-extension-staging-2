@@ -21,6 +21,15 @@ Designed for developers, this extension delivers a unified, intuitive environmen
 
 - Supports multiple container runtimes: Docker, Podman, and Colima, giving you flexibility to use whichever runtime is available on your system.
 
+### Genius AI
+- Ask Db2 questions and get answers with supporting documentation sources, without leaving VS Code.
+- Generate SQL from plain English, open it in the editor, and run it against your connected database.
+- Resolve SQL errors with explanations, possible causes, and suggested fixes.
+- Analyze query performance with explain plans, execution diagrams, statistics, and index recommendations.
+- Use slash commands for quick access to capabilities such as explain plan, query optimization, schema comparison, and error investigation.
+- Revisit, archive, and unarchive previous conversations.
+- View historical table data by using Db2 Time Machine.
+
 ### Database connection management
 - Create, edit, and delete secure connection profiles.
 - Maintain multiple active database connections simultaneously.
@@ -36,10 +45,14 @@ Designed for developers, this extension delivers a unified, intuitive environmen
 - Consistent SQL syntax highlighting: keywords, data types, strings, and comments are rendered in the same colors across all SQL file types.
 - Signature help for correct parameter usage.
 - Cancel long-running queries without closing the connection.
+- Set your default statement terminator in the VS Code settings, and override it for individual files.
 
 ### Query running and visualization
 - Run queries directly within VS Code.
 - View results instantly in tabular format with streaming support for large result sets.
+- Open results in the data viewer, copy data, and visualize results as bar, line, area, pie, or scatter charts.
+- Rearrange and sort columns in the results table.
+
 - Export results to CSV and JSON with one click.
 - Export table and schema data directly from the extension.
 - Replicate data between schemas without leaving VS Code.
@@ -50,6 +63,8 @@ Designed for developers, this extension delivers a unified, intuitive environmen
 - View check constraints on table objects.
 - Support for table and object names that contain special characters.
 - View LOB data (CLOB, BLOB, DBCLOB, XML, Binary, Spatial, Vector Embeddings, Metadata, and more) directly in the LOB Viewer.
+- Filter database objects to find the items you need quickly.
+- View ER diagrams, search for tables, change the layout, add columns from the diagram, and export diagrams as PNG images.
 - Right-click objects for instant access to common operations.
 
 <!--

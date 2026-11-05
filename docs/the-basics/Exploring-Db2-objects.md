@@ -34,7 +34,16 @@ After you create a database connection, the following object types associated wi
 - **User-defined types**: Custom data types created by users to represent complex structures beyond built-in types.
 - **Variables**: Variables store temporary values during the execution of SQL statements or procedures.
 
-When you click an object type in a schema, it expands to show all objects of that type. For example, if you click **Tables**, it expands to show all the tables in a schema. 
+When you click an object type in a schema, it expands to show all objects of that type. For example, if you click **Tables**, it expands to show all the tables in a schema.
+
+## Filtering database objects {#filtering-objects}
+
+When you work with a large database, finding a specific object manually can take time. Use the filter option in the **Db2 Connections** pane to narrow down the displayed items based on your search criteria.
+
+1. In the **Db2 Connections** pane, navigate to the database objects that you want to explore.
+2. Use the filter option to enter your search criteria.
+
+   The pane shows only the items that match your criteria.
 
 ## Viewing table details in a schema {#tables-schema-id}
 

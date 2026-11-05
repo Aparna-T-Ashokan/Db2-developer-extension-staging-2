@@ -25,19 +25,26 @@ The IBM Db2 Genius Code icon (![Db2 developer icon]({{site.baseurl}}/assets/imag
 
 ## Configuring IBM Db2 Genius Code
 ---
-1. Open Visual Studio Code and click the gear icon (![gear icon]({{site.baseurl}}/assets/images/gear-icon.png){:width="25" :height="25"}) and then **Settings**. 
+1. Open Visual Studio Code and click the gear icon (![gear icon]({{site.baseurl}}/assets/images/gear-icon.png){:width="25" :height="25"}) and then **Settings**.
 2. Go to **Extensions** in the left sidebar and select **IBM Db2 Genius Code Settings**.
 3. Configure the following settings as required:
 
 
-   - **Db2 › Java: Home**
-     Path to the Java installation for the Db2 extension. If not set, the extension uses the `JAVA_HOME` environment variable or the system PATH to locate Java. Set this if you have multiple JDKs installed and the extension is picking up the wrong version.
+   - **Db2 › Java: Home** (applies to all profiles)
+     Path to the Java installation for the Db2 extension. This setting is optional. If not set, the extension uses the `JAVA_HOME` environment variable or the system PATH to locate Java. Set this if you have multiple JDKs installed and the extension is picking up the wrong version. Because this setting is independent of the system Java path, you can use a dedicated Java installation for the extension without changing your existing system configuration.
    - **Db2service: Max Rows**
      Set the maximum number of rows to fetch in query results (default is 1000).
    - **Db2service: Service Port**
      Enter the port number for the Db2 service (default is 9000).
-     
-     <!-- - **Genius Hub: Allow Self Signed Certificate** :Allow self-signed TLS certificates when connecting to IBM Db2 Genius Hub. Enable this only if your Genius Hub server is using a self-signed certificate.-->
+   - **Db2service: Statement Terminator**
+     Set the default statement terminator that is used to split SQL statements (default is a semicolon, `;`). You can override this setting for an individual file by adding `--#SET TERMINATOR <char>` to the file. For more information, see [Setting the statement terminator]({{site.baseurl}}/docs/working-with-sql/running-multiple-sql-statements#setting-the-sql-statement-terminator).
+   - **Genius Hub: Allow Self Signed Certificate** (applies to all profiles)
+     Allow self-signed TLS certificates when you connect to IBM Db2 Genius Hub. The extension automatically detects whether to allow self-signed certificates when you log in. Change this setting manually only if needed, for example, if your Genius Hub server uses a self-signed certificate.
+
+## Using the onboarding experience
+---
+
+When you first open IBM Db2 Genius Code, the onboarding interface brings the important setup actions together in one place. Use it to explore the available setup options and to configure the extension for your requirements.
 
 ## Using the IBM Db2 Genius Code
 ---

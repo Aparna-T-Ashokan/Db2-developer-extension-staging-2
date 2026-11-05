@@ -38,6 +38,10 @@ You can generate DDL for the following Db2 objects:
 3. From the menu, click the option **Generate DDL**. 
 
    The extension opens the DDL for the selected table structure in a read-only editor tab. You can copy the DDL for an object but cannot run it directly.
+
+   > **Note**: If you are logged in to Genius Hub, Genius AI handles the DDL generation request and generates the DDL for the selected database object. If you are not logged in, DDL generation uses the previous workflow described in the steps. DDL generation works in both cases.
+   {: .note-right}
+
    
    
    ![Generate DDL]({{site.baseurl}}/assets/images/create-ddl.png)
