@@ -42,7 +42,7 @@ To connect your workspace and enable Genius AI code assistance, log in to Genius
 
 2. Click **Toggle Genius AI** to open the **Genius AI** chat panel. At the bottom of the panel, make sure that the **Choose Database** dropdown shows the database that you want to query. If it does not, select the database from the dropdown.
 
-   ![Genius AI chat interface]({{site.baseurl}}/assets/images/genius-ai-chat.png){:width="400" :height="500"}
+   ![Genius AI chat interface]({{site.baseurl}}/assets/images/genius-ai-chat.png){:width="300" :height="400"}
 
 3. Enter your question in natural language. For example:
 
@@ -108,8 +108,7 @@ In both cases, DDL generation continues to work. For more information, see [Gene
 ## Viewing conversation history
 
 Click Conversation History (![history]({{site.baseurl}}/assets/images/history-icon.png){:width="25" :height="25"}) in the **Genius AI** chat panel to see the **Conversation History**. It lists your previously asked questions.
-
-(![Toggle Genius AI]{{site.baseurl}}/assets/images/conv-history.png){:width="400" :height="600"}
+![Toggle Genius AI]({{site.baseurl}}/assets/images/conv-history.png){:width="400" :height="600"}
 
 The following actions are available for managing your conversations:
 
