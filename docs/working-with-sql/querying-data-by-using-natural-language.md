@@ -34,25 +34,24 @@ To connect your workspace and enable Genius AI code assistance, log in to Genius
 
    After you log in, the **Account** section shows that you are logged in, with an **Open Genius Hub** button and a **Log out** link.
 
-5. In the **Db2 Connections** pane, connect to a database.
+## Querying data
+
+1. In the **Db2 Connections** pane, connect to the database that you want to query.
 
    When a database is selected, the **Toggle Genius AI** button (![Toggle Genius AI]({{site.baseurl}}/assets/images/Toggle-db2-ai-assistant.png){:width="25" :height="25"}) is displayed.
 
-6. Click **Toggle Genius AI** to open the **Genius AI** chat panel.
+2. Click **Toggle Genius AI** to open the **Genius AI** chat panel. At the bottom of the panel, make sure that the **Choose Database** dropdown shows the database that you want to query. If it does not, select the database from the dropdown.
 
    ![Genius AI chat interface]({{site.baseurl}}/assets/images/genius-ai-chat.png){:width="400" :height="600"}
 
-## Querying data
-
-1. In the **Genius AI** chat panel, click the **Choose Database** dropdown at the bottom and select the database that you want to query.
-2. Enter your question in natural language. For example:
+3. Enter your question in natural language. For example:
 
    ```
    Generate SQL Query for @ADNAAN.ACT
 
    ```
 
-3. Click **Send**.
+4. Click **Send**.
 
    The extension:
 
