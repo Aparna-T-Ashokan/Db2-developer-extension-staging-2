@@ -4,7 +4,7 @@ title: "Viewing historical table data by using Db2 Time Machine"
 
 # {{ page.title }}
 
-Db2 Time Machine lets you view how the data in a temporal table looked on a specific date. You can compare the contents of a table at different points in time to understand how its data has changed.
+Db2 Time Machine lets you view how the data in a temporal table looked at a specific point in time. You can compare the contents of a table at different times to understand how its data has changed. If a table doesn't track history yet, Db2 Time Machine shows the SQL statements that you need to run to enable it.
 
 ## Before you begin
 
@@ -12,25 +12,49 @@ Db2 Time Machine is locked until you log in to Genius Hub. Log in to Genius Hub 
 
 ## Viewing the history of a temporal table
 
-1. Open **Db2 Time Machine**.
+A temporal table records every change (INSERT, UPDATE, and DELETE) so that you can query the data as it looked at any past moment.
 
-   If you are not logged in to Genius Hub, the feature is locked.
-2. Log in to Genius Hub.
+1. In the **Db2 Connections** pane, expand the connection, schema, and **Tables** folder.
+2. Right-click the table, and then click **See History**.
 
-   After you log in, Db2 Time Machine is unlocked.
-3. Select a date.
+   The table details open on the **History** tab. You can also open the table and click the **History** tab.
+
+3. In the **View data as of** field, select the date and time that you want to view. To select the date and time, use one of the following methods:
+   - In the **Timeline navigator**, drag the slider to a year between 2000 and the current year, or click one of the **Jump to** buttons.
+   - Use the **Month**, **Day**, **Hour**, **Min**, and **Sec** lists to set the exact time.
+   - Click **Use current time** to select the current date and time.
+
+   The **Selected** label under the lists shows the date and time that you chose.
+
 4. Click **View history**.
 
-   The extension shows the data in the table as it was on the selected date, including the number of rows.
+   
 
-To compare the table at another point in time, select a different date and click **View history** again.
+To compare the table at another point in time, select a different date and time, and then click **View history** again.
 
-For example, if the table has 12 rows on October 16, 2026 and 24 rows on October 21, 2026, you can see that the table gained 12 rows between those dates.
+Each time you view the history of a table, the extension saves an entry to **Query History** that starts with `Time Machine:` followed by the table name.
 
-## Working with tables that are not temporal tables
+## Enabling history tracking for a table
 
-If the table that you select is not a temporal table, Db2 Time Machine guides you through the steps that are required to enable temporal history tracking for that table.
+If the table that you select is not a temporal table, the **History** tab shows the message **This table doesn't track history yet**. The tab also shows the SQL statements that you need to run to add history tracking to the table.
 
-## Logging out of Genius Hub
+1. Click **Copy SQL**.
+2. Open a **Db2 SQL Editor** that is connected to the same database, and paste the statements.
+3. Run the statements in the order they are shown.
 
-When you log out of Genius Hub, Db2 Time Machine is locked again. Log in again to continue to use the feature.
+   The statements do the following:
+
+   | Step | What the statements do |
+   |------|------------------------|
+   | 1 | Add the system-period columns `SYS_START`, `SYS_END`, and `TS_ID` to the table. |
+   | 2 | Define the `SYSTEM_TIME` period by using `SYS_START` and `SYS_END`. |
+   | 3 | Create a history table that has the same structure as the table. The history table name is the table name followed by `_HISTORY`. |
+   | 4 | Enable versioning by associating the history table with the table. |
+
+4. Refresh the table, and then open the **History** tab again.
+
+To learn more about temporal tables, click **Db2 docs** on the **History** tab.
+
+**Note:** Db2 captures history from the moment that versioning is enabled. Earlier changes are not tracked retroactively.
+
+
