@@ -51,6 +51,8 @@ To connect your workspace and enable Genius AI code assistance, log in to Genius
 
    ```
 
+   **Note:** To generate a SQL query, you need to enable **Generate SQL** mode. At the bottom of the **Genius AI** chat panel, click the icon next to the database name, and then select **Generate SQL**. If the mode is not enabled, Genius AI asks you to enable it.
+
 4. Click **Send**.
 
    The extension:

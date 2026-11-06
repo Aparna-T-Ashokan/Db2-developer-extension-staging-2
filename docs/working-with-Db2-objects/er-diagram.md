@@ -46,32 +46,30 @@ Use the layout control to switch between horizontal and vertical arrangements. C
 When a schema contains many tables, use the search option to find a particular table.
 
 1. Click the search option in the ER diagram view.
-2. Enter the name of the table that you want to find (for example, `Product`).
+2. Enter the name of the table that you want to find.
 
    The matching table is highlighted in blue in the diagram.
 
 ## Modifying a table from the diagram
 
-You can add a column to a table directly from the diagram.
+You can modify a table directly from the diagram by adding new columns.
 
-1. In the diagram, use the editing functionality to add a new column to the table.
+1. In the diagram, locate the table that you want to modify and click **Add Column**.
+2. Enter the column details and click **Add**.
 
    The extension generates the SQL statement for the proposed change.
-2. Review the generated SQL.
-3. Select one of the following options:
-   - **Open SQL editor**: Opens the SQL in the SQL editor.
-   - **Copy SQL**: Copies the SQL to the clipboard.
-   - **Cancel**: Closes the dialog without making the change.
-   - **Run** or **Apply**: Runs the SQL to apply the change to the database.
+3. Review the generated SQL statement.
+   - Click **Copy SQL** to copy the SQL statement to the clipboard and run it in the SQL Editor.
+   - Click **Run & Apply** to update the table in the database, or click **Cancel** to ignore the changes.
 
 ## Exporting an ER diagram
 
 
 You can export an ER diagram in the following formats:
 
-- **PNG**: Exports the diagram as an image, suitable for documentation and sharing.
-- **JSON**: Exports the diagram data as a JSON file, suitable for further processing or reimporting.
+- **PNG**
+- **JSON**
+- **SVG**
 
 To export a diagram, click **Export** in the ER diagram view and select the format you want.
 
-When you export a diagram as a PNG image, a dialog box prompts you for the name of the exported file. Enter the file name and confirm the export.
