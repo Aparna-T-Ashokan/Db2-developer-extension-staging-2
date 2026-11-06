@@ -108,6 +108,7 @@ In both cases, DDL generation continues to work. For more information, see [Gene
 ## Viewing conversation history
 
 Click Conversation History (![history]({{site.baseurl}}/assets/images/history-icon.png){:width="25" :height="25"}) in the **Genius AI** chat panel to see the **Conversation History**. It lists your previously asked questions.
+
 ![Toggle Genius AI]({{site.baseurl}}/assets/images/conv-history.png){:width="400" :height="600"}
 
 The following actions are available for managing your conversations:
