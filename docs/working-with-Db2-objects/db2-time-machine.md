@@ -32,7 +32,7 @@ A temporal table records every change (INSERT, UPDATE, and DELETE) so that you c
 
 To compare the table at another point in time, select a different date and time, and then click **View history** again.
 
-Each time you view the history of a table, the extension saves an entry to **Query History** that starts with `Time Machine:` followed by the table name.
+Each time you view the history of a table, IBM Db2 Genius Code saves an entry to **Query History** that starts with `Time Machine:` followed by the table name.
 
 ## Enabling history tracking for a table
 
@@ -44,12 +44,12 @@ If the table that you select is not a temporal table, the **History** tab shows 
 
    The statements do the following:
 
-   | Step | What the statements do |
-   |------|------------------------|
-   | 1 | Add the system-period columns `SYS_START`, `SYS_END`, and `TS_ID` to the table. |
-   | 2 | Define the `SYSTEM_TIME` period by using `SYS_START` and `SYS_END`. |
-   | 3 | Create a history table that has the same structure as the table. The history table name is the table name followed by `_HISTORY`. |
-   | 4 | Enable versioning by associating the history table with the table. |
+| Step | What the statements do |
+|------|------------------------|
+| 1 | Add the system-period columns `SYS_START`, `SYS_END`, and `TS_ID` to the table. |
+| 2 | Define the `SYSTEM_TIME` period by using `SYS_START` and `SYS_END`. |
+| 3 | Create a history table that has the same structure as the table. The history table name is the table name followed by `_HISTORY`. |
+| 4 | Enable versioning by associating the history table with the table. |
 
 4. Refresh the table, and then open the **History** tab again.
 
