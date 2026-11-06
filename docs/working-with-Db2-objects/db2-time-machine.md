@@ -40,17 +40,11 @@ If the table that you select is not a temporal table, the **History** tab shows 
 
 1. Click **Copy SQL**.
 2. Open a **Db2 SQL Editor** that is connected to the same database, and paste the statements.
-3. Run the statements in the order they are shown.
-
-   The statements do the following:
-
-| Step | What the statements do |
-|------|------------------------|
-| 1 | Add the system-period columns `SYS_START`, `SYS_END`, and `TS_ID` to the table. |
-| 2 | Define the `SYSTEM_TIME` period by using `SYS_START` and `SYS_END`. |
-| 3 | Create a history table that has the same structure as the table. The history table name is the table name followed by `_HISTORY`. |
-| 4 | Enable versioning by associating the history table with the table. |
-
+3. Run the statements in the order they are shown:
+   - **Step 1**: Add the system-period columns `SYS_START`, `SYS_END`, and `TS_ID` to the table.
+   - **Step 2**: Define the `SYSTEM_TIME` period by using `SYS_START` and `SYS_END`.
+   - **Step 3**: Create a history table that has the same structure as the table. The history table name is the table name followed by `_HISTORY`.
+   - **Step 4**: Enable versioning by associating the history table with the table.
 4. Refresh the table, and then open the **History** tab again.
 
 To learn more about temporal tables, click **Db2 docs** on the **History** tab.
