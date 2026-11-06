@@ -57,19 +57,12 @@ You can modify a table directly from the diagram by adding new columns.
 1. In the diagram, locate the table that you want to modify and click **Add Column**.
 2. Enter the column details and click **Add**.
 
-   The extension generates the SQL statement for the proposed change.
+   IBM Db2 Genius Code generates the SQL statement for the proposed change.
 3. Review the generated SQL statement.
    - Click **Copy SQL** to copy the SQL statement to the clipboard and run it in the SQL Editor.
    - Click **Run & Apply** to update the table in the database, or click **Cancel** to ignore the changes.
 
 ## Exporting an ER diagram
 
-
-You can export an ER diagram in the following formats:
-
-- **PNG**
-- **JSON**
-- **SVG**
-
-To export a diagram, click **Export** in the ER diagram view and select the format you want.
+To export an ER diagram as a PNG, JSON, or SVG file, click **Export** in the ER diagram view and select the format that you want.
 
