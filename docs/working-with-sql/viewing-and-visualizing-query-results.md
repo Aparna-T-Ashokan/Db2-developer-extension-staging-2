@@ -4,40 +4,44 @@ title: "Viewing and visualizing query results"
 
 # {{ page.title }}
 
-The data viewer and data visualization features in IBM Db2 Genius Code help you work with query results interactively.
+When you run SQL statements in IBM Db2 Genius Code, the query results are displayed in the **DB2 GENIUS CODE** panel in the terminal area. Each executed query generates its own tab (for example, **Query 1**, **Query 2**), allowing you to review, search, filter, export, and visualize your data interactively.
 
-## Opening results in the data viewer
+## Working with tabular results
 
-1. Run a SQL query against your Db2 database.
-2. Click the result data to open it in the data viewer.
+The table view presents your query results in a structured grid with the following interactive features:
 
-   The data viewer displays the returned records in a structured tabular format in a dedicated view.
+- **Search results**: Enter keywords in the **Search results** bar to quickly find matching data across all returned rows.
+- **Filter results**: Click the filter icon to apply specific filtering criteria to the result columns.
+- **Drag and drop columns**: Click and drag column headers to reorder columns in the table so that the most relevant information is positioned where you need it.
+- **Sort columns**: Click a column header to sort values in ascending or descending order.
+- **Pagination**: Use the pagination controls at the bottom of the table to set **Items per page** (for example, 25, 50, 100) and navigate between result pages.
+- **Export to CSV or JSON**: Click the export icon (**⤓**) in the toolbar to download your query results in CSV or JSON format for offline analysis, reporting, or sharing.
+- **Open in Db2 SQL Editor**: Click the open icon (**⧉**) in the toolbar to open the results in a full editor tab (`Results: Db2 SQL Editor`).
 
-Use the copy feature in the data viewer to copy data and use it elsewhere in your workflow.
+## Exploring data in the Data Viewer
 
-## Visualizing results as charts
+A dedicated **DATA VIEWER** panel is displayed alongside the query results. When you click on any result cell containing large-object (LOB) or complex data types—such as BINARY, VARBINARY, BLOB, CLOB, DBCLOB, XML, Spatial, or Vector Embeddings—its complete content is displayed in the Data Viewer.
 
-Instead of analyzing the results only in a table, you can visualize the data by using the following chart types:
+Key features of the **Data Viewer** include:
 
-- Bar chart
-- Line chart
-- Area chart
-- Pie chart
-- Scatter chart
+- **Multiple tab support**: Each clicked cell opens in its own tab (for example, `C_BLOB #1`, `C_DBCLOB #2`, `C_XML #3`), making it easy to inspect and compare multiple data values side by side. Clicking an already open cell switches focus to its existing tab.
+- **Detailed cell metadata**: The top header of each tab displays:
+  - **Column name**: Name of the column.
+  - **Data type**: Specific data type (for example, `XML`, `BLOB`, `BINARY`).
+  - **Size**: Formatted data size (for example, `61 bytes`).
+  - **Row** and **Col**: The row number and column position of the cell in the result set.
+- **Copy content**: Click the copy icon in the upper-right corner of the viewer tab to copy the formatted content to the clipboard.
+- **Close tabs**: Click the close icon (**×**) on any tab to dismiss it when finished.
 
-To visualize your results:
+## Visualizing results in Chart / Graph mode
 
-1. In the data viewer, select a chart type.
-2. Configure the relevant columns and axes.
+Instead of analyzing results only in tabular format, you can switch to chart mode to visualize data patterns, trends, and comparisons:
 
-   The extension displays your query results as a chart.
+1. In the **Query Results** toolbar, click the **Chart mode** icon (bar chart icon) next to the table view icon.
+2. In the configuration panel on the left:
+   - **Chart type**: Select your desired chart type from the dropdown (for example, **Bar**, **Line**, **Area**, **Pie**, or **Scatter**).
+   - **X-Axis**: Select the column to use for the X-axis (category or horizontal dimension).
+   - **Y-Axis**: Select the column to use for the Y-axis (metric or vertical dimension).
+   - **+ Add column**: Click **+ Add column** to add additional metrics or data series to compare multiple values on the same chart.
 
-Charts make it easier to compare values, identify trends, understand proportions, and explore relationships between data points.
-
-## Working with tabular data
-
-In the tabular view, you can use the following features:
-
-- **Rearrange columns**: Drag and drop columns to change their positions in the table. This helps you keep the most relevant information where you need it.
-- **Sort columns**: Sort the values in a column in ascending or descending order. Ascending order arranges values from lower to higher, or from A to Z for alphabetical values. Descending order reverses the sequence.
-- **Export data**: Export the data to use it outside IBM Db2 Genius Code, for example, for further analysis, reporting, or sharing with teammates.
+The chart updates interactively as you configure your dimensions and series.

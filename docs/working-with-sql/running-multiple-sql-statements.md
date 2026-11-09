@@ -2,47 +2,49 @@
 title: "Running SQL statements"
 ---
 
-
-
 # {{ page.title }}
 
-
-IBM Db2 Genius Code supports running multiple SQL statements within a single editor session. You can run all statements at once or select specific statements to run individually. Each statement that is run generates its own result tab in the Results pane, making it easier to review and compare the output from each statement.
+IBM Db2 Genius Code supports running SQL statements within the SQL editor. You can run individual statements using inline run buttons or execute multiple statements at once using the main run button. Each executed statement generates its own tab in the results panel, making it easy to review and compare output.
 
 Each SQL file editor uses a dedicated database connection. The connection remains associated with the editor while it is active, which allows transaction state, temporary tables, and session variables to persist across query executions.
 
-## Running multiple SQL statements in SQL Editor
+## Running queries in Db2 SQL Editor
 ---
 
+1. Click **Open SQL Editor** (![Opening a new SQL editor]({{site.baseurl}}/assets/images/open-sql-editor.png){:width="25" :height="25"}) in the **Db2 Connections** pane.
+2. Select the database connection from the dropdown menu at the top of the editor.
+3. Enter your SQL statements in the editor.
+4. Choose how to run or analyze your queries:
+   - **Run a single statement**: Click the inline **▶ Run** button located directly above the statement you want to execute.
+   - **Run multiple statements**: Click the **Run ▶** button in the top toolbar to execute all statements in the editor, or right-click anywhere in the editor and select **Run All Queries**.
+   - **Run selected query**: Highlight a statement, right-click, and select **Run Selected Query**.
+   - **Analyze query performance**: Right-click a statement and select **Genius: Analyze Query Performance** to have Genius AI analyze execution performance and explain plans.
 
-To run multiple SQL statements, do the following steps.
-1. Click **Open SQL Editor** (![Opening a new SQL editor]({{site.baseurl}}/assets/images/open-sql-editor.png){:width="25" :height="25"}) in the Db2 Connections pane. **Db2 SQL Editor** opens.
-2. Select the database connection from the dropdown menu.
-3. Write SQL statements in the editor.
-4. Right‑click in the editor and select **Run All Queries**. Alternatively, you can click **Run** to run all the statements.
+The results appear in the **DB2 GENIUS CODE** panel in the terminal area. Each executed query produces its own tab (for example, **Query 1**, **Query 2**).
 
+### Query Results features
 
-When you run multiple SQL statements, the extension runs them sequentially and presents the consolidated results in the **Results** pane. Each statement's result set appears in its own tab (for example, Query 1, Query 2).
+The **Query Results** panel provides several interactive tools:
 
+- **View modes**: Toggle between **Table view** (grid) and **Chart mode** (graph) using the view icons.
+- **Search results**: Use the **Search results** search bar to search for specific text across returned rows.
+- **Filter**: Click the filter icon to apply filters to result columns.
+- **Export**: Click the download/export icon (**⤓**) to export query results in **CSV** or **JSON** format.
+- **Open in Db2 SQL Editor**: Click the open icon (**⧉**) to open the query results in a full editor tab (`Results: Db2 SQL Editor`).
+- **Drag and drop columns**: Drag and drop column headers to rearrange column positions.
+- **Pagination**: Adjust **Items per page** (e.g., 25) and navigate through pages.
 
+## Viewing LOB and complex data in Data Viewer
 
+When a result cell contains large-object (LOB) or complex data types—such as BINARY, VARBINARY, BLOB, CLOB, DBCLOB, XML, Spatial, Vector Embeddings, or Metadata—click the cell to open it in the **Data Viewer** pane. The Data Viewer displays:
 
-![Run multiple queries]({{site.baseurl}}/assets/images/run-sql-mulitple.png)
+- The **Column name**, **Data type**, formatted **Size** (e.g., in bytes), and the **Row** and **Col** numbers.
+- The formatted or captured cell content.
+- A **Copy** button in the upper-right corner to copy the full content to the clipboard.
 
+You can open multiple cells simultaneously—each opens in its own tab (such as `C_BLOB #1`, `C_XML #2`). Clicking an already opened cell switches focus to its existing tab rather than opening a duplicate.
 
-
-> **Note**: When you click the layout toggle icon, the **Results** pane switches from the default vertical view to a horizontal view, where the results are aligned horizontally with the editor. Click the icon again to return the results to the vertical alignment with the editor.
-{: .note-right}
-
-You can search in the result set. Click **Export** to download your query results in CSV or JSON.
-
-## Viewing LOB data
-
-When a result cell contains a large-object (LOB) data type such as CLOB, BLOB, DBCLOB, XML, BINARY, Spatial, Vector Embeddings, or Metadata, click the cell to open the **LOB Viewer**. The LOB Viewer displays the column name, data type, character count, and the full captured content. Click **Copy** to copy the content to the clipboard.
-
-You can open multiple columns in the LOB Viewer simultaneously — each opens in its own tab. Clicking the same cell a second time focuses the existing tab rather than opening a duplicate.
-
-> **Note**: A zero-byte or null LOB value is rendered as `NULL` in the viewer, regardless of the LOB data type.
+> **Note**: A zero-byte or null value is rendered as `NULL` in the viewer regardless of the data type.
 {: .note-right}
 
 ## Running a statement from the SQL editor
