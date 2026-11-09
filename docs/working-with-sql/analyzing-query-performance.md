@@ -12,12 +12,16 @@ The performance analyzer is part of Genius AI. Log in to Genius Hub and select a
 
 ## Analyzing a query
 
-1. In the **Genius AI** chat panel, ask Genius AI to analyze the performance of a SQL query.
+To analyze the performance of a previously run query from **QUERY HISTORY**:
 
-   You can also use the `performance analyzer` slash command.
-2. Wait for the analysis to complete.
+1. In the **Db2 Connections** pane, locate and expand **QUERY HISTORY**.
+2. Find the query that you want to analyze, and click **Analyse Query Performance**, or right-click the query and select **Genius: Analyse Query Performance**.
 
-   Genius AI summarizes the execution plan, highlights potential performance bottlenecks, and lets you explore the results in more detail.
+   Genius AI runs the performance analysis on the selected query in the **Genius AI** chat panel, summarizing the execution plan and identifying potential bottlenecks.
+
+3. In the Genius AI response, click **View Performance** to open the performance analyzer view.
+
+**Note:** You can also analyze queries directly in the **Genius AI** chat panel by asking Genius AI or by entering `/` to use slash commands (such as the `performance analyzer` command).
 
 ## Exploring the results
 

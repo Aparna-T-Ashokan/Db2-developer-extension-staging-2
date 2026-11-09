@@ -58,5 +58,13 @@ Query history is persistent — your previously run queries are retained even af
    - **Past results**:
      - Expand the **Past results** section to view past query results or historical execution records.
 
+## Using Genius AI options with Query History
+---
+
+You can interact with queries in **QUERY HISTORY** using Genius AI:
+
+- **Chat with AI**: Hover over or right-click a query in **QUERY HISTORY** and select **Chat with AI**. The SQL statement is automatically populated in the **Genius AI** chat input box, where you can modify or send it to ask questions or get assistance.
+- **Analyse Query Performance**: Click the **Analyse Query Performance** option on a query in **QUERY HISTORY**, or right-click the query and select **Genius: Analyse Query Performance**. Genius AI analyzes the query execution plan and performance. Click **View Performance** to inspect the execution plan, visual diagram, statistics, and index recommendations.
+
 
 
