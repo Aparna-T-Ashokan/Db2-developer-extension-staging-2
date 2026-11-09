@@ -36,14 +36,25 @@ After you create a database connection, the following object types associated wi
 
 When you click an object type in a schema, it expands to show all objects of that type. For example, if you click **Tables**, it expands to show all the tables in a schema.
 
-## Filtering database objects {#filtering-objects}
+## Filtering schemas and tables {#filtering-objects}
 
-When you work with a large database, finding a specific object manually can take time. Use the filter option in the **Db2 Connections** pane to narrow down the displayed items based on your search criteria.
+When you work with a large database, finding specific schemas or tables manually can take time. You can use the filter option (magnifying lens icon) in the **Db2 Connections** pane to narrow down the list:
 
-1. In the **Db2 Connections** pane, navigate to the database objects that you want to explore.
-2. Use the filter option to enter your search criteria.
+- **Filtering schemas under a database connection**:
+  1. Hover over a database connection and click the filter icon (magnifying lens).
+  2. In the input field that opens at the top of the editor, enter the schema name or pattern that you want to find.
+  3. Press **Enter**. The connection expands to display only the matching schema.
 
-   The pane shows only the items that match your criteria.
+- **Filtering tables in a schema**:
+  1. Expand the schema, hover over **Tables**, and click the filter icon (magnifying lens).
+  2. In the input field, enter the table name or prefix (for example, `emp`).
+  3. Press **Enter**. The schema displays only the tables that match the criteria (for example, tables starting with `emp`).
+
+### Removing a filter
+
+To remove filtering and restore the full list of schemas or tables:
+- Click the close button (**×**) next to the filtered item, or
+- Click the filter icon again, clear the input field (leave it empty), and press **Enter**.
 
 ## Viewing table details in a schema {#tables-schema-id}
 
