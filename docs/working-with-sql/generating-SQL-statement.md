@@ -16,13 +16,7 @@ You can generate SQL statements by multiple methods:
 1. Click **Open SQL Editor** (![Opening a new SQL editor]({{site.baseurl}}/assets/images/open-sql-editor.png){:width="25" :height="25"}) in the Db2 Connections pane. **Db2 SQL Editor** opens.
 2. Select the connection from the dropdown menu.
 3. In the editor, write your SQL statements.
-4. Click **Run** to run the SQL statement. Your results appear in the results window.
-
-    ![Query results window]({{site.baseurl}}/assets/images/results-window.png)
-5. Click **Export** to download the results in CSV or JSON format.
-
-  > **Note**: You can save your SQL statements in .sql or .db2.sql format by clicking **Save**.
-  {: .note-right}
+4. Click **Run** to run the SQL statement. The query results appear in the terminal. For more information, see [Viewing and visualizing query results]({{site.baseurl}}/docs/working-with-sql/viewing-and-visualizing-query-results).
 
 
 ## Generating SQL statements by using the Create new SQL file icon
