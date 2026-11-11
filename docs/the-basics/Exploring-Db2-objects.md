@@ -38,23 +38,21 @@ When you click an object type in a schema, it expands to show all objects of tha
 
 ## Filtering schemas and tables {#filtering-objects}
 
-When you work with a large database, finding specific schemas or tables manually can take time. You can use the filter option (magnifying lens icon) in the **Db2 Connections** pane to narrow down the list:
+When you work with a large database, finding specific schemas or tables manually can take time. You can use the filter option in the **Db2 Connections** pane to narrow down the list:
 
 - **Filtering schemas under a database connection**:
-  1. Hover over a database connection and click the filter icon (magnifying lens).
+  1. Hover over a database connection and click **Filter schemas** (![Filter objects]({{site.baseurl}}/assets/images/filter-objects.png){:width="25" :height="25"}).
   2. In the input field that opens at the top of the editor, enter the schema name or pattern that you want to find.
   3. Press **Enter**. The connection expands to display only the matching schema.
 
 - **Filtering tables in a schema**:
-  1. Expand the schema, hover over **Tables**, and click the filter icon (magnifying lens).
+  1. Expand the schema, hover over **Tables**, and click **Filter objects** (![Filter objects]({{site.baseurl}}/assets/images/filter-objects.png){:width="25" :height="25"}).
   2. In the input field, enter the table name or prefix (for example, `emp`).
   3. Press **Enter**. The schema displays only the tables that match the criteria (for example, tables starting with `emp`).
 
 ### Removing a filter
 
-To remove filtering and restore the full list of schemas or tables:
-- Click the close button (**×**) next to the filtered item, or
-- Click the filter icon again, clear the input field (leave it empty), and press **Enter**.
+To remove filtering and restore the full list of schemas or tables, click the close button (**×**) next to the filtered item.
 
 ## Viewing table details in a schema {#tables-schema-id}
 
@@ -73,20 +71,20 @@ To remove filtering and restore the full list of schemas or tables:
    - Owner: The user who owns the table. 
    - Created time: Date and time when the table was created in the database.
    - Organization Type: Specifies how the data within the table is physically organized. Common types include row-organized or column-organized.
-2. Click the table name that you want to view (for example, EMPMDC table). It displays the following details. 
+2. Click the table name that you want to view. It displays the following details.
 
 
-   ![Connecting to database]({{site.baseurl}}/assets/images/single-table-details.png)
+   ![Table details]({{site.baseurl}}/assets/images/single-table-details.png)
 
 
    - Properties: General details such as table name, schema name, type, encoding scheme, owner.
-   - Columns: Lists all column names along with their data types and constraints.        
+   - Columns: Lists all column names along with their data types and constraints.
    - Constraints: Rules that apply to table columns.
    - Indexes: Shows relationships with other objects (like views or indexes).
    - Data: Shows the actual rows that are stored in the table.
    
    
-You can also view the details of a particular table by expanding the Tables section under the schema in the Db2 Connections pane and clicking the table name. For example, EMPMDC. For more information about the table properties, see [Exploring table object details](../working-with-Db2-objects/Db2-objects.md).
+You can also view the details of a particular table by expanding the **Tables** section under the schema in the **Db2 Connections** pane and clicking the table name. For more information about the table properties, see [Exploring table object details](../working-with-Db2-objects/Db2-objects.md).
 
 
 You can follow the same process to explore other Db2 objects. 

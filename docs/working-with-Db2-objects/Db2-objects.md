@@ -17,28 +17,29 @@ In Db2, every table is associated with a set of metadata and structural componen
 1. Click the database connection and then the schema that you want.
 2. Expand the **Tables** section and click the table name. It shows the following table details:
 
-      ![Adding a database connection]({{site.baseurl}}/assets/images/table-properties.png)
+      ![Table properties]({{site.baseurl}}/assets/images/single-table-details.png)
 
       
-   **Properties**: General details such as table name, schema name, type, encoding scheme, owner, etc.
+   **Properties**: General details such as table name, schema name, type, encoding scheme, owner, and more.
    
    
-   The Properties tab shows the following details:
+   The **Properties** tab shows the following details:
+   - Name: Name of the table.
    - Schema: Schema under which the table resides.
    - Database: Database name.
    - Table space: Logical storage location.
-   - Type: Object type (Table).
+   - Type: Object type (for example, T for table).
    - Encoding scheme: Character encoding used for the text data in the table (for example, UTF-8).
-   - No. of primary key columns: Number of columns that are defined as the primary key in metadata.
+   - No. of primary key columns: Number of columns that are defined as the primary key.
    - Partition key: Indicates if the table is partitioned and how many columns are used as partition keys.
    - Restrict on drop: Prevents accidental table deletion until you explicitly remove the restriction.
-   - Append on: If set to Yes, new rows are appended at the end of the table. Here, it is disabled.
+   - Append on: If set to Yes, new rows are appended at the end of the table.
    - Control: Indicates whether special control features are enabled.
    - Auditing: Specifies if auditing is enabled for this table. Auditing tracks changes for compliance.
    - Data capture: Indicates whether data capture for replication or change tracking is enabled.
    - Owner: The user who owns the table.
    - Cardinality: Estimated number of rows in the table.
-   - Statistics time: Shows the timestamp of the last statistics update. A default value indicates that statistics have not yet been collected.
+   - Statistics time: Timestamp of the last statistics update. A default value indicates that statistics have not yet been collected.
    - Created time: Timestamp indicating when the table was created.
    - Altered time: Timestamp indicating when the table was last modified.
 

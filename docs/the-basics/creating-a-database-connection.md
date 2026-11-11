@@ -65,26 +65,35 @@ You can see the following information about the instance:
 ---
 To work with IBM Db2 databases, you need to create a database connection to connect to the required database within the Db2 instance.
 
-1. In the **Db2 Connections** pane, click **Add connection** button or **Add connection** ![Adding a database connection]({{site.baseurl}}/assets/images/add-database-connection.png){:width="25" :height="25"} to open the **Db2 Connection** workflow in a new editor tab.
-![Adding a database connection]({{site.baseurl}}/assets/images/add-db2-connection.png)
+1. In the **Db2 Connections** pane, click **Add connection** or **Add connection** ![Adding a database connection]({{site.baseurl}}/assets/images/add-database-connection.png){:width="25" :height="25"} to open the **Db2 Connection** form in a new editor tab.
+
+   ![Adding a database connection]({{site.baseurl}}/assets/images/add-db2-connection.png)
 
 2. Enter the connection details by using one of the following methods:
-      - Enter the **Host**, **Port**, and **Database**. The extension automatically generates the **Connection URL** from these fields.
-      - Paste the JDBC URL for your Db2 database (for example, `jdbc:db2://<host>:<port>/<database>`) in the **Connection URL** field. The extension automatically populates the other fields from the URL.
+   - Enter the **Host**, **Port**, and **Database**. The extension automatically generates the **Connection URL** from these fields. The default port is `50000`.
+   - Paste the JDBC URL for your Db2 database (for example, `jdbc:db2://<host>:<port>/<database>`) in the **Connection URL** field. The extension automatically populates the other fields from the URL.
 
    Optionally, enter a unique **Connection name** to identify the connection in the **Db2 Connections** pane.
-3. (Optional) Under the **Security** section, select **Use SSL** to enable SSL encryption for the database connection. When enabled, SSL properties (such as `sslConnection=true` and `sslCertificateType=StandardCA`) are automatically added to **Optional JDBC Properties**, and you can configure:
-      - **Certificate**: Select the SSL certificate type (**Public CA** is selected by default; other options include **JKS** and **PKCS12**).
-      - **Truststore Password**: Enter the password for your truststore file (if applicable).
-      - **Truststore Path**: Provide the file system path to your truststore file (if applicable).
+
+3. Under the **Security** section, **Use SSL** is selected by default. SSL properties (`sslConnection=true` and `sslCertificateType=StandardCA`) are automatically added to **Optional JDBC Properties**. You can configure the following SSL options:
+   - **Certificate**: Select the SSL certificate type. **Public CA** is selected by default. Other options include **JKS** and **PKCS12**.
+   - **Truststore Password**: Enter the password for your truststore file (if applicable).
+   - **Truststore Path**: Provide the file system path to your truststore file (if applicable).
+
+   To disable SSL encryption, clear the **Use SSL** checkbox.
+
 4. Enter your connection credentials:
-      - **Username \***: Enter the username to access the Db2 database. (Required field).
-      - **Password**: Enter the password to access the Db2 database. You can click the eye icon to toggle password visibility.
+   - **Username \***: Enter the username to access the Db2 database. This is a required field.
+   - **Password**: Enter the password to access the Db2 database. Click the eye icon to toggle password visibility.
+
 5. (Optional) Select the **Save credentials** checkbox to save your credentials securely in Visual Studio Code. If you do not select this checkbox, the extension prompts you for the password each time that you connect.
-6. (Optional) In the **Optional JDBC Properties** section, review automatically populated properties or click **+ Add Property** to add custom JDBC connection properties as key-value pairs. Click **Remove** to delete a property.
+
+6. (Optional) In the **Optional JDBC Properties** section, review the automatically populated properties. When **Use SSL** is selected, `sslConnection` and `sslCertificateType` properties are pre-populated. To add a custom property, click **+ Add Property**. A new row with **Name** and **Value** fields appears. Enter the property name and value, and click **Remove** to delete the row if needed.
+
 7. (Optional) Click **Test connection** to verify the connection details before you create the connection.
+
 8. Click **Create connection**.
-   If your connection was created successfully, you can see it on the **Db2 Connections** pane. Click **Cancel** to close the tab without saving.
+   If the connection is created successfully, it appears in the **Db2 Connections** pane. Click **Cancel** to close the tab without saving.
 
 After you connect to the database, you can browse its schemas, data types, LOBs, and tables.
 
