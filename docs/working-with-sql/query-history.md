@@ -36,14 +36,16 @@ Query history is persistent — your previously run queries are retained even af
       - Warning: Number of statements that completed with warnings.
       - Total elapsed time (ms): The cumulative time taken to run all the statements in the group, in milliseconds.
 
-3. Expand a timestamped query group to display the individual SQL statements executed during that session. Click a statement to open its **Query Result** view in the editor.
+3. Expand a timestamped query group to display the individual SQL statements executed during that session. Click a statement to open its **Query Detail** view.
 
-   The **Query Result** view provides the following information and actions:
+   The **Query Detail** view opens in a new window and provides the following information and actions:
+
+   ![Query Detail view]({{site.baseurl}}/assets/images/query-details.png)
 
    - **SQL Statement panel**:
      - Shows the full SQL query text.
      - **Copy icon**: Copies the SQL statement to your clipboard.
-     - **Run icon** (▶): Runs the query directly from the Query Result view. The results are displayed in the terminal.
+     - **Run icon** (▶): Runs the query directly from the Query Detail view. A prompt appears to select the database connection, and the results are displayed in the results window.
      - **Open button** (**Open ↗**): Opens the query in the **Db2 SQL Editor**, where you can modify and run the SQL statement.
    - **Status panel**:
      - **Message**: Status text describing the execution result (for example, *Query processed successfully*).
@@ -53,10 +55,10 @@ Query history is persistent — your previously run queries are retained even af
    - **Execution details**:
      - **File**: Source file or editor from which the query was executed (for example, *Db2 SQL Editor*).
      - **Executed**: Date and time when the query was run.
-     - **Connection**: Database connection profile used (for example, *TESTDB@localhost*).
+     - **Connection**: Database connection profile used (for example, *SAMPLE@localhost*).
      - **Elapsed time (ms)**: Total execution duration in milliseconds.
    - **Past results**:
-     - Expand the **Past results** section to view past query results or historical execution records.
+     - Expand the **Past results** section to view the query output in a table. You can sort any column in ascending or descending order by clicking the column header.
 
 ## Using Genius AI options with Query History
 ---

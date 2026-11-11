@@ -6,6 +6,8 @@ title: "Viewing and visualizing query results"
 
 When you run SQL statements in IBM Db2 Genius Code, the query results are displayed in the **DB2 GENIUS CODE** panel in the terminal area. Each executed query generates its own tab (for example, **Query 1**, **Query 2**), allowing you to review, search, filter, export, and visualize your data interactively.
 
+![Query results window]({{site.baseurl}}/assets/images/results-window.png)
+
 ## Working with tabular results
 
 The table view presents your query results in a structured grid with the following interactive features:

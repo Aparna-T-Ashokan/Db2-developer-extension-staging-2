@@ -14,12 +14,11 @@ You can generate SQL statements by multiple methods:
 ---
 
 1. Click **Open SQL Editor** (![Opening a new SQL editor]({{site.baseurl}}/assets/images/open-sql-editor.png){:width="25" :height="25"}) in the Db2 Connections pane. **Db2 SQL Editor** opens.
-
-
-    ![Adding a database connection]({{site.baseurl}}/assets/images/create-sql-open-sql-editor.png)
 2. Select the connection from the dropdown menu.
 3. In the editor, write your SQL statements.
-4. Click **Run** to run the SQL statement. Your results appear in the **Results** pane.
+4. Click **Run** to run the SQL statement. Your results appear in the results window.
+
+    ![Query results window]({{site.baseurl}}/assets/images/results-window.png)
 5. Click **Export** to download the results in CSV or JSON format.
 
   > **Note**: You can save your SQL statements in .sql or .db2.sql format by clicking **Save**.
@@ -48,9 +47,7 @@ You can generate SQL statements by multiple methods:
 
     When you select a snippet, the editor inserts the corresponding SQL template into your current SQL editor.
 
-7. Click Run SQL to run the queries. 
-    The Query **Result** tab opens to view the query output in a table format.
-    Switch to the **Status** tab to view the execution details such as timestamp, SQL statement, return code, and elapsed time.
+7. Click **Run SQL** to run the queries. The results appear in the results window.
 8. Save the file with a .sql extension.
 
     > **Note**:
