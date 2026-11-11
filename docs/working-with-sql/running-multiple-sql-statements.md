@@ -114,7 +114,7 @@ To run a single SQL statement, do the following steps:
 3. Right‑click in the editor and select **Run Selected Query**. 
 
 
-The statement result appears in the **Results** pane.
+The query results appear in the terminal.
 
 
 Click **Save** to save your SQL statements. You can also download the query results in CSV or JSON format for later use. The SQL statements results are also stored in the **QUERY HISTORY** menu in the sidebar.

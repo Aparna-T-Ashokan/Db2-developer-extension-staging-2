@@ -45,7 +45,7 @@ Query history is persistent — your previously run queries are retained even af
    - **SQL Statement panel**:
      - Shows the full SQL query text.
      - **Copy icon**: Copies the SQL statement to your clipboard.
-     - **Run icon** (▶): Runs the query directly from the Query Detail view. A prompt appears to select the database connection, and the results are displayed in the results window.
+     - **Run icon** (▶): Runs the query directly from the Query Detail view. A prompt appears to select the database connection, and the query results appear in the terminal.
      - **Open button** (**Open ↗**): Opens the query in the **Db2 SQL Editor**, where you can modify and run the SQL statement.
    - **Status panel**:
      - **Message**: Status text describing the execution result (for example, *Query processed successfully*).

@@ -38,7 +38,7 @@ CALL DB2INST1.CalculateBonus('000010', 0.10, ?, ?);
   - `0.10` is the bonus rate (IN parameter).
   - `?` placeholders capture the bonus amount and status message (OUT parameters).
 
-  The `?` acts as a placeholder for each OUT parameter. The extension automatically captures and displays the returned values in the Results pane.
+  The `?` acts as a placeholder for each OUT parameter. The extension automatically captures and displays the returned values in the terminal.
 
 ## Procedure
 
@@ -75,13 +75,13 @@ Ensure the correct database connection is selected in the dropdown (for example,
 
 ## Understanding the results
 
-When you run a procedure, the results are displayed in the **Results** pane on the right side of the editor.
+When you run a procedure, the query results appear in the terminal.
 
 ![Result pane showing procedure execution]({{site.baseurl}}/assets/images/result-procedure.png)
 
 
 
-  When you run a procedure, the **Results** pane shows:
+  When you run a procedure, the terminal shows:
 
   - Query tab: Query Results: 1 total rows indicates the the number of rows returned. Since the previous procedure returns output parameters, you get one row with each output parameter shown as a column.
   - Output parameters: Each OUT parameter appears as a column in the result grid.
@@ -94,7 +94,7 @@ When you run a procedure, the results are displayed in the **Results** pane on t
 
 To export your results:
 
-1. Click **Export** in the **Results** pane.
+1. Click **Export** in the terminal.
 2. Choose your format:
    - **CSV**
    - **JSON**

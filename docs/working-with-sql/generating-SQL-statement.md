@@ -41,7 +41,7 @@ You can generate SQL statements by multiple methods:
 
     When you select a snippet, the editor inserts the corresponding SQL template into your current SQL editor.
 
-7. Click **Run SQL** to run the queries. The results appear in the results window.
+7. Click **Run SQL** to run the queries. The query results appear in the terminal.
 8. Save the file with a .sql extension.
 
     > **Note**:
@@ -61,11 +61,11 @@ To generate SQL statements for a table, do the following steps:
    
 
 
-   The DELETE, SELECT, INSERT, and UPDATE statements open in a new **Db2 SQL Editor** tab with the **Results** pane on the right. 
+   The DELETE, SELECT, INSERT, and UPDATE statements open in a new **Db2 SQL Editor** tab.
    
    The DDL script opens in a read-only editor tab. You can copy the script, not run it directly in the editor. For more information, see [Generating DDL for a Db2 object](../the-basics/generating-ddl.md).
-3. Run your SQL statements by clicking **Run**. 
-4. View the results in the **Results** pane.
+3. Run your SQL statements by clicking **Run**.
+4. The query results appear in the terminal.
 
 
 You can follow the same steps to generate SQL statements for other object types, such as views.
