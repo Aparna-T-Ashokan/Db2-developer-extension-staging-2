@@ -76,5 +76,3 @@ Use **Genius: Generate Explain plan** to have Genius AI generate the execution p
 3. In the **Genius AI** chat panel, make sure that a database is selected, and then send the *Explain Plan for:* request that is filled in with your SQL statement.
 
 Genius AI generates the execution plan for the query. The response shows details such as the estimated cost and cardinality, highlights potential performance issues, and suggests areas where you can improve performance.
-
-This option is different from **Analyze Query Performance**. **Generate Explain plan** returns the execution plan and an explanation of it in the chat. **Analyze Query Performance** also opens the performance analyzer, where you can explore the plan, statistics, and index recommendations in detail.
