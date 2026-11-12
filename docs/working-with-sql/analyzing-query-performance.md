@@ -38,8 +38,8 @@ The **Findings** section highlights the most important issues that were detected
 
 The performance analyzer provides the following tabs:
 
-- **Explain plan**: Shows the operations that are involved in running the query, in a table view or a diagram view.
-- **Statistics**: Shows the `RUNSTATS` command that updates the table statistics that the optimizer uses.
+- **Explain plan**: Shows the execution plan for the query as a table or as a diagram.
+- **Statistics**: Shows a `RUNSTATS` command for each table that the query uses. You can apply the command to update the table statistics that the optimizer uses.
 - **Indexes**: Shows the index recommendations that might improve the query performance.
 
 ### Explain plan
