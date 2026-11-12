@@ -44,7 +44,7 @@ The performance analyzer provides the following tabs:
 
 ### Explain plan
 
-The explain plan shows how Db2 runs the query, from the data access operations at the bottom of the plan to the final **Return** operation at the top. Use the **Table** and **Diagram** buttons to switch between two views of the same plan.
+The explain plan generates the execution plan for the query. Use the **Table** and **Diagram** buttons to switch between two views of the same plan.
 
 - **Table view**: Lists each operation in the plan in a row. The columns show the step number (**#**), the **Operation** (for example, a full table scan, a sort, or a return), the **Object** that the operation works on, the number of **Rows**, the **Time**, and the estimated **Cost**. Operations that take a large share of the time, such as full table scans, are highlighted so that you can find them quickly.
 - **Diagram view**: Shows the plan as a flow of connected operators, with the cost in timerons on each node. A warning icon marks operators that might cause performance problems, such as a full table scan. Use the zoom in, zoom out, and fit-to-screen controls to navigate larger plans.
