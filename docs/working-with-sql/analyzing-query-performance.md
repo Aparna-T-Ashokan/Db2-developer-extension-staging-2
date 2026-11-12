@@ -56,18 +56,16 @@ Click an operation in the table or a node in the diagram to see its details in t
 - **Pages read**: The number of pages that the operation reads.
 - **Rows read → out**: The number of rows that the operation reads and the number of rows that it passes on.
 
-Click **Run again** to run the analysis again on the same query. Use this option after you apply an index or update statistics to see how the plan and the costs change.
-
-### Asking Genius AI about the plan
-
-In the **Details** panel, click **Ask Genius** to ask Genius AI about the selected operation. Genius AI explains what the operation does, why it might be slow, and what you can do to improve it. You can continue the conversation in the **Genius AI** chat panel, for example, to ask Genius AI to suggest changes that improve the plan, such as rewriting the query or creating an index.
-
 ### Improving statistics and indexes
 
 1. Click the **Statistics** tab. For each table that is used by the query, review the generated `RUNSTATS` command, and then click **Apply RUNSTATS** to update the table statistics. Current statistics help the optimizer choose efficient access plans.
 2. Click the **Indexes** tab. The tab shows the estimated cost of the query if the recommended indexes are applied (for example, from 145.857 to 6.872 timerons). For each recommendation, review the table, the percentage improvement, the columns in the index, and the `CREATE INDEX` statement.
 3. Click **Open in editor** to open the `CREATE INDEX` statement in the **Db2 SQL Editor**, and then run it.
 4. Click **Run again** to analyze the query again and see how the change affects the plan and the cost.
+
+### Asking Genius AI about the plan
+
+In the **Details** panel, click **Ask Genius** to ask Genius AI about the selected operation. Genius AI explains what the operation does, why it might be slow, and what you can do to improve it. You can continue the conversation in the **Genius AI** chat panel, for example, to ask Genius AI to suggest changes that improve the plan, such as rewriting the query or creating an index.
 
 ## Generating an explain plan
 
