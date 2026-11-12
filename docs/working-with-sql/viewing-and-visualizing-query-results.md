@@ -15,7 +15,7 @@ The **Query Results** panel provides several interactive tools:
 - **View modes**: Toggle between **Table view** (grid) and **Chart mode** (graph) by using the view icons.
 - **Search results**: Use the **Search results** bar to search for specific text across returned rows.
 - **Filter** (![Filter]({{site.baseurl}}/assets/images/filter.png){:width="20" :height="20"}): Click the filter icon to apply filters to result columns.
-- **Sort columns**: Click a column header to sort values in ascending or descending order.
+- **Sort columns**: Click the three dots icon (**⋮**) in a column header, and then select **Sort ascending** or **Sort descending**.
 - **Drag and drop columns**: Drag and drop column headers to rearrange column positions.
 - **Export**: Click the export icon (**⤓**) to export query results in CSV or JSON format.
 - **Open in Db2 SQL Editor**: Click the open icon (![Open]({{site.baseurl}}/assets/images/open-icon.png){:width="20" :height="20"}) to open the query results in a full editor tab (**Results: Db2 SQL Editor**).

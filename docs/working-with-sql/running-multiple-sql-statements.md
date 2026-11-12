@@ -31,6 +31,7 @@ The **Query Results** panel provides several interactive tools:
 - **Export**: Click the download/export icon (**⤓**) to export query results in **CSV** or **JSON** format.
 - **Open in Db2 SQL Editor**: Click the open icon (![Open]({{site.baseurl}}/assets/images/open-icon.png){:width="20" :height="20"}) to open the query results in a full editor tab (**Results: Db2 SQL Editor**).
 - **Drag and drop columns**: Drag and drop column headers to rearrange column positions.
+- **Sort columns**: Click the three dots icon (**⋮**) in a column header, and then select **Sort ascending** or **Sort descending**.
 
 ## Viewing LOB and complex data in Data Viewer
 

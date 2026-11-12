@@ -60,7 +60,7 @@ Query history is persistent — your previously run queries are retained even af
    - **Past results**: Expand the **Past results** section to view the query output in a table. You can work with the results in the following ways:
       - **Search**: Enter text in the **Search results** bar to find values across the returned rows.
       - **Filter** (![Filter]({{site.baseurl}}/assets/images/filter.png){:width="20" :height="20"}): Click the filter icon to apply filters to result columns.
-      - **Sort**: Click a column header to sort the values in ascending or descending order.
+      - **Sort**: Click the three dots icon (**⋮**) in a column header, and then select **Sort ascending** or **Sort descending**.
       - **Rearrange columns**: Drag and drop column headers to change the order of the columns.
       - **Download**: Download the results to a file.
       - **Visualize**: Switch between the table view and the chart view to visualize the results.
