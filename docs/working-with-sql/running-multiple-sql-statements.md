@@ -15,10 +15,9 @@ Each SQL file editor uses a dedicated database connection. The connection remain
 2. Select the database connection from the dropdown menu at the top of the editor.
 3. Enter your SQL statements in the editor.
 4. Choose how to run or analyze your queries:
-   - **Run a single statement**: Click the inline **▶ Run** button located directly above the statement you want to execute.
+   - **Run a single statement or selected query**: Click the inline **▶ Run** button directly above the statement, or highlight a statement, right-click, and select **Run Selected Query**.
    - **Run multiple statements**: Click the **Run ▶** button in the top toolbar to execute all statements in the editor, or right-click anywhere in the editor and select **Run All Queries**.
-   - **Run selected query**: Highlight a statement, right-click, and select **Run Selected Query**.
-   - **Analyze query performance**: Right-click a statement and select **Genius: Analyze Query Performance** to have Genius AI analyze execution performance and explain plans.
+   - **Analyze query performance**: Right-click a statement and select **Genius: Analyze Query Performance**. For more information, see [Analyzing query performance]({{site.baseurl}}/docs/working-with-sql/analyzing-query-performance).
 
 The results appear in the **DB2 GENIUS CODE** panel in the terminal area. Each executed query produces its own tab (for example, **Query 1**, **Query 2**).
 
@@ -28,11 +27,10 @@ The **Query Results** panel provides several interactive tools:
 
 - **View modes**: Toggle between **Table view** (grid) and **Chart mode** (graph) using the view icons.
 - **Search results**: Use the **Search results** search bar to search for specific text across returned rows.
-- **Filter**: Click the filter icon to apply filters to result columns.
+- **Filter** (![Filter]({{site.baseurl}}/assets/images/filter.png){:width="20" :height="20"}): Click the filter icon to apply filters to result columns.
 - **Export**: Click the download/export icon (**⤓**) to export query results in **CSV** or **JSON** format.
-- **Open in Db2 SQL Editor**: Click the open icon (**⧉**) to open the query results in a full editor tab (`Results: Db2 SQL Editor`).
+- **Open in Db2 SQL Editor**: Click the open icon (![Open]({{site.baseurl}}/assets/images/open-icon.png){:width="20" :height="20"}) to open the query results in a full editor tab (**Results: Db2 SQL Editor**).
 - **Drag and drop columns**: Drag and drop column headers to rearrange column positions.
-- **Pagination**: Adjust **Items per page** (e.g., 25) and navigate through pages.
 
 ## Viewing LOB and complex data in Data Viewer
 
@@ -40,9 +38,9 @@ When a result cell contains large-object (LOB) or complex data types—such as B
 
 - The **Column name**, **Data type**, formatted **Size** (e.g., in bytes), and the **Row** and **Col** numbers.
 - The formatted or captured cell content.
-- A **Copy** button in the upper-right corner to copy the full content to the clipboard.
+- A copy icon (![Copy]({{site.baseurl}}/assets/images/copy.png){:width="20" :height="20"}) in the upper-right corner to copy the full content to the clipboard.
 
-You can open multiple cells simultaneously—each opens in its own tab (such as `C_BLOB #1`, `C_XML #2`). Clicking an already opened cell switches focus to its existing tab rather than opening a duplicate.
+You can open multiple cells simultaneously—each opens in its own tab. Clicking an already opened cell switches focus to its existing tab rather than opening a duplicate.
 
 > **Note**: A zero-byte or null value is rendered as `NULL` in the viewer regardless of the data type.
 {: .note-right}

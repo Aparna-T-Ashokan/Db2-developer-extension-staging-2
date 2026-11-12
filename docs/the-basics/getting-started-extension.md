@@ -20,7 +20,7 @@ Before you begin, ensure that the following software is installed:
 4. Select the extension and click **Install**.
 
 
-The IBM Db2 Genius Code icon (![Db2 developer icon]({{site.baseurl}}/assets/images/Db2-developer-extension-icon.png){:width="25" :height="25"}) appears in the Activity Bar.
+The IBM Db2 Genius Code icon (![Db2 developer icon]({{site.baseurl}}/assets/images/genius-code.png){:width="25" :height="25"}) appears in the Activity Bar.
 
 
 ## Configuring IBM Db2 Genius Code

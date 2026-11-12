@@ -44,9 +44,9 @@ Query history is persistent — your previously run queries are retained even af
 
    - **SQL Statement panel**:
      - Shows the full SQL query text.
-     - **Copy icon**: Copies the SQL statement to your clipboard.
-     - **Run icon** (▶): Runs the query directly from the Query Detail view. A prompt appears to select the database connection, and the query results appear in the terminal.
-     - **Open button** (**Open ↗**): Opens the query in the **Db2 SQL Editor**, where you can modify and run the SQL statement.
+     - **Copy** (![Copy]({{site.baseurl}}/assets/images/copy.png){:width="20" :height="20"}): Copies the SQL statement to your clipboard.
+     - **Run** (![Run]({{site.baseurl}}/assets/images/run.png){:width="20" :height="20"}): Runs the query directly from the Query Detail view. A prompt appears to select the database connection, and the query results appear in the terminal.
+     - **Open** (![Open]({{site.baseurl}}/assets/images/open-icon.png){:width="20" :height="20"}): Opens the query in the **Db2 SQL Editor**, where you can modify and run the SQL statement.
    - **Status panel**:
      - **Message**: Status text describing the execution result (for example, *Query processed successfully*).
      - **Return code**: Return code indicating the outcome (for example, *0* for success).
@@ -57,8 +57,15 @@ Query history is persistent — your previously run queries are retained even af
      - **Executed**: Date and time when the query was run.
      - **Connection**: Database connection profile used (for example, *SAMPLE@localhost*).
      - **Elapsed time (ms)**: Total execution duration in milliseconds.
-   - **Past results**:
-     - Expand the **Past results** section to view the query output in a table. You can sort any column in ascending or descending order by clicking the column header.
+   - **Past results**: Expand the **Past results** section to view the query output in a table. You can work with the results in the following ways:
+      - **Search**: Enter text in the **Search results** bar to find values across the returned rows.
+      - **Filter** (![Filter]({{site.baseurl}}/assets/images/filter.png){:width="20" :height="20"}): Click the filter icon to apply filters to result columns.
+      - **Sort**: Click a column header to sort the values in ascending or descending order.
+      - **Rearrange columns**: Drag and drop column headers to change the order of the columns.
+      - **Download**: Download the results to a file.
+      - **Visualize**: Switch between the table view and the chart view to visualize the results.
+
+      For more information, see [Viewing and visualizing query results]({{site.baseurl}}/docs/working-with-sql/viewing-and-visualizing-query-results).
 
 ## Using Genius AI options with Query History
 ---
@@ -66,7 +73,8 @@ Query history is persistent — your previously run queries are retained even af
 You can interact with queries in **QUERY HISTORY** using Genius AI:
 
 - **Chat with AI**: Hover over or right-click a query in **QUERY HISTORY** and select **Chat with AI**. The SQL statement is automatically populated in the **Genius AI** chat input box, where you can modify or send it to ask questions or get assistance.
-- **Analyse Query Performance**: Click the **Analyse Query Performance** option on a query in **QUERY HISTORY**, or right-click the query and select **Genius: Analyse Query Performance**. Genius AI analyzes the query execution plan and performance. Click **View Performance** to inspect the execution plan, visual diagram, statistics, and index recommendations.
+- **Analyse Query Performance** (![Analyse query performance]({{site.baseurl}}/assets/images/analyze-query.png){:width="20" :height="20"}): Hover over a query in **QUERY HISTORY** and click the analyse query icon, or right-click the query and select **Genius: Analyse Query Performance**. Genius AI analyzes the query execution plan and performance. Click **View Performance** to inspect the explain plan, diagram, statistics, and index recommendations. For more information, see [Analyzing query performance]({{site.baseurl}}/docs/working-with-sql/analyzing-query-performance).
+- **Generate Explain plan**: Right-click a query in **QUERY HISTORY** and select **Genius: Generate Explain plan**. The **Genius AI** chat input box is populated with an *Explain Plan for:* request that contains the SQL statement. Select a database, and then send the request to have Genius AI generate and explain the access plan for the query. For more information, see [Analyzing query performance]({{site.baseurl}}/docs/working-with-sql/analyzing-query-performance).
 
 
 

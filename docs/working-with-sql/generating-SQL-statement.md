@@ -19,10 +19,9 @@ Each SQL file editor uses a dedicated database connection. The connection remain
 2. Select the connection from the dropdown menu.
 3. Enter your SQL statements in the editor.
 4. Choose how to run or analyze your queries:
-   - **Run a single statement**: Click the inline **▶ Run** button located directly above the statement you want to execute.
+   - **Run a single statement or selected query**: Click the inline **▶ Run** button directly above the statement, or highlight a statement, right-click, and select **Run Selected Query**.
    - **Run multiple statements**: Click the **Run ▶** button in the top toolbar to execute all statements in the editor, or right-click anywhere in the editor and select **Run All Queries**.
-   - **Run selected query**: Highlight a statement, right-click, and select **Run Selected Query**.
-   - **Analyze query performance**: Right-click a statement and select **Genius: Analyze Query Performance** to have Genius AI analyze execution performance and explain plans.
+   - **Analyze query performance**: Right-click a statement and select **Genius: Analyze Query Performance**. For more information, see [Analyzing query performance]({{site.baseurl}}/docs/working-with-sql/analyzing-query-performance).
 5. The query results appear in the terminal. For more information, see [Viewing and visualizing query results]({{site.baseurl}}/docs/working-with-sql/viewing-and-visualizing-query-results).
 
    ![Query results window]({{site.baseurl}}/assets/images/results-window.png)
