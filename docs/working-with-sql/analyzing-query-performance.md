@@ -30,14 +30,15 @@ Click **View Performance** in the Genius AI response to open the performance ana
 
 ## Generating an explain plan
 
-To get an explanation of how Db2 accesses the data for a query, use **Genius: Generate Explain plan**:
+Use **Genius: Generate Explain plan** to have Genius AI generate the execution plan for a query in the **Genius AI** chat panel.
 
 1. In **QUERY HISTORY**, right-click the query.
 2. Select **Genius: Generate Explain plan**.
+3. In the **Genius AI** chat panel, make sure that a database is selected, and then send the *Explain Plan for:* request that is filled in with your SQL statement.
 
-The **Genius AI** chat input box is populated with an *Explain Plan for:* request that contains the SQL statement. Select the database in the chat input box, and then send the request. Genius AI generates the access plan for the query and explains it in the chat. The response walks through the operations in the plan, the choices that the optimizer made, and suggestions for improving performance, such as updating statistics, adding indexes, adjusting configuration parameters, or rewriting the query. SQL statements in the response, such as a `RUNSTATS` call, can be copied or opened in the SQL editor.
+Genius AI generates the execution plan for the query. The response shows details such as the estimated cost and cardinality, highlights potential performance issues, and suggests areas where you can improve performance.
 
-Use **Analyse Query Performance** when you want to inspect the plan in the performance analyzer. Use **Generate Explain plan** when you want a written explanation of the plan in the chat.
+This option is different from **Analyze Query Performance**. **Generate Explain plan** returns the execution plan and an explanation of it in the chat. **Analyze Query Performance** also opens the performance analyzer, where you can explore the plan, statistics, and index recommendations in detail.
 
 ## Exploring the results
 
