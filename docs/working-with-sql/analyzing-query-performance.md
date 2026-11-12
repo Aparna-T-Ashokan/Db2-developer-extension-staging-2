@@ -20,7 +20,7 @@ You can analyze the performance of a query directly from the **Db2 SQL Editor** 
 
 - **From Query History**:
   1. In the **Db2 Connections** pane, locate and expand **QUERY HISTORY**.
-  2. Find the query that you want to analyze, and click **Analyse Query Performance** (![Analyse query performance]({{site.baseurl}}/assets/images/analyze-query.png){:width="20" :height="20"}), or right-click the query and select **Genius: Analyse Query Performance**.
+  2. Find the query that you want to analyze, and click **Analyse Query Performance** (![Analyze query performance]({{site.baseurl}}/assets/images/analyze-query.png){:width="20" :height="20"}), or right-click the query and select **Genius: Analyse Query Performance**.
 
 Genius AI runs the performance analysis on the selected query in the **Genius AI** chat panel, summarizing the execution plan and identifying potential bottlenecks.
 
@@ -41,7 +41,7 @@ Use **Analyse Query Performance** when you want to inspect the plan in the perfo
 
 ## Exploring the results
 
-![Performance analyzer showing the explain plan and the Genius AI response]({{site.baseurl}}/assets/images/analyse-performance.png)
+![Performance analyzer showing the explain plan and the Genius AI response]({{site.baseurl}}/assets/images/analyze-performance.png)
 
 At the top of the performance analyzer, a summary bar shows the key metrics for the query: estimated runtime, the number of rows scanned compared with the number of rows returned, CPU time, and pages read.
 
