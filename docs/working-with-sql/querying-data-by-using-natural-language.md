@@ -115,7 +115,7 @@ The following actions are available for managing your chats:
 
    - **Search**: Use the search bar at the top of the Chat History panel to find a specific chat by keyword.
 
-   - **Archive** (![Archive]({{site.baseurl}}/assets/images/archive.png){:width="20" :height="20"}): Archive a chat to remove it from your active list. Click the archive icon to add the chat to the archive history. Click **Archived chats** to see all archived chats. To unarchive a chat, in the archived chats, click the restore icon (![Restore]({{site.baseurl}}/assets/images/reload.png){:width="20" :height="20"}). The chat returns to your active list.
+   - **Archive**: Archive a chat to remove it from your active list. Click the archive icon (![Archive]({{site.baseurl}}/assets/images/archive.png){:width="20" :height="20"}) to add the chat to the archive history. Click **Archived chats** to see all archived chats. To unarchive a chat, in the archived chats, click the restore icon (![Restore]({{site.baseurl}}/assets/images/reload.png){:width="20" :height="20"}). The chat returns to your active list.
 
    Click any chat entry to reload it.
 
