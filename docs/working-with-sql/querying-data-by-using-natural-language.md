@@ -117,8 +117,6 @@ The following actions are available for managing your chats:
 
    - **Archive**: Archive a chat to remove it from your active list. Click the archive icon (![Archive]({{site.baseurl}}/assets/images/archive.png){:width="20" :height="20"}) to add the chat to the archive history. Click **Archived chats** to see all archived chats. To unarchive a chat, in the archived chats, click the restore icon (![Restore]({{site.baseurl}}/assets/images/reload.png){:width="20" :height="20"}). The chat returns to your active list.
 
-   Click any chat entry to reload it.
-
 ## Adding context with the @ Context Manager
 
 Use the @ Context Manager to add database objects as context to your chat, so that Genius AI uses them in its responses.
