@@ -107,17 +107,15 @@ In both cases, DDL generation continues to work. For more information, see [Gene
 
 ## Viewing chat history
 
-Click Chat History (![history]({{site.baseurl}}/assets/images/history-icon.png){:width="25" :height="25"}) in the **Genius AI** chat panel to see the **Chat History**. It lists your previously asked questions.
+Click Chat History (![history]({{site.baseurl}}/assets/images/history-icon.png){:width="25" :height="25"}) in the **Genius AI** chat panel to see the Chat History. It lists your previously asked questions.
 
 ![Toggle Genius AI]({{site.baseurl}}/assets/images/conv-history.png){:width="400" :height="600"}
 
 The following actions are available for managing your chats:
 
-   - **Search**: Use the search bar at the top of the **Chat History** panel to find a specific chat by keyword.
+   - **Search**: Use the search bar at the top of the Chat History panel to find a specific chat by keyword.
 
-   - **Archive** (![Archive]({{site.baseurl}}/assets/images/archive.png){:width="20" :height="20"}): Archive a chat to remove it from your active list. Click the archive icon to add the chat to the archive history. Click **Archived chats** to see all archived chats.
-
-   - **Unarchive** (![Reload]({{site.baseurl}}/assets/images/reload.png){:width="20" :height="20"}): To restore an archived chat, click **Archived chats**, and then click the reload icon next to the chat to unarchive it. The chat returns to your active list in **Chat History**.
+   - **Archive** (![Archive]({{site.baseurl}}/assets/images/archive.png){:width="20" :height="20"}): Archive a chat to remove it from your active list. Click the archive icon to add the chat to the archive history. Click **Archived chats** to see all archived chats. To unarchive a chat, in the archived chats, click the restore icon (![Restore]({{site.baseurl}}/assets/images/reload.png){:width="20" :height="20"}). The chat returns to your active list.
 
    Click any chat entry to reload it.
 
