@@ -40,7 +40,7 @@ To connect your workspace and enable Genius AI code assistance, log in to Genius
 
    When a database is selected, the **Toggle Genius AI** button (![Toggle Genius AI]({{site.baseurl}}/assets/images/Toggle-db2-ai-assistant.png){:width="25" :height="25"}) is displayed.
 
-2. Click **Toggle Genius AI** to open the **Genius AI** chat panel. At the bottom of the panel, make sure that the **Choose Database** dropdown shows the database that you want to query. If it does not, select the database from the dropdown.
+2. Click **Toggle Genius AI** to open the **Genius AI** chat panel. The database is not selected automatically when you log in. At the bottom of the panel, use the **Choose Database** dropdown to select the database that you want to query.
 
    ![Genius AI chat interface]({{site.baseurl}}/assets/images/genius-ai-chat.png){:width="300" :height="400"}
 
@@ -71,7 +71,7 @@ The database that you select with **Choose Database** stays the same for the who
 
 ## Searching the Db2 documentation
 
-By default, deep search mode is enabled in the **Genius AI** chat panel. You can ask questions about Db2, for example, `What is a buffer pool?`. Genius AI provides an explanation along with supporting documentation sources, so you can find trusted information without leaving VS Code.
+By default, Doc Search mode is enabled in the **Genius AI** chat panel. You can ask questions about Db2, for example, `What is a buffer pool?`. Genius AI provides an explanation along with supporting documentation sources, so you can find trusted information without leaving VS Code.
 
 
 ## Resolving SQL errors
@@ -101,7 +101,7 @@ For more detailed analysis, see [Analyzing query performance]({{site.baseurl}}/d
 How DDL generation works depends on whether you are logged in to Genius Hub:
 
 - If you are logged in, Genius AI handles the DDL generation request and generates the DDL for the selected database object.
-- If you are not logged in, DDL generation uses the previous workflow described in [Generating DDL for a Db2 object]({{site.baseurl}}/docs/the-basics/generating-ddl).
+- If you are not logged in, DDL generation uses the Db2LOOK workflow described in [Generating DDL for a Db2 object]({{site.baseurl}}/docs/the-basics/generating-ddl).
 
 In both cases, DDL generation continues to work. For more information, see [Generating DDL for a Db2 object]({{site.baseurl}}/docs/the-basics/generating-ddl).
 
@@ -117,7 +117,13 @@ The following actions are available for managing your conversations:
 
    - **Archive**: Archive a chat to remove it from your active list. Click **Archived chats** to see all archived chats.
 
+   - **Unarchive**: To restore an archived chat, click **Archived chats**, and then unarchive the chat. The chat returns to your active list in **Conversation History**.
+
    Click any conversation entry to reload it.
+
+## Adding context with the @ Context Manager
+
+Use the @ Context Manager to add context to your chat, so that Genius AI uses specific information in its responses. In the chat input box, type `@` to open the @ Context Manager, and then select the item that you want to add. For example, in the request `Generate SQL Query for @ADNAAN.ACT`, `@ADNAAN.ACT` adds the `ACT` table in the `ADNAAN` schema as context.
 
 
 ## Providing feedback

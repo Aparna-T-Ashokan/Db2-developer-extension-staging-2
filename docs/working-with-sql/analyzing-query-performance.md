@@ -15,8 +15,8 @@ The performance analyzer is part of Genius AI. Log in to Genius Hub and select a
 You can analyze the performance of a query directly from the **Db2 SQL Editor** or from **QUERY HISTORY**:
 
 - **From the SQL Editor**:
-  1. In the **Db2 SQL Editor**, select or right-click the SQL query.
-  2. Select **Genius: Analyze Query Performance** from the context menu.
+  1. In the **Db2 SQL Editor**, select the SQL query.
+  2. Right-click the selected query, and then select **Genius: Analyze Query Performance** from the context menu.
 
 - **From Query History**:
   1. In the **Db2 Connections** pane, locate and expand **QUERY HISTORY**.
