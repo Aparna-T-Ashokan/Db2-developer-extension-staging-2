@@ -26,8 +26,6 @@
           url: "docs/working-with-Db2-objects/Procedure-objects"
         - title: "Exploring views"
           url: "docs/working-with-Db2-objects/Db2-objects-view"
- #       - title: "Viewing ER diagrams"
- #         url: "docs/working-with-Db2-objects/er-diagram"
         - title: "Viewing historical table data by using Db2 Time Machine"
           url: "docs/working-with-Db2-objects/db2-time-machine"
     - title: Working with SQL
