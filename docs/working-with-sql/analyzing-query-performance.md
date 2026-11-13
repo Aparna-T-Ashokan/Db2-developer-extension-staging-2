@@ -30,8 +30,6 @@ Click **View Performance** in the Genius AI response to open the performance ana
 
 ## Exploring the results
 
-![Performance analyzer showing the explain plan and the Genius AI response]({{site.baseurl}}/assets/images/analyze-performance.png)
-
 At the top of the performance analyzer, a summary bar shows the key metrics for the query: estimated runtime, the number of rows scanned compared with the number of rows returned, CPU time, and pages read.
 
 The **Finding** section highlights the most important issue that was detected. For example, a finding can tell you that a table is read in full and how much the estimated runtime drops if the recommended indexes are created. In the summary bar, click **View query** to see the SQL statement that is analyzed, or click **Run again** to analyze the query again.
@@ -49,11 +47,11 @@ The explain plan generates the execution plan for the query. Use the following i
 - **Table view** (![Table view]({{site.baseurl}}/assets/images/table-view.png){:width="20" :height="20"}): Shows the plan as a table.
 - **Diagram view** (![Diagram view]({{site.baseurl}}/assets/images/diagram-icon.png){:width="20" :height="20"}): Shows the plan as a diagram.
 
-To find a specific operation, enter text in the **Search results** field.
-
 #### Table view
 
 The table view lists each operation in the plan in a row. The columns show the step number (**#**) and the **Operation**. Each operation shows its name (for example, **Full scan**, **Sort**, or **Hash join**) and its operator type (for example, `TBSCAN`, `SORT`, or `HSJOIN`). The operations are indented to show how they are nested in the plan. Use the arrows next to an operation to expand or collapse it.
+
+![Performance analyzer showing the explain plan and the Genius AI response]({{site.baseurl}}/assets/images/analyze-performance.png)
 
 #### Diagram view
 

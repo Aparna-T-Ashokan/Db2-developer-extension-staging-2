@@ -105,21 +105,21 @@ How DDL generation works depends on whether you are logged in to Genius Hub:
 
 In both cases, DDL generation continues to work. For more information, see [Generating DDL for a Db2 object]({{site.baseurl}}/docs/the-basics/generating-ddl).
 
-## Viewing conversation history
+## Viewing chat history
 
-Click Conversation History (![history]({{site.baseurl}}/assets/images/history-icon.png){:width="25" :height="25"}) in the **Genius AI** chat panel to see the **Conversation History**. It lists your previously asked questions.
+Click Chat History (![history]({{site.baseurl}}/assets/images/history-icon.png){:width="25" :height="25"}) in the **Genius AI** chat panel to see the **Chat History**. It lists your previously asked questions.
 
 ![Toggle Genius AI]({{site.baseurl}}/assets/images/conv-history.png){:width="400" :height="600"}
 
-The following actions are available for managing your conversations:
+The following actions are available for managing your chats:
 
-   - **Search**: Use the search bar at the top of the **Conversation History** panel to find a specific chat by keyword.
+   - **Search**: Use the search bar at the top of the **Chat History** panel to find a specific chat by keyword.
 
-   - **Archive**: Archive a chat to remove it from your active list. Click **Archived chats** to see all archived chats.
+   - **Archive** (![Archive]({{site.baseurl}}/assets/images/archive.png){:width="20" :height="20"}): Archive a chat to remove it from your active list. Click the archive icon to add the chat to the archive history. Click **Archived chats** to see all archived chats.
 
-   - **Unarchive**: To restore an archived chat, click **Archived chats**, and then unarchive the chat. The chat returns to your active list in **Conversation History**.
+   - **Unarchive** (![Reload]({{site.baseurl}}/assets/images/reload.png){:width="20" :height="20"}): To restore an archived chat, click **Archived chats**, and then click the reload icon next to the chat to unarchive it. The chat returns to your active list in **Chat History**.
 
-   Click any conversation entry to reload it.
+   Click any chat entry to reload it.
 
 ## Adding context with the @ Context Manager
 

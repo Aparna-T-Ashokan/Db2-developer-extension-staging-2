@@ -27,7 +27,7 @@ Designed for developers, this extension delivers a unified, intuitive environmen
 - Resolve SQL errors with explanations, possible causes, and suggested fixes.
 - Analyze query performance with explain plans, execution diagrams, statistics, and index recommendations.
 - Use slash commands for quick access to capabilities such as explain plan, query optimization, schema comparison, and error investigation.
-- Revisit, archive, and unarchive previous conversations.
+- Revisit, archive, and unarchive previous chats.
 - View historical table data by using Db2 Time Machine.
 
 ### Database connection management
