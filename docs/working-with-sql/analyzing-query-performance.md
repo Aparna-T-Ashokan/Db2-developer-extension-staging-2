@@ -34,34 +34,49 @@ Click **View Performance** in the Genius AI response to open the performance ana
 
 At the top of the performance analyzer, a summary bar shows the key metrics for the query: estimated runtime, the number of rows scanned compared with the number of rows returned, CPU time, and pages read.
 
-The **Findings** section highlights the most important issues that were detected. For example, a finding can tell you that a table is read in full and how much the estimated cost drops if the recommended indexes are created.
+The **Finding** section highlights the most important issue that was detected. For example, a finding can tell you that a table is read in full and how much the estimated runtime drops if the recommended indexes are created. In the summary bar, click **View query** to see the SQL statement that is analyzed, or click **Run again** to analyze the query again.
 
 The performance analyzer provides the following tabs:
 
 - **Explain plan**: Shows the execution plan for the query as a table or as a diagram.
-- **Statistics**: Shows a `RUNSTATS` command for each table that the query uses. You can apply the command to update the table statistics that the optimizer uses.
+- **Statistics**: Shows `RUNSTATS` recommendations for the tables that the query uses. You can apply the recommendations to update the table statistics that the optimizer uses.
 - **Indexes**: Shows the index recommendations that might improve the query performance.
 
 ### Explain plan
 
-The explain plan generates the execution plan for the query. Use the **Table** and **Diagram** buttons to switch between two views of the same plan.
+The explain plan generates the execution plan for the query. Use the table icon and the diagram icon above the plan to switch between two views of the same plan. To find a specific operation, enter text in the **Search results** field.
 
-- **Table view**: Lists each operation in the plan in a row. The columns show the step number (**#**), the **Operation** (for example, a full table scan, a sort, or a return), the **Object** that the operation works on, the number of **Rows**, the **Time**, and the estimated **Cost**. Operations that take a large share of the time, such as full table scans, are highlighted so that you can find them quickly.
+- **Table view**: Lists each operation in the plan in a row. The columns show the step number (**#**) and the **Operation**. Each operation shows its name (for example, **Full scan**, **Sort**, or **Hash join**) and its operator type (for example, `TBSCAN`, `SORT`, or `HSJOIN`). The operations are indented to show how they are nested in the plan. Use the arrows next to an operation to expand or collapse it.
 - **Diagram view**: Shows the plan as a flow of connected operators, with the cost in timerons on each node. A warning icon marks operators that might cause performance problems, such as a full table scan. Use the zoom in, zoom out, and fit-to-screen controls to navigate larger plans.
 
-Click an operation in the table or a node in the diagram to see its details in the **Details** panel:
+Click an operation in the table or a node in the diagram to see its details in the **Details** panel. Click the close icon (**×**) to close the panel. The panel shows the operation number and type, the operation name, and the following information:
 
-- **Time** and **Share**: How long the operation takes and what percentage of the total time it accounts for.
-- **Estimated**: The estimated cost of the operation.
+- **Time** and **Share of query**: How long the operation takes and what percentage of the total time it accounts for.
+- **Estimated rows**: The estimated number of rows that the operation returns.
+- **Est. cost**: The estimated cost of the operation.
 - **Pages read**: The number of pages that the operation reads.
-- **Rows read → out**: The number of rows that the operation reads and the number of rows that it passes on.
 
 ### Improving statistics and indexes
 
-1. Click the **Statistics** tab. For each table that is used by the query, review the generated `RUNSTATS` command, and then click **Apply RUNSTATS** to update the table statistics. Current statistics help the optimizer choose efficient access plans.
-2. Click the **Indexes** tab. The tab shows the estimated cost of the query if the recommended indexes are applied (for example, from 145.857 to 6.872 timerons). For each recommendation, review the table, the percentage improvement, the columns in the index, and the `CREATE INDEX` statement.
-3. Click **Open in editor** to open the `CREATE INDEX` statement in the **Db2 SQL Editor**, and then run it.
-4. Click **Run again** to analyze the query again and see how the change affects the plan and the cost.
+1. Click the **Statistics** tab. The **RUNSTATS recommendations** list shows the tables that the query uses, with the **TABLE SCHEMA**, **TABLE NAME**, and **CARDINALITY** of each table.
+
+   ![RUNSTATS recommendations on the Statistics tab]({{site.baseurl}}/assets/images/stats.png)
+
+   1. Select the tables that you want to update. To select all tables, select the check box in the header row.
+   2. Click **Apply RUNSTATS** to update the statistics for the selected tables. Current statistics help the optimizer choose efficient access plans.
+
+   To review or edit the `RUNSTATS` command before you apply it, click **Open SQL script**, or click the script icon at the end of a table row to open the script for that table only.
+
+2. Click the **Indexes** tab. The **Index recommendations** list shows the estimated cost of the query if the recommended indexes are applied (for example, from 708 to 563.096 timerons). For each recommendation, review the **Index name**, **Schema**, **Table**, **Key columns**, **Contribution**, and **Disk usage**.
+
+   ![Index recommendations on the Indexes tab]({{site.baseurl}}/assets/images/index.png)
+
+   1. Select the indexes that you want to create. To select all indexes, select the check box in the header row.
+   2. Click **Apply indexes** to create the selected indexes.
+
+   To review the `CREATE INDEX` statement before you create the index, click **Open SQL script**, or click the script icon at the end of an index row to open the script for that index only. The script opens in the **Db2 SQL Editor**, where you can run it.
+
+3. Click **Run again** to analyze the query again and see how the change affects the plan and the cost.
 
 ### Asking Genius AI about the plan
 
