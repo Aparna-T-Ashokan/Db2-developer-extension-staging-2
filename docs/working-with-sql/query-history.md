@@ -27,7 +27,7 @@ Query history is persistent — your previously run queries are retained even af
 
 
    - File: Indicates the source of the statements that were run. For example, Db2 SQL Editor means that the statements were run from the SQL editor in the extension.
-   - Statement date: Timestamp when the query was run.
+   - Executed: Timestamp when the query was run.
    - Connection: Shows the database connection details used for running the query.
    - Metric:
       - Total statements run: Total count of SQL statements that were run together.
