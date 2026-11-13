@@ -10,12 +10,12 @@ When you run SQL statements in IBM Db2 Genius Code, the query results are displa
 
 The **Query Results** panel provides several interactive tools:
 
-- **View modes**: Toggle between **Table view** (grid) and **Chart view** (graph) by using the view icons.
-  - **Table view**: Displays the query results in a grid, as shown in the following figure.
+- **View modes**: Toggle between **Table view** and **Chart view** by using the view icons.
+  - **Table view**: Displays the query results in a table, as shown in the following figure.
 
     ![Query results in table view]({{site.baseurl}}/assets/images/results-window.png)
 
-  - **Chart view**: Displays the query results as a chart, which helps you spot patterns and compare values more easily. Click the chart icon in the **Query Results** toolbar to switch from the table to the chart view.
+  - **Chart view**: Displays the query results as a chart, which helps you spot patterns and compare values more easily.
 
     ![Query results displayed as a bar chart]({{site.baseurl}}/assets/images/graph-view.png)
 
@@ -30,8 +30,6 @@ The **Query Results** panel provides several interactive tools:
       - **Bubble**
     - **X-Axis**: Select the result column to plot on the horizontal axis.
     - **Y-Axis**: Select the result column to plot on the vertical axis.
-
-    The chart updates when you change a setting. The title of the chart is the SQL statement that produced the results. To return to the grid, click the table icon.
 
 - **Search results**: Use the **Search results** bar to search for specific text across returned rows.
 - **Filter** (![Filter]({{site.baseurl}}/assets/images/filter.png){:width="20" :height="20"}): Click the filter icon to apply filters to result columns.

@@ -20,7 +20,7 @@ You can analyze the performance of a query directly from the **Db2 SQL Editor** 
 
 - **From Query History**:
   1. In the **Db2 Connections** pane, locate and expand **QUERY HISTORY**.
-  2. Find the query that you want to analyze, and click **Analyse Query Performance** (![Analyze query performance]({{site.baseurl}}/assets/images/analyze-query.png){:width="20" :height="20"}), or right-click the query and select **Genius: Analyse Query Performance**.
+  2. Find the query that you want to analyze, and click **Analyze Query Performance** (![Analyze query performance]({{site.baseurl}}/assets/images/analyze-query.png){:width="20" :height="20"}), or right-click the query and select **Genius: Analyze Query Performance**.
 
 Genius AI runs the performance analysis on the selected query in the **Genius AI** chat panel, summarizing the execution plan and identifying potential bottlenecks.
 
@@ -44,10 +44,38 @@ The performance analyzer provides the following tabs:
 
 ### Explain plan
 
-The explain plan generates the execution plan for the query. Use the table icon and the diagram icon above the plan to switch between two views of the same plan. To find a specific operation, enter text in the **Search results** field.
+The explain plan generates the execution plan for the query. Use the following icons above the plan to switch between two views of the same plan:
 
-- **Table view**: Lists each operation in the plan in a row. The columns show the step number (**#**) and the **Operation**. Each operation shows its name (for example, **Full scan**, **Sort**, or **Hash join**) and its operator type (for example, `TBSCAN`, `SORT`, or `HSJOIN`). The operations are indented to show how they are nested in the plan. Use the arrows next to an operation to expand or collapse it.
-- **Diagram view**: Shows the plan as a flow of connected operators, with the cost in timerons on each node. A warning icon marks operators that might cause performance problems, such as a full table scan. Use the zoom in, zoom out, and fit-to-screen controls to navigate larger plans.
+- **Table view** (![Table view]({{site.baseurl}}/assets/images/table-view.png){:width="20" :height="20"}): Shows the plan as a table.
+- **Diagram view** (![Diagram view]({{site.baseurl}}/assets/images/diagram-icon.png){:width="20" :height="20"}): Shows the plan as a diagram.
+
+To find a specific operation, enter text in the **Search results** field.
+
+#### Table view
+
+The table view lists each operation in the plan in a row. The columns show the step number (**#**) and the **Operation**. Each operation shows its name (for example, **Full scan**, **Sort**, or **Hash join**) and its operator type (for example, `TBSCAN`, `SORT`, or `HSJOIN`). The operations are indented to show how they are nested in the plan. Use the arrows next to an operation to expand or collapse it.
+
+#### Diagram view
+
+The diagram view shows the plan as a flow of connected operators.
+
+![Explain plan diagram view]({{site.baseurl}}/assets/images/diagram-view.png)
+
+In the diagram:
+
+- Each node shows the step number, the operator type (for example, `RETURN`, `TBSCAN`, or `SORT`), and the estimated cost in timerons.
+- Arrows connect the operators and show the order in which data flows through the plan.
+- A warning icon (⚠) and a yellow outline mark operators that might cause performance problems, such as a full table scan (`TBSCAN`) or a hash join (`HSJOIN`).
+- The overview map at the upper right of the diagram shows the whole plan. The operators that are highlighted in yellow are the ones with warnings. The blue box shows the part of the plan that is currently displayed.
+
+Use the controls above the overview map to navigate larger plans:
+
+- **Zoom out** (magnifying glass with a minus sign): Makes the diagram smaller.
+- **Zoom in** (magnifying glass with a plus sign): Makes the diagram larger.
+- **Fit to screen** (square brackets icon): Resizes the diagram so that the whole plan fits in the view.
+- **Overview map** (overlapping squares icon): Shows or hides the overview map.
+
+#### Operation details
 
 Click an operation in the table or a node in the diagram to see its details in the **Details** panel. Click the close icon (**×**) to close the panel. The panel shows the operation number and type, the operation name, and the following information:
 

@@ -123,7 +123,22 @@ The following actions are available for managing your conversations:
 
 ## Adding context with the @ Context Manager
 
-Use the @ Context Manager to add context to your chat, so that Genius AI uses specific information in its responses. In the chat input box, type `@` to open the @ Context Manager, and then select the item that you want to add. For example, in the request `Generate SQL Query for @ADNAAN.ACT`, `@ADNAAN.ACT` adds the `ACT` table in the `ADNAAN` schema as context.
+Use the @ Context Manager to add database objects as context to your chat, so that Genius AI uses them in its responses.
+
+1. In the chat input box, type `@`. The **Add context** list opens.
+2. Browse the list, or type to search. The list contains a **Recent** section and the following database object categories, for example:
+   - **Procedures**
+   - **Functions**
+   - **Aliases**
+   - **Audit policies**
+   - **Buffer pools**
+   - **Check constraints**
+   - **Indexes**
+3. Expand a category, and then select the object that you want to add. To move through the list, use the up and down arrow keys. To select the highlighted item, press **Tab**.
+
+The **Recent** section lists the items that you added as context before, so that you can add them again quickly.
+
+For example, in the request `Generate SQL Query for @ADNAAN.ACT`, `@ADNAAN.ACT` adds the `ACT` table in the `ADNAAN` schema as context.
 
 
 ## Providing feedback
