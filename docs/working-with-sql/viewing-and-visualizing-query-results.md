@@ -6,39 +6,39 @@ title: "Viewing and visualizing query results"
 
 When you run SQL statements in IBM Db2 Genius Code, the query results are displayed in the **DB2 GENIUS CODE** panel in the terminal area. Each executed query generates its own tab (for example, **Query 1**, **Query 2**), allowing you to review, search, filter, export, and visualize your data interactively.
 
-![Query results window]({{site.baseurl}}/assets/images/results-window.png)
-
 ## Query results features
 
 The **Query Results** panel provides several interactive tools:
 
-- **View modes**: Toggle between **Table view** (grid) and **Chart view** (graph) by using the view icons. For more information, see [Visualizing results as charts](#visualizing-results-as-charts).
+- **View modes**: Toggle between **Table view** (grid) and **Chart view** (graph) by using the view icons.
+  - **Table view**: Displays the query results in a grid, as shown in the following figure.
+
+    ![Query results in table view]({{site.baseurl}}/assets/images/results-window.png)
+
+  - **Chart view**: Displays the query results as a chart, which helps you spot patterns and compare values more easily. Click the chart icon in the **Query Results** toolbar to switch from the table to the chart view.
+
+    ![Query results displayed as a bar chart]({{site.baseurl}}/assets/images/graph-view.png)
+
+    In the chart view, use the following options to configure the chart:
+
+    - **Chart type**: Select the type of chart to display. The following chart types are available:
+      - **Bar**
+      - **Line**
+      - **Pie**
+      - **Scatter**
+      - **Area**
+      - **Bubble**
+    - **X-Axis**: Select the result column to plot on the horizontal axis.
+    - **Y-Axis**: Select the result column to plot on the vertical axis.
+
+    The chart updates when you change a setting. The title of the chart is the SQL statement that produced the results. To return to the grid, click the table icon.
+
 - **Search results**: Use the **Search results** bar to search for specific text across returned rows.
 - **Filter** (![Filter]({{site.baseurl}}/assets/images/filter.png){:width="20" :height="20"}): Click the filter icon to apply filters to result columns.
 - **Sort columns**: Click the three dots icon (**⋮**) in a column header, and then select **Sort ascending** or **Sort descending**.
 - **Drag and drop columns**: Drag and drop column headers to rearrange column positions.
 - **Export**: Click the export icon (**⤓**) to export query results in CSV or JSON format.
 - **Open in Db2 SQL Editor**: Click the open icon (![Open]({{site.baseurl}}/assets/images/open-icon.png){:width="20" :height="20"}) to open the query results in a full editor tab (**Results: Db2 SQL Editor**).
-
-## Visualizing results as charts
-
-You can display query results as a chart to spot patterns and compare values more easily. Click the chart icon in the **Query Results** toolbar to switch from the table to the chart view.
-
-![Query results displayed as a bar chart]({{site.baseurl}}/assets/images/graph-view.png)
-
-In the chart view, use the following options to configure the chart:
-
-- **Chart type**: Select the type of chart to display. The following chart types are available:
-  - **Bar**
-  - **Line**
-  - **Pie**
-  - **Scatter**
-  - **Area**
-  - **Bubble**
-- **X-Axis**: Select the result column to plot on the horizontal axis.
-- **Y-Axis**: Select the result column to plot on the vertical axis.
-
-The chart updates when you change a setting. The title of the chart is the SQL statement that produced the results. To return to the grid, click the table icon.
 
 ## Viewing LOB and complex data in Data Viewer
 
