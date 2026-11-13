@@ -75,15 +75,10 @@ Use **Genius: Generate Explain plan** to have Genius AI generate the execution p
 2. Select **Genius: Generate Explain plan**.
 3. In the **Genius AI** chat panel, make sure that a database is selected, and then send the *Explain Plan for:* request that is filled in with your SQL statement.
 
-Genius AI generates the execution plan for the query. The response shows the following information:
-
-- **Estimated cost** and **Estimated cardinality**: The optimizer's estimates for the query, in timerons and rows.
-- **Summary**: A short analysis of the plan, such as the access path that the optimizer uses and whether the query requires a sort operation that an index could eliminate.
-- **Explain Plan** card: A card for the table that the query uses, with an **Open** link.
-
-To see the full plan, click **Open** on the **Explain Plan** card. The plan opens in a read-only **Explain Plan** editor, as shown in the following figure.
+Genius AI generates the execution plan for the query. To see the full plan, click **Open** on the **Explain Plan**. The plan opens in a read-only **Explain Plan** editor, as shown in the following figure:
 
 ![Explain plan editor and the Genius AI response]({{site.baseurl}}/assets/images/explain-plan.png)
+
 
 The **Explain Plan** editor shows the following information:
 
