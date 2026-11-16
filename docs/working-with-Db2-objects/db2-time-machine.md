@@ -30,6 +30,8 @@ A temporal table maintains historical versions of its data, allowing you to retr
    - **Choose a time**: Specify the exact time using the time field and AM/PM selector.
    - **Clear**: Reset the selected date and time.
 
+   ![Time Machine view for a temporal table]({{site.baseurl}}/assets/images/time-machine-2.png)
+
 4. Review the generated SQL query. Db2 Time Machine generates a query using the `FOR SYSTEM_TIME AS OF` clause and the selected timestamp. For example:
 
    ```sql
@@ -51,6 +53,9 @@ If the selected table is not temporal, the **Time Machine** tab displays a messa
 You can convert the table into a temporal table by using Genius AI.
 
 1. Open the non-temporal table and select the **Time Machine** tab.
+
+   ![Time Machine tab for a non-temporal table]({{site.baseurl}}/assets/images/time-machine-1.png)
+
 2. Click **Convert using Genius AI**.
 3. Genius AI generates the required SQL statements to enable temporal history tracking.
 4. Review the generated SQL and execute the statements to convert the table.
