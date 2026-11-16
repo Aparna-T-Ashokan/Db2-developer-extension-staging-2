@@ -103,6 +103,8 @@ In Db2, every table is associated with a set of metadata and structural componen
 >**Note**: The **Max rows** specifies the maximum number of rows to show in the data preview. Enter the required value in the Max rows and press Enter to refresh the preview. You can also set the row limit by using the Db2service: Max Rows extension setting. See [Limiting the number of rows returned](../working-with-sql/limiting-the-number-of-rows-returned.md) for more information. The **Max rows** field is synchronized with the **Db2service: Max Rows extension setting**, and changes made in either location automatically update both.
 {: .note-right}
 
+**Time Machine**: Shows how the data in a temporal table looked at a specific point in time. Time Machine requires you to sign in to Genius Hub through the **Account** view. To open it, right-click the temporal table and select **See History**, or open the table and select the **Time Machine** tab. Select a date and time to retrieve the historical data. For more information, see [Viewing historical table data by using Db2 Time Machine]({{site.baseurl}}/docs/working-with-Db2-objects/db2-time-machine).
+
 
 
 

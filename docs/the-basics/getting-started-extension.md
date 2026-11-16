@@ -38,7 +38,7 @@ The IBM Db2 Genius Code icon (![Db2 developer icon]({{site.baseurl}}/assets/imag
      Enter the port number for the Db2 service (default is 9000).
    - **Db2service: Statement Terminator**
      Set the default statement terminator that is used to split SQL statements (default is a semicolon, `;`). You can override this setting for an individual file by adding `--#SET TERMINATOR <char>` to the file. For more information, see [Setting the statement terminator]({{site.baseurl}}/docs/working-with-sql/running-multiple-sql-statements#setting-the-sql-statement-terminator).
- the
+
 ## Using the IBM Db2 Genius Code
 ---
 When you open the Db2 Genius Code, you can see the **Db2 Connections** pane. 

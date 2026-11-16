@@ -3,7 +3,7 @@
 ---
 **IBM Db2 Genius Code** provides a clean, intuitive tree-based interface for exploring and managing database objects. With this organized view, you can quickly navigate through schemas and access objects such as tables, views, indexes, and stored procedures. 
 
-The extension offers a seamless way to drill down into object details and manage your Db2 environment efficiently.
+IBM Db2 Genius Code offers a seamless way to drill down into object details and manage your Db2 environment efficiently.
 
 ## Exploring Db2 objects
 ---
@@ -56,7 +56,7 @@ To remove filtering and restore the full list of schemas or tables, click the cl
 
 ## Viewing table details in a schema {#tables-schema-id}
 
-1. Under the database connection, click the specific schema that you want to explore. When you click a schema, the extension opens a detailed view showing all tables in that schema, including key information such as table name, table space, row count, owner, creation time, and organization.
+1. Under the database connection, click the specific schema that you want to explore. When you click a schema, IBM Db2 Genius Code opens a detailed view showing all tables in that schema, including key information such as table name, table space, row count, owner, creation time, and organization.
    
    
    ![Connecting to database]({{site.baseurl}}/assets/images/schema-tables.png)
@@ -82,6 +82,7 @@ To remove filtering and restore the full list of schemas or tables, click the cl
    - Constraints: Rules that apply to table columns.
    - Indexes: Shows relationships with other objects (like views or indexes).
    - Data: Shows the actual rows that are stored in the table.
+   - Time Machine: Shows how the data in a temporal table looked at a specific point in time. Select a date and time to generate a query that you can run to retrieve the historical data. Tables that do not track history yet can be converted to temporal tables by using Genius AI. For more information, see [Viewing historical table data by using Db2 Time Machine]({{site.baseurl}}/docs/working-with-Db2-objects/db2-time-machine).
    
    
 You can also view the details of a particular table by expanding the **Tables** section under the schema in the **Db2 Connections** pane and clicking the table name. For more information about the table properties, see [Exploring table object details](../working-with-Db2-objects/Db2-objects.md).

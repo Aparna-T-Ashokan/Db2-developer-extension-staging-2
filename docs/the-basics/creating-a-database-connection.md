@@ -83,7 +83,7 @@ To work with IBM Db2 databases, you need to create a database connection to conn
    To disable SSL encryption, clear the **Use SSL** checkbox.
 
 4. Enter your connection credentials:
-   - **Username \***: Enter the username to access the Db2 database. This is a required field.
+   - **Username**: Enter the username to access the Db2 database. This is a required field.
    - **Password**: Enter the password to access the Db2 database. Click the eye icon to toggle password visibility.
 
 5. (Optional) Select the **Save credentials** checkbox to save your credentials securely in Visual Studio Code. If you do not select this checkbox, the extension prompts you for the password each time that you connect.
