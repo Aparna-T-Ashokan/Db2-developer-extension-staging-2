@@ -17962,8 +17962,9 @@ a.text-dark:focus {
 
 .td-navbar .navbar-brand svg {
     display: inline-block;
-    margin: 0 10px;
-    height: 30px
+    margin: 0 4px 0 10px;
+    height: 30px;
+    width: 30px
 }
 
 .td-navbar .nav-link {
